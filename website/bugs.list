@@ -1,0 +1,5 @@
+1.- EIT 171/swap 171 NO DATA does not exist.  Needs to be created
+2.- EIT 171 no data don't linked properly, example: 19970101, it links to a swap_171
+3.- Region search does not work
+4.- Error message when wrong date is input!
+5.- smart and charm pages do not load properly

@@ -1,0 +1,9 @@
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="./css_block.css">
+</head>
+<body>
+HOLA
+<div id="block-foot" class="test">
+HOLA
+</div>
+</body>

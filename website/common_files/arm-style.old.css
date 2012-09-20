@@ -1,0 +1,29 @@
+body { font-family : arial;
+       font-size : 100%;
+       color : black;
+       background-color : white;
+     }
+
+a:link { color : white; font-size : 100%; }
+
+a:visited { color: white; }
+
+a:hover { color : black; }
+
+a.mail:link { text-decoration : none; color : aliceblue; font-size : 100%; }
+
+a.mail:visited { text-decoration : none; color: aliceblue; font-size : 100%; }
+
+a.mail:hover { text-decoration : underline; color: white; font-size : 100%; }
+
+a.mail2:link { text-decoration : none; color : blue; font-size : 100%; }
+
+a.mail2:visited { text-decoration : none; color: blue; font-size : 100%; }
+
+a.mail2:hover { text-decoration : underline; color: black; font-size : 100%; }
+
+a.mail3:link { text-decoration : none; color : aliceblue; font-size : 100%; font-weight : bold; }
+
+a.mail3:visited { text-decoration : none; color: aliceblue; font-size : 100%; font-weight : bold; }
+
+a.mail3:hover { text-decoration : underline; color: white; font-size : 100%; font-weight : bold; }

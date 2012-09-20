@@ -1,0 +1,18 @@
+body { font-family : arial;
+       font-size : 100%;
+       color : black;
+       background-color : white;
+     }
+
+a:link { color : white; font-size : 100%; }
+
+a:visited { color: white; }
+
+a:hover { color : black; }
+
+a.mail:link { text-decoration : none; color : blue; font-size : 100%; }
+
+a.mail:visited { text-decoration : none; color: blue; font-size : 100%; }
+
+a.mail:hover { text-decoration : underline; color: blue; font-size : 100%; }
+

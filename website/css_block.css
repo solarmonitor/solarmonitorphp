@@ -1,0 +1,26 @@
+#block-outer #block {
+    display:block;
+}
+#block-inner {
+    width: 850px;
+    padding: 0px 9px 0 9px;
+/*    margin: 100px 0 0 0;*/
+    background: transparent;
+    display:block;
+    position:relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#frame {
+    background-color:#1c1c1c;
+    border-radius: 15px;
+    display:block;
+    height:650px;
+}
+#block-foot {
+    border-top: 1px solid #4C4C4C;
+    background-color: red;
+    width: 850px;
+    padding: 16px 16px 13px 16px;
+    position: relative
+}

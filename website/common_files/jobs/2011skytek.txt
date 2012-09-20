@@ -1,0 +1,11 @@
+Job Title|Web 2.0-development for space projects (including SolarMonitor.org)
+Company|<a href=http://www.skytek.com>Skytek Ltd.</a>
+Description|Skytek is a software development company operating in the space and aerospace industry.  The company has a strong research focus specifically in the area of developing mobile and internet applications.  We are looking for a Java programmer on a full-time or contract basis.
+Experience required|<ul><li>Strong experience in Java programming</li><li>Solid web projects experience across all elements of the project 'Life Cycle'.</li><li>A proven track record in designing systems in a Java environment.</li><li>Experience in designing, developing and deploying Web based applications from start to end.</li></ul>
+Skills|<ul><li><b>Java server side programming (Java Beans/Java Servlets)*</b></li><li>Web Services Development</li><li>Understanding of development life cycle</li><li>Experience in Object Oriented Design</li><li>SQL</li><li>XSL</li><li>XML</li><li><b>HTML/Javascript/AJAX*</b></li><li>Microsoft SQL Server/MySQL</li><li><b>PHP*</b></li></ul><br><b>*Proven expertise essential</b>
+Additional skills that would be an advantage|<ul><li>Linux OS</li><li>Apache Tomcat</li><li>Apache Struts</li></ul>
+Key responsibilities|<ul><li>Web based application development</li><li>Client liaison</li></ul>
+Location|Dublin, Ireland
+Salary|Salary will be commensurate with experience and in line with current rates in the market.
+Clossing date|10th June 2011
+Application|Please e-mail your CV and cover letter to <a href="mailto:susan[DOT]meade[AT]skytek[DOT]com?Subject=Job%20Offer">Susan Meade</a>

@@ -1,0 +1,23 @@
+Forecast:
+Auroral activity will be minimal. Weather permitting, minimum displays will be visible overhead along Alaska's northern coast, Greenland's southern coast, and Novaya Zemlya, Russia, and visible low on the horizon in Dawson, Canada, Tromsø, Norway and Tiksi, Russia.
+Auroral activity will be quiet. Weather permitting, quiet displays will be visible directly overhead in Yellowknife, Canada, northern Norway and Wrangel Island, Russia, and visible low on the horizon as far south as Fairbanks, Alaska, Rovaniemi, Finland and Cherskiy, Russia.
+Auroral activity will be low. Weather permitting, low-level displays will be visible overhead in Barrow, Alaska, Tromsø, Norway and Tiksi, Russia, and visible low on the northern horizon from as far south as Winnipeg, Canada, Trondheim, Norway, and Igarka, Russia.
+Auroral activity will be moderate. Weather permitting, moderate displays will be visible overhead in Fairbanks, Alaska, Tromsø, Norway and Cherskiy, Russia, and visible low on the horizon as far south as Marquette, Michigan, Sundsvall, Sweden and Arkhangelsk, Russia.
+Auroral activity will be active. Weather permitting, active auroral displays will be visible overhead as far south as Anchorage, Alaska, Trondheim, Norway and Igarka, Russia, and visible low on the horizon in Montreal, Stockholm, Helsinki and Yakutsk, Russia.'
+Auroral activity will be high.  Weather permitting, highly active auroral displays will be visible overhead from Barrow to Bethel and Ketchikan, and visible low on the horizon from Seattle and Minneapolis.
+Auroral activity will be high(+).  Weather permitting, highly active auroral displays will be visible overhead from Barrow to as far south as Kodiak and Minneapolis, and visible low on the horizon from  Salem, Oregon and Chicago.
+Auroral activity will be high(++).  Weather permitting, highly active auroral displays will be visible overhead from Barrow to Seattle, Chicago, and visible low on the horizon as far south as New York.
+Auroral activity will be high(+++).  Weather permitting, highly active auroral displays will be visible overhead from Barrow to Portland, St. Louis and Washington, DC, and visible low on the horizon from northern California, Oklahoma and Georgia.
+Auroral activity will be at its maximum peak.  Highly active auroral displays will be visible over all of Alaska and low on the horizon in most of the northern U.S.'
+
+Nowcast:
+Auroral activity will be minimal.  Weather permitting, minimum displays will be visible overhead along Alaskas north coast, and visible low on the horizon from Fort Yukon to as far south as Fairbanks, Kotzebue, and Dawson, Canada.
+Auroral activity will be quiet. Weather permitting, quiet displays will be visible directly overhead in Yellowknife, Canada, northern Norway and Wrangel Island, Russia, and visible low on the horizon as far south as Fairbanks, Alaska, Rovaniemi, Finland and Cherskiy, Russia.
+Auroral activity will be low. Weather permitting, low-level displays will be visible overhead in Barrow, Alaska, Troms&oslash;, Norway and Tiksi, Russia, and visible low on the northern horizon from as far south as Winnipeg, Canada, Trondheim, Norway, and Igarka, Russia.
+Auroral activity will be moderate. Weather permitting, moderate displays will be visible overhead in Fairbanks, Alaska, Troms&oslash;, Norway and Cherskiy, Russia, and visible low on the horizon as far south as Marquette, Michigan, Sundsvall, Sweden and Arkhangelsk, Russia.
+Auroral activity will be active.  Weather permitting, active auroral displays will be visible overhead from Barrow to Anchorage and Juneau, and visible low on the horizon from  King Salmon, Prince Rupert, Bismark and Montreal.
+Auroral activity will be high.  Weather permitting, highly active auroral displays will be visible overhead from Barrow to Bethel and Ketchikan, and visible low on the horizon from Seattle and Minneapolis.
+Auroral activity will be high(+).  Weather permitting, highly active auroral displays will be visible overhead from Barrow to as far south as Kodiak and Minneapolis, and visible low on the horizon from  Salem, Oregon and Chicago.
+Auroral activity will be high(++).  Weather permitting, highly active auroral displays will be visible overhead from Barrow to Seattle, Chicago, and visible low on the horizon as far south as New York.
+Auroral activity will be high(+++).  Weather permitting, highly active auroral displays will be visible overhead from Barrow to Portland, St. Louis and Washington, DC, and visible low on the horizon from northern California, Oklahoma and Georgia.
+Auroral activity will be at its maximum peak.  Highly active auroral displays will be visible over all of Alaska and low on the horizon in most of the northern U.S.

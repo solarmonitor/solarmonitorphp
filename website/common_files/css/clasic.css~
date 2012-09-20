@@ -1,0 +1,10 @@
+body { 
+       background-color : dimgrey; /*white*/
+     }
+
+/*===================================== Tables frame ==========================*/
+table.frame {
+    /*background: url(../common_files/brushed-metal.jpg) repeat;*/
+    color : dimgrey;
+    background-color:#333;
+}

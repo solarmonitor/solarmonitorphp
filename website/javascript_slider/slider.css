@@ -1,0 +1,6 @@
+/*  body {margin:0; font-family:Arial, Helvetica, sans-serif; font-size:12px}*/
+#slider {width:50}
+.header {width:48; color:white; padding:2px; font-weight:bold; margin-top:5px; cursor:pointer}
+.header:hover {border:2px solid #9ac1c9}/*background:url(../common_files/brushed-metal.jpg)}*/
+.content {overflow:hidden}/*; background:url(../common_files/brushed-metal.jpg)}*/
+.text {width:46;  border-top:none; padding:0px}

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JavaScript Slider Example</title>
+<link rel="stylesheet" href="../common_files/arm-style.css" type="text/css" />
+<!--<link rel="stylesheet" href="slider.css" type="text/css" />-->
+<script type="text/javascript" src="slider.js"></script>
+</head>
+<body onload="slider.init('slider')">
+			<table bgcolor=#787878 width=815 border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td background=../common_files/brushed-metal.jpg valign=top align=center>
+<div id="slider">
+  <div class="header" id="GOES-header">GOES</div>
+  <div class="content" id="GOES-content">
+    <div class="text">
+		<a class=mail href=JavaScript:OpenGoes(\"./goes_pop.php?date=$date&type=xray\")>X-rays</a><br>
+		<a class=mail href=JavaScript:OpenGoes(\"./goes_pop.php?date=$date&type=proton\")>Protons</a><br>
+		<a class=mail href=JavaScript:OpenGoes(\"./goes_pop.php?date=$date&type=electron\")>Electrons</a>
+     </div>
+  </div>
+  <div class="header" id="ACE-header">ACE</div>
+  <div class="content" id="ACE-content">
+    <div class="text">
+	<a class=mail href=JavaScript:OpenAce(\"./ace_pop.php?date=$date&type=aceplasma\")>Plasma</a><br>
+	<a class=mail href=JavaScript:OpenAce(\"./ace_pop.php?date=$date&type=acemag\")>B Field</a>
+    </div>
+  </div>
+  <div class="header" id="EVE-header">SDO/EVE</div>
+  <div class="content" id="EVE-content">
+    <div class="text">
+    	<a class=mail href=JavaScript:OpenEve(\"./eve_pop.php?date=$date&type=eve3day\")>3 Day</a><br>
+		<a class=mail href=JavaScript:OpenEve(\"./eve_pop.php?date=$date&type=eve6hr\")>6 Hour</a>
+    </div>
+  </div>
+  <div class="header" id="Events-header">Events</div>
+  <div class="content" id="Events-content">
+    <div class="text">
+		<a class=mail href=JavaScript:OpenHek(\"$heklink\")>HEK</a><br>
+		<a class=mail href=JavaScript:OpenLastEvents(\"http://www.lmsal.com/solarsoft/last_events/\")>SolarSoft</a><br>
+		<a class=mail href=JavaScript:OpenEvents()>SWPC</a>
+     </div>
+  </div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

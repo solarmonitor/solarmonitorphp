@@ -1,0 +1,29 @@
+29-Nov-2011 New SolarMonitor Launch at the <a class=mail2 href=http://www.stce.be/esww8/index.php>Eighth European Space Weather Week</a>.  Available now from the <a class=mail2 href=./mobile/>mobile</a> too!
+31-May-2011 <a href="./jobs.php">Web-developer job offer</a> to work with <a href"http://www.skytek.com">Skytek</a> and SolarMonitor.org
+20-May-2010 <i>Proba2</i>/SWAP has been added to the front page of SolarMonitor, and a tutorial for the new SWAP data object is available <a href="http://www.solarmonitor.org/objects/swap">here</a>. (P.&nbsp;Higgins).
+26-May-2009 Zoom function added to full disk images. New six panel instruments <a class=mail2 href="http://www.solarmonitor.org/index2.php">page</a> added, including STEREO A 195 &Aring;, STEREO B 195 &Aring;, Solis chromospheric magnetograms, and GONG farside magnetograms (P.&nbsp;Higgins).
+17-Oct-2008 SolarMonitor hosting moved to the Astrophysics Research Group (ARG) at Trinity College Dublin. <a class=mail2 href="idl/solmon/solmon_20070823.tar" target="_blank">SOLMON Object</a> and <a class=mail2 href="idl/solmon/" target="_blank">Tutorial</a> Advertised on front page (P.&nbsp;Higgins).
+24-Nov-2004 Arm 2.0 is <a class=mail2 href="http://www.solarmonitor.org/index.php">live</a>.  Arm 1.0 can still be found at http://www.solarmonitor.org/yyyymmdd. (R. Hewett)
+03-Aug-2004 Arm 2.0beta online for testing purposes.  Things may not work right until it is fully live.  (R. Hewett)
+23-Jun-2004 ARM mirror site now running at the <a class=mail2 href=http://www.kao.re.kr/html/english/index.html>Korean Astronomy Observatory</a> - <a class=mail2 href=http://sun.kao.re.kr/arm/>http://sun.kao.re.kr/arm/</a> (Thanks to Dr. Yong-Jae Moon and colleagues!).
+11-Jun-2004 Added fulldisk slideshow (P. Gallagher).
+17-May-2004 Added capability to go back and forward one week and one rotation (P. Gallagher).
+15-Jan-2004 Added clickable zooms to full-disk images (P. Gallagher).
+10-Jan-2004 Added EIT 304 and 171 &Aring; (P. Gallagher).
+05-Aug-2003 RHESSI observing interval plots added (P. Gallagher).
+30-May-2003 ARM now hosted at the <a class=mail2 href=http://umbra.nascom.nasa.gov>SDAC</a> (P. Gallagher).
+24-Mar-2003 Added GOES-12 SXI images (P. Gallagher).
+03-Aug-2002 Made GOES proton and electron data available (P. Gallagher).
+27-Mar-2002 Solar events from Sam Freeland's <a class=mail2 href=http://www.lmsal.com/solarsoft/last_events>last_events</a> list added (P. Gallagher).
+27-Feb-2002 Added dynamic GOES X-rays plots (P. Gallagher).
+11-Feb-2002 Updated flare probabilities to use Poisson statistics (P. Gallagher).
+19-Feb-2002 Replaced Yohkoh/SXT images with EIT FeXV (28.4 nm) (P. Gallagher).
+09-Oct-2001 Added Max Millennium motd ticker (P. Gallagher).
+04-Aug-2001 Magnetic gradient maps added (P. Gallagher).
+02-Aug-2001 Added GONG+ full-disk magnetograms (P. Gallagher).
+18-Jul-2001 Added GOES 5-minute X-ray data (P. Gallagher).
+03-Jul-2001 Full-disk <i>Yohkoh</i> SXT data included (P. Gallagher).
+25-Jun-2001 Search engine and archiving system added (P. Gallagher). 
+02-Jun-2001 Modified flare prediction to use McIntosh classifications (P. Gallagher).
+20-Feb-2001 Flare prediction software completed (P. Gallagher).
+04-Feb-2001 ARM launched on web (P. Gallagher).

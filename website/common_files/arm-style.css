@@ -1,0 +1,377 @@
+body { font-family : arial;
+       font-size : 100%;
+       color : black;
+     }
+#footer {
+   background: #ffffff;
+}
+div.stylenavbar {
+   position: fixed;
+         bottom: 0px;
+         right: 0px;
+   font-size: 9px; 
+   padding: 4px;
+         opacity: 0.4;
+}
+
+div.stylenavbar ul {
+        list-style-type: none;
+        margin-left: 0px;
+        padding-left: 0px;
+        
+}
+
+div.textbox {
+   text-decoration : none; color : white; font-size : 100%; font-weight : normal; font-style : normal;
+}
+
+iframe { overflow-x: hidden;
+		 overflow-y: scroll;
+	   } 
+
+a:link { color : blue; font-size : 100%; }
+
+a:visited { color: blue; }
+
+a:hover { color : black; }
+
+a.mail:link { text-decoration : none; color : aliceblue; font-size : 100%; font-weight : normal; font-style : normal; }
+
+a.mail:visited { text-decoration : none; color: aliceblue; font-size : 100%; font-weight : normal; font-style : normal; }
+
+a.mail:hover { text-decoration : underline; color: white; font-size : 100%; font-weight : normal; font-style : normal; }
+
+a.mail2:link { text-decoration : none; color : blue; font-size : 100%; }
+
+a.mail2:visited { text-decoration : none; color: blue; font-size : 100%; }
+
+a.mail2:hover { text-decoration : underline; color: black; font-size : 100%; }
+
+a.mail31:link { text-decoration : none; color : aliceblue; font-size : 100%; font-weight : bold; }
+
+a.mail31:visited { text-decoration : none; color: aliceblue; font-size : 100%; font-weight : bold; }
+
+a.mail31:hover { text-decoration : underline; color: white; font-size : 100%; font-weight : bold; }
+
+a.mail3:link { text-decoration : none; color : aliceblue; font-size : 100%; }
+
+a.mail3:visited { text-decoration : none; color: aliceblue; font-size : 100%; }
+
+a.mail3:hover { text-decoration : underline; color: white; font-size : 100%; }
+
+a.mail4:link { text-decoration : none; color : white; font-size : 100%; }
+
+a.mail4:visited { text-decoration : none; color: white; font-size : 100%; }
+
+a.mail4:hover { text-decoration : underline; color: white; font-size : 100%; }
+
+a.mail5:link { text-decoration : none; color : white; font-weight : bold; font-size : 100%; }
+
+a.mail5:visited { text-decoration : none; color: white; font-weight : bold; font-size : 100%; }
+
+a.mail5:hover { text-decoration : none; color: white; font-weight : bold; font-size : 100%; }
+
+a.info {text-decoration : none; color : gray; font-size : 80%; font-weight : bold; font-style :normal;}
+
+.artitl { text-decoration : none; color : white; font-size : 100%; font-weight : bold; font-style : normal; }
+
+.arhead { text-decoration : none; color: white; font-size : 100%; font-weight : normal; font-style : italic; }
+
+.artext { text-decoration : none; color: black; font-size : 80%; font-weight : normal; font-style : normal; }
+
+#slider {width:70}
+.header {width:70; color:white; font-weight:bold; margin-top:5px; cursor:pointer; text-align:centre}
+.header_sm {width:70; color:white; font-weight:bold; margin-top:0px; cursor:pointer; text-align:centre;font-size: 75%}
+.header:hover {border:0px}/*background:url(../common_files/brushed-metal.jpg)}*/
+.content {overflow:hidden}/*; background:url(../common_files/brushed-metal.jpg)}*/
+.text {width:70;  border-top:none; padding:0px; font-size: 85%}
+/*.header#Forecast-header {margin-top:150px;padding-top:150px;}*/
+/*.header#IDL-header {margin-top:150px; padding-top:150px;}*/
+
+#right {width:70}
+.header2 {width:70; color:white; font-weight:bold; margin-top:5px; text-align:centre}
+
+#charmt {}
+.chtit { text-decoration : none; color :  white; font-size : 100%; font-weight : bold; font-style : normal; border-bottom-width: 0px;}
+.chtit td {border-bottom-width:0;}
+.chcolumns { text-decoration : none; color: white; font-size : 100%; font-weight : normal; font-style : italic; border-top-width: 0px;}
+.chresults { border-bottom-style: solid; 
+	     background-color:#f0f0f0;
+	  border-bottom-width: 1px;
+	  text-decoration : none;
+	  color: black; 
+	  font-size : 80%; 
+	  font-weight : normal; 
+	  font-style : normal;}
+	  
+#noaat {}
+.noaatit { text-decoration : none; color :  white; font-size : 100%; font-weight : bold; font-style : normal; border-bottom-width: 0px;}
+.noaatit td {border-bottom-width:0;}
+.noaacolumns { text-decoration : none; color: white; font-size : 100%; font-weight : normal; font-style : italic; border-top-width: 0px;}
+.noaacol  {width: 100px; border-top-width:0px;}
+.noaaresults { border-bottom-style: solid; 
+	  border-bottom-width: 1px;
+	  text-decoration : none;
+	  color: black; 
+	  font-size : 80%; 
+	  font-weight : normal; 
+	  font-style : normal;}
+	  
+#warning {width:75%}
+.headerw {width:99.7%; color:white; font-weight:bold; margin-top:0px; cursor:pointer; text-align:right;  font-size: 85%; border-top:1px solid silver;border-left:1px solid silver; border-right:1px solid silver}
+.contentw {overflow:hidden}/*; background:url(../common_files/brushed-metal.jpg)}*/
+.textw {width:99.7%;  color:white; border-top:none; padding:0px; font-size: 85%;border-bottom:1px solid silver; border-left:1px solid silver; border-right:1px solid silver}
+
+#share {width:70}
+.addthis_toolbox addthis_default_style {text-align:right}
+a.addthis_button_compact { text-decoration : none; color : white; font-size : 85%; font-weight:bold}
+
+/*---------------------------------   toolbar ------------------------------*/
+ul#toolnav {
+	margin: 0; padding: 0;
+	float:left;
+	width: 100%;
+	list-style: none;
+	font-size: 15px;
+}
+ul#toolnav li {
+	float: center;
+	margin: 0; padding: 0;
+	position: relative; /*--Important--*/
+	height: 1;
+}
+ul#toolnav li a {
+	float: left;
+	text-indent: -9999px; /*--Push text off of page--*/
+	height: 20px;
+}
+/*ul#toolnav li:hover a, ul#toolnav li a:hover { background-position: left bottom; } /*--Hover State--*/
+ul#toolnav a.download {
+	/*float: center;   /*this shows the image... and the text*/
+	background: url('../common_files/images/toolbar/nav_download.png') no-repeat;
+	width: 70px;
+}
+ul#toolnav a.menu {
+	background: url('./images/toolbar/nav_menu.png') no-repeat 50% 50%;
+	width: 500px;/*117*/
+}
+ul#toolnav li .sub {
+	position: absolute; /*--Important--*/
+	top: 25px; left: -20px; /* was 44 in top */
+	z-index: 99999;
+	background: #000000 url('../common_files/images/toolbar/nav_subbg.png') repeat-x; /*#344c00--Background gradient--*/
+	padding: 0px 0px 20px 20px;
+	float: left;
+	/*--Bottom right rounded corner--*/
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	/*--Bottom left rounded corner--*/
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	display: none; /*--Hidden for those with js turned off--*/
+}
+ul#toolnav li .row { /*--If needed to break out into rows--*/
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+ul#toolnav li .sub ul{
+	list-style: none;
+	margin: 0; padding: 0;
+	width: 162px; /*It was 150*/
+	float: left;
+}
+ul#toolnav li .sub .sub_small ul{
+	width: 80px;
+}
+ul#toolnav .sub ul li {
+	width: 100%; /*--Override parent list item--*/
+	color: #fff;
+	height:auto;
+}
+ul#toolnav .sub ul li h2 { /*--Sub nav heading style--*/
+	padding: 0;  margin: 0;
+	font-size: 15px;
+	font-weight: normal;
+}
+ul#toolnav .sub ul li h2 a { /*--Sub nav heading link style--*/
+	padding: 5px 0;
+	background-image: none;
+	color: #e8e000;
+}
+ul#toolnav .sub ul li a {
+	float: none;
+	text-indent: 0; /*--Override text-indent from parent list item--*/
+	height: auto; /*--Override height from parent list item--*/
+	background: url(../common_files/images/toolbar/navlist_arrow.png) no-repeat 5px 12px;
+	/*padding: 7px 5px 7px 15px;*/
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+ul#toolnav .sub ul li a:hover {
+	color: #ddd;
+	background-position: 5px 12px ;/*--Override background position--*/
+}
+/*------------------------------------- test div table together with super drop down: http://bonrouge.com/~ul-table ------------------------------------ */
+ul#toolnav .sub ul .sm-table{
+	padding: 0;
+	float: left;
+}
+ul#toolnav .sub ul .sm-table ul{
+    width:162px;
+    text-align:center;
+    margin: 0px auto;
+    padding:0;
+    list-style-type:none;
+    clear:both;
+}
+ul#toolnav .sub ul .sm-table li {
+    width: 30%;/*139px;*/
+    float:left;
+    border:0px;
+    border-right:none;
+    text-align: center;
+}
+* html ul#toolnav .sub ul .sm-table li a {
+width: 100%;
+}
+/*=================== AR search box ========================*/
+form#ar_search{
+    height:33px;
+    margin-bottom:0;
+}
+fieldset.ar_search {
+	border: none;
+	margin: 0 0 0 0;
+	margin-bottom: 0;
+	padding:0;
+	background: auto;
+	height:33px;
+}
+.ar_box {
+    width: 110px;
+    background: auto;
+    color:white;
+    margin-top:8;
+	font-family : arial;
+	font-weight : bold;
+	font-size: 100%; 
+ 	border: 1px solid #666666;
+/*	height:19px;*/
+}
+.ar_search button {
+	border: none;
+/*	float: left;*/
+}
+.ar_search button.ar_btn {
+	width: 15px;
+	height: 18px;
+	cursor: pointer;
+	text-indent: -9999px;
+	background: url(../common_files/images/toolbar/magnifier2.png) no-repeat top right;
+}
+.ar_search button.ar_btn:hover {
+	background: url(../common_files/images/toolbar/magnifier2.png) no-repeat bottom right;
+}
+
+/* ==================================== search test ===============================*/
+fieldset.search {
+	border: none;
+	width: 150px;
+	margin: 0 auto;
+	margin-left: 0px;
+	margin-top:0px
+}
+.search input, .search button {
+	border: none;
+/*	float: left;*/
+}
+.search input.box {
+    float: right;
+	font-size: 75%;
+	width: 44px;
+	height: 19px;
+/*	padding: 5px 0;*/
+/*	background: #8888888 url(../common_files/images/toolbar/magnifier2.png) no-repeat;*/
+/*	margin-right: 5px;*/
+/*	padding: 8px 5px 0;*/
+	color: black;
+ 	border: 1px solid #666666;
+}
+.search input.box:focus {
+	/*background: #white url(../common_files/images/toolbar/magnifier2.png) no-repeat left -38px;*/
+	outline: none;
+}
+.search button.btn {
+	width: 15px;
+	height: 18px;
+	cursor: pointer;
+	text-indent: -9999px;
+	background: #ff8800 url(../common_files/images/toolbar/magnifier2.png) no-repeat top right;
+}
+.search button.btn:hover {
+	background: #ff8800 url(../common_files/images/toolbar/magnifier2.png) no-repeat bottom right;
+}
+
+/* ==================================== AR images ===============================*/
+
+
+/*------------------------------------- test div table: http://bonrouge.com/~ul-table ------------------------------------ */
+/*
+#ul-table li a {
+background-color:#000000;
+font: 12px Arial, sans-serif;
+display:block;
+line-height:40px;
+}
+*/
+/*
+#ul-table a:link, #ul-table a:visited, #ul-table a:active {
+color: #FFFFFF; text-decoration: none;
+}
+#ul-table a:hover {
+background-color:#FFFFFF;
+color:navy;
+text-decoration: none;
+}
+*/
+/*
+ul#toolnav .ul-table {
+width:15%;*562px;*
+text-align:center;
+margin: 0px auto;
+padding:0;
+list-style-type:none;
+clear:both;
+}
+*/
+/*
+ul#toolnav .ul-table li {
+width: 30%;*139px;*
+float:left;
+border:0px;
+border-right:none;
+text-align: center;
+}
+* html #ul-table li a {
+width: 100%;
+}
+#ul-table li.top {
+border-bottom:none;
+}
+#ul-table li.right {
+border-right:0px;
+}
+.clear {
+clear:both;
+margin-top:-1px;
+height:1px;
+overflow:hidden;
+}   */
+
+
+

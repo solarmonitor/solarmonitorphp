@@ -1,0 +1,42 @@
+#body { 
+       background-color : white;
+     }
+
+/*===================================== Tables frame ==========================*/
+table.frame {
+    background: url(../../common_files/brushed-metal.jpg) repeat;
+/*    color : dimgrey;
+    background-color:#333;*/
+}
+td.leftup {
+    width:22px;
+    background: url(../../common_files/topleftcorner.png);
+    background-repeat: no-repeat;
+}
+td.rightup {
+    width:22px;
+    background: url(../../common_files/toprightcorner.png);
+    background-repeat: no-repeat;
+}
+td.leftdown {
+    width:22px;
+    background: url(../../common_files/bottomleftcorner.png);
+    background-repeat: no-repeat;
+}
+td.rightdown {
+    width:22px;
+    background: url(../../common_files/bottomrightcorner.png);
+    background-repeat: no-repeat;
+}
+.tabbed_content {
+	background-color: #000000;
+	background-image:url(../../common_files/brushed-metal.jpg);
+}
+
+.cal_box {
+	background-image: url(../brushed-metal.jpg);
+}
+
+.ar_box {
+	background-image: url(../brushed-metal.jpg);
+}

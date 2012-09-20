@@ -1,0 +1,14 @@
+<?php
+        function arsql_search($region)
+	{
+	  print "<br> sql_search <br>";
+	  print $region;
+	  print "<br>";
+
+$db = new SQLite3('./data/ar_db.sqlite');
+
+var_dump($db->querySingle('SELECT date FROM regions WHERE number="'.$region.'"');
+print_r($db->querySingle('SELECT date FROM regions WHERE number="'.$region.'"', true));
+
+	 }
+?>

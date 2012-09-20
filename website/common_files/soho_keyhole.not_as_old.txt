@@ -1,0 +1,79 @@
+                ESTIMATED DATES OF FUTURE SOHO KEYHOLES
+
+Note: These dates may change slightly and are only to be taken as
+guidelines for e.g. scheduling of observing campaigns etc. Please
+contact the SOHO Science Operations Coordinators in case you have
+questions.
+
+In general, for each keyhole, data losses will almost certainly occur
+between the last and first full days of high rate on 34m stations
+(i.e. the "34m keyholes"). Data losses are less likely (but cannot be
+excluded) in the adjacent "26m keyholes" (between last full day of
+high rate on 26m and last full day of high rate on 34m, and first full
+day of high rate on 34m and first full day of high rate on 26m).
+
+                         [------  34m keyhole  ------]
+      Last FULL DAY        Last day          First day      First FULL DAY
+      w/high rate 26m   w/high rate 34m   w/high rate 34m   w/high rate 26m 
+--------------------------------------------------------------------------
+2004    15-Mar-04         19-Mar-04         03-Apr-04         07-Apr-04
+        16-Jun-04         19-Jun-04         30-Jun-04         03-Jul-04
+        12-Sep-04         17-Sep-04         01-Oct-04         05-Oct-04
+        12-Dec-04         16-Dec-04         26-Dec-04         30-Dec-04
+--------------------------------------------------------------------------
+2005    02-Mar-05         10-Mar-05         24-Mar-05         01-Apr-05
+        05-Jun-05         09-Jun-05         20-Jun-05         25-Jun-05
+        30-Aug-05         06-Sep-05         22-Sep-05         29-Sep-05
+        02-Dec-05         06-Dec-05         17-Dec-05         21-Dec-05
+--------------------------------------------------------------------------
+2006    21-Feb-06         28-Feb-06         16-Mar-06         22-Mar-06
+        26-May-06         31-May-06         11-Jun-06         15-Jun-06
+        20-Aug-06         28-Aug-06         13-Sep-06         20-Sep-06
+        23-Nov-06         27-Nov-06         08-Dec-06         12-Dec-06
+--------------------------------------------------------------------------
+2007    12-Feb-07         19-Feb-07         06-Mar-07         13-Mar-07
+        17-May-07         21-May-07         01-Jun-07         06-Jun-07
+        10-Aug-07         18-Aug-07         03-Sep-07         10-Sep-07
+        14-Nov-07         18-Nov-07         29-Nov-07         03-Dec-07
+--------------------------------------------------------------------------
+2008    03-Feb-08         10-Feb-08         25-Feb-08         03-Mar-08
+        06-May-08         10-May-08         22-May-08         26-May-08
+        31-Jul-08         07-Aug-08         23-Aug-08         31-Aug-08
+        04-Nov-08         08-Nov-08         19-Nov-08         23-Nov-08
+--------------------------------------------------------------------------
+2009    24-Jan-09         31-Jan-09         15-Feb-09         22-Feb-09
+        27-Apr-09         01-May-09         13-May-09         17-May-09
+        21-Jul-09         28-Jul-09         14-Aug-09         21-Aug-09
+        26-Oct-09         30-Oct-09         10-Nov-09         14-Nov-09
+--------------------------------------------------------------------------
+2010    15-Jan-10         22-Jan-10         06-Feb-10         13-Feb-10
+        18-Apr-10         22-Apr-10         03-May-10	      07-May-10
+        11-Jul-10         19-Jul-10         04-Aug-10         12-Aug-10
+        16-Oct-10         21-Oct-10         01-Nov-10         05-Nov-10
+--------------------------------------------------------------------------
+2011 	06-Jan-11	  13-Jan-11	    28-Jan-11	      04-Feb-11
+     	08-Apr-11	  13-Apr-11	    24-Apr-11	      28-Apr-11
+     	02-Jul-11	  09-Jul-11	    26-Jul-11	      02-Aug-11
+	07-Oct-11	  11-Oct-11	    22-Oct-11	      26-Oct-11
+--------------------------------------------------------------------------
+2012 	28-Dec-11	  04-Jan-12	    19-Jan-12	      26-Jan-12
+	29-Mar-12	  02-Apr-12	    14-Apr-12	      18-Apr-12
+	21-Jun-12	  28-Jun-12	    15-Jul-12	      23-Jul-12
+	27-Sep-12	  01-Oct-12	    12-Oct-12	      16-Oct-12
+	18-Dec-12	  25-Dec-12	    09-Jan-13	      16-Jan-13
+--------------------------------------------------------------------------
+2013    20-Mar-13	  24-Mar-13	    04-Apr-13	      08-Apr-13
+	12-Jun-13	  19-Jun-13	    06-Jul-13	      13-Jul-13
+	17-Sep-13	  22-Sep-13	    03-Oct-13	      07-Oct-13
+	09-Dec-13	  18-Dec-13	    01-Jan-14	      08-Jan-14
+--------------------------------------------------------------------------
+2014    11-Mar-14	  15-Mar-14	    26-Mar-14	      30-Mar-14
+	02-Jun-14	  09-Jun-14	    26-Jun-14	      04-Jul-14
+	08-Sep-14	  12-Sep-14	    23-Sep-14	      27-Sep-14
+	30-Nov-14	  07-Dec-14	    23-Dec-14	      30-Dec-14
+--------------------------------------------------------------------------
+2015    02-Mar-15	  06-Mar-15	    17-Mar-15 	      21-Mar-15
+	24-May-15	  31-May-15	    16-Jun-15	      24-Jun-15
+--------------------------------------------------------------------------
+
+Revision 20
