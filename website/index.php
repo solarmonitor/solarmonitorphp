@@ -1,6 +1,6 @@
 <?
-	include("globals.php");
 	include("include.php");
+	include("globals.php");
 	$title = "www.SolarMonitor.org";
 	$indexnum = "1";
 ?>

@@ -1,7 +1,0 @@
-#block-foot {
-    border-top: 1px solid #4C4C4C;
-    background-color: red;
-    width: 700px;
-    padding: 16px 16px 13px 16px;
-    position: relative
-}
