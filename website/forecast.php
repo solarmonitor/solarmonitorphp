@@ -27,20 +27,20 @@
 							<tr>
 								<td bgcolor=#FFFFFF align=left valign=top colspan=1 height=10%>
 									<table cellspacing=0 cellpadding=20 border=0 width=100% height=100%><tr><td>
-									Welcome to the Flare Prediction System. This page 
-									gives the active regions on the Sun today together with each regions probability
-									for producing C-, M-, or X-class events. The flare probabilities were calculated using
-									<a class=mail2 href="http://www.swpc.noaa.gov/">NOAA Space Weather Prediction Center</a> data from nearly
-									eight years of data starting November 1988 and ending June 1996. The percentage 
-									probabilities are based on the number of flares produced by regions classified using
-									the McIntosh classification scheme (McIntosh, P., 1990, <i>Solar Physics</i>, <b>125</b>, 251) during cycle 22.
-									For example, between November 1988 and June 1996 there were 302 regions 
-									classified Eai. As this class produced 62 M-class events,
-									the mean M-class flare rate is
-									~62/302 or ~0.21 flares per day. Assuming the number of flares per
-									unit time is governed by Poisson statistics, we can estimate a flaring probability
+									Welcome to the Flare Prediction System. 
+                                                                        This page lists the active regions present on the Sun today, together with their probability
+									of producing C-, M-, or X-class events. Flare probabilities are calculated using
+									<a class=mail2 href="http://www.swpc.noaa.gov/">NOAA Space Weather Prediction Center</a> data 
+	                                                                combined over 1969-1976 and 1988-1996 (details of which can be found in Bloomfield <i>et al.</i>, 
+								        2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, L41, along with full forecast 
+                                                                        verification testing). The percentage probabilities 
+									are based on the number of flares produced by regions classified using the McIntosh classification 
+									scheme (McIntosh, P., 1990, <i>Solar Physics</i>, <b>125</b>, 251) during cycles 21 and 22. For example, 
+									over both time periods there were 377 regions classified Eai. As this class produced 131 M-class 
+									events, the mean M-class flare rate is ~131/377 or ~0.347 flares per day. Assuming the number of 
+									flares per unit time is governed by Poisson statistics, we can estimate a flaring probability
 									for the following 24-hours using P( one or more flares ) = 1 - exp( -mean ), i.e.,
-									P = 1 - exp( -0.21 ) ~ 0.19, or 19% for an Eai class region to produce one or more M-class
+									P = 1 - exp( -0.347 ) ~ 0.29, or 29% for an Eai class region to produce one or more M-class
 									flares in the next 24-hours. See Wheatland, M. S., 2001, <i>Solar Physics</i>, <b>203</b>, 
 									87 and Moon <i>et al.</i>, 2001, <i>Journal of Geophysical Research-Space Physics</i>, 
 									<b>106(A12)</b> 29951 for further details.
@@ -140,11 +140,13 @@
 							<tr>
 								<td bgcolor=#FFFFFF align=left valign=top colspan=1>
 									<table width=100% height=100% cellpadding=20 cellspacing=0 border=0><tr><td valign=top><p><i><b>NOTE:</b></i> 
-									Values in parantheses/brackets give the NOAA/SWPC forecast probabilities for the 
+									Occurrence of '...' indicates that McIntosh class was not observed in 
+                                                                        the period over which the Poisson flare rate statistics were determined. 
+                                                                        Values in parantheses/brackets give the NOAA/SWPC forecast probabilities for the 
 									occurrence of one or more C-, M-, or X-class flares. When viewed in 
-									real-time and before 22:00 UT, predictions are valid up to 22:00 UT 
+									real-time and before 22:00 UT, NOAA predictions are valid up to 22:00 UT 
 									on the current date. When viewed in real-time after 22:00 UT (or when 
-									viewing past dates), predictions are valid up to 22:00 UT on the 
+									viewing past dates), NOAA predictions are valid up to 22:00 UT on the 
 									following date. The most recent data can also be found at NOAA's
 									<a class=mail2 href=http://www.swpc.noaa.gov/ftpdir/latest/daypre.txt>
 									3-day Space Weather Predictions</a> page.
