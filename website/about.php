@@ -91,7 +91,7 @@ supplied courtesy of SolarMonitor.org".<br>
 <ul>
 <li><a class=mail2 href=http://sdo.gsfc.nasa.gov
 target=_blank>SDO</a> Data supplied courtesy of the SDO/HMI and
-SOHO/AIA consortia. SDO is the first mission to be launched for 
+SDO/AIA consortia. SDO is the first mission to be launched for 
 NASA's Living With a Star (LWS) Program.<p>
 
 <li><a class=mail2 href=http://sohowww.nascom.nasa.gov
