@@ -3,7 +3,11 @@ var slider=function(){
 	return{
 		init:function(t,c){
 			var s,ds,l,i,y;
-			s=document.getElementById(t); ds=s.getElementsByTagName('div'); l=ds.length; i=y=0;
+			s=document.getElementById(t);
+                        if(s == null){
+                            return
+                        }
+                        ds=s.getElementsByTagName('div'); l=ds.length; i=y=0;
 			for(i=0;i<l;i++){
 				var d,did; d=ds[i]; did=d.id;
 				if(did.indexOf("header")!=-1){
