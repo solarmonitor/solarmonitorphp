@@ -122,9 +122,9 @@ a.info {text-decoration : none; color : gray; font-size : 80%; font-weight : bol
 .contentw {overflow:hidden}/*; background:url(../common_files/brushed-metal.jpg)}*/
 .textw {width:99.7%;  color:white; border-top:none; padding:0px; font-size: 85%;border-bottom:1px solid silver; border-left:1px solid silver; border-right:1px solid silver}
 
-#share {width:70}
-.addthis_toolbox addthis_default_style {text-align:right}
-a.addthis_button_compact { text-decoration : none; color : white; font-size : 85%; font-weight:bold}
+#share {width:120%;}
+.addthis_toolbox addthis_default_style {}
+
 
 /*---------------------------------   toolbar ------------------------------*/
 ul#toolnav {
