@@ -58,6 +58,8 @@ David O'Callaghan</a> (TCD Computer Science)
 
 <b>SolarMonitor Alumni</b>
 <ul>
+<li>Aoife McCloskey (Summer Intern 2013)
+<li>Amy Holden (Summer Intern 2013)
 <li>Donna Rogers-Lee (Physics Summer Intern 2010)
 <li><a class=mail2 href="http://www.russellhewett.com/" target=_blank>Russell J. Hewett</a> (2004-2007)
 </ul>
@@ -77,10 +79,15 @@ Further information on SolarMonitor.org can be found in <a class=mail2
 href=http://www.springerlink.com/content/h02309110582457j/
 target=_blank>Gallagher, P. T., Moon, Y.-J., Wang, H., Solar Physics,
 209, 171, (2002)</a>.<br>
-SolarMonitor poster:<br> 
-<a class=mail2 href='./publications/201110_sw_US/201110_sw_US.png'> Providing access to Solar and Space Weather data in Near-Realtime</a>
+
+<a class=mail2 href='./publications/solmon_2013/solmon_2013.png'> Solar Monitor Poster (2013)</a>
+[<a href='./publications/solmon_2013/solmon_2013.pdf'>pdf</a>]<br>
+
+<a class=mail2 href='./publications/201110_sw_US/201110_sw_US.png'>  Solar Monitor Poster (2011):</a>
+Providing access to Solar and Space Weather data in Near-Realtime
 [<a href='./publications/201110_sw_US/201110_sw_US.pdf'>pdf</a>]<br>
 <br>
+
 
 <b>Acknowledgments</b><br>
 
