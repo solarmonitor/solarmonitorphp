@@ -15,10 +15,16 @@
 	{
 		$title = "TRACE 171 &Aring; Mosaic and NOAA Active Regions";	
 	}
+
+        else if ($type == "saia_00171")
+	  {
+	    $title = "AIA 171&Aring and NOAA Active Regions";
+	  }
+
 	else
 	{
-		$temp_index = $fd_types2num[$type];
-		$title = $fd_strs2[$temp_index] . " and NOAA Active Regions";	
+		$temp_index = $index_types_def[$type];
+		$title = $temp_index." and NOAA Active Regions";	
 	}
 ?>
 

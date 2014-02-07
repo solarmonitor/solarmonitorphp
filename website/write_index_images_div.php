@@ -246,20 +246,20 @@
 				elseif($index_types[$i] == 'smdi_igram')
 				{
 					$gongintfile="${arm_data_path}data/$dirdate/pngs/thmb/gong_igram_thumb.png";
-					$aiaintfile="${arm_data_path}data/$dirdate/pngs/thmb/saia_04500_thumb.png";
-					if (@fopen($aiaintfile, "r"))
+					$chmiintfile="${arm_data_path}data/$dirdate/pngs/thmb/chmi_06173_thumb.png";
+					if (@fopen($chmiintfile, "r"))
 					{
-						$links[$i] = link_image($aiaintfile, 50, false);
-						$index_types[$i] = 'saia_04500';
+						$links[$i] = link_image($chmiintfile, 50, false);
+						$index_types[$i] = 'chmi_06173';
 						list($instrument, $filter) = split('[_]', $index_types[$i],2);
 						$file = find_latest_file($date, $instrument, $filter, 'png', 'fd');
 						if($file !== "No File Found"){
 							list($inst, $filt, $fd, $fdate, $time, $ext) = split('[_.]',$file,6);
 							$dt = $fdate . " " . substr($time,0,2) . ":" . substr($time,2,2);
-							$str = "AIA 4500&Aring; ".$fdate . " " . date("H:i", strtotime($dt));
+							$str = "HMI 6173&Aring; ".$fdate . " " . date("H:i", strtotime($dt));
 							$times[]=$str;
 							//$times[]="AIA 4500&Aring; ".$date." ".substr($file,23,2) . ":" . substr($file,25,2);
-						}else{$times[]="AIA 4500&Aring; ".$date." ";}
+						}else{$times[]="HMI 6173&Aring; ".$date." ";}
 
 					}
 					elseif (@fopen($gongintfile, "r"))

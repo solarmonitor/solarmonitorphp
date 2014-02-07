@@ -119,7 +119,7 @@
 		}
 		
 		/*Share this*/
-		print("			<td align=right valign=middle height=30>\n");
+			print("	    	<td align=right valign=middle height=30>\n");
 		include ("share_include.txt"); 
 		print("			</td>  \n");
 		print("			</tr>\n");
