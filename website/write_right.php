@@ -32,7 +32,7 @@
 		print("	<tr>\n");
 		print("		<td align=center valign=top>\n");
 //		print("                       <br><font color=white><b>Solar<br>Monitor</b></font><br>\n");
-        print("			<br><b><a class=mail4 href=\"./index.php\">Home</a></b><br>\n");
+		print("			<br><b><a class=mail4 href=\"./index.php\">Home</a></b><br>\n");
 		print("			<a class=mail href=\"./forecast.php?date=$date\">Forecast</a><br>\n");
 		print("			<a class=mail href=\"./search.php?date=$date\">Search</a><br>\n");
 		print("         <a class=mail href=\"./news.php\">News</a><br>\n");
@@ -53,7 +53,7 @@
 		print("			<a href=JavaScript:OpenGoes(\"./goes_pop.php?date=$date&type=rhessi\")>Times</a><br><br>\n");
 */
 		
-		print("			<font color=white><b>Geomag</b></font><br>\n");
+		//	print("			<font color=white><b>Geomag</b></font><br>\n");
 		print("			<a class=mail href=JavaScript:OpenAurora(\"./aurora_pop.php?date=$date&type=geddsnowcast\")>Now-cast</a><br><br>\n");
 		
 		
@@ -123,7 +123,7 @@
 		print("				<a class=mail href=JavaScript:OpenEve(\"./eve_pop.php?date=$date&type=eve6hr\")>6 Hour</a>\n");
 		print("   		</div>\n");
 		print("  		</div>\n");
-		print(" 		<div class=\"header\"><a class=mail5 href=JavaScript:OpenAurora(\"./aurora_pop.php?date=$date&type=geddsnowcast\")>GeoMag</a></div>\n");
+		//	print(" 		<div class=\"header\"><a class=mail5 href=JavaScript:OpenAurora(\"./aurora_pop.php?date=$date&type=geddsnowcast\")>GeoMag</a></div>\n");
 		//print("		    <div class=\"content\" id=\"GEOMAG-content\">\n");
 		//print(" 	   	<div class=\"text\">\n");
 		//print("    			<a class=mail href=JavaScript:OpenAurora(\"./aurora_pop.php?date=$date&type=geddsnowcast\")>Now-cast</a>\n");
@@ -137,13 +137,13 @@
 		print("				<a class=mail href=JavaScript:OpenHek(\"$heklink\")>HEK</a><br>\n");
 		print("			</div>\n");
   		print("			</div>\n");
-		print("          <div class=\"header\" id=\"Forecast-header\">Forecast</div>\n");
-  		print("		 <div class=\"content\" id=\"Forecast-content\">\n");
-		print("			   <div class=\"text\">\n");
-		print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Forecast</a><br>\n");
-		print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
-		print("			   </div>\n");
-		print("  	</div>\n");
+		//	print("          <div class=\"header\" id=\"Forecast-header\">Forecast</div>\n");
+		//	print("		 <div class=\"content\" id=\"Forecast-content\">\n");
+		//	print("			   <div class=\"text\">\n");
+		//	print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Forecast</a><br>\n");
+		//	print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
+		//	print("			   </div>\n");
+		//	print("  	</div>\n");
 
 		print("		  </div>\n");
 		print("		</td>\n");

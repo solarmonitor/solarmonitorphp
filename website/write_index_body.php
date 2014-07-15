@@ -218,16 +218,16 @@
 				elseif($index_types[$i] == 'smdi_igram')
 				{
 					$gongintfile="${arm_data_path}data/$dirdate/pngs/thmb/gong_igram_thumb.png";
-					$aiaintfile="${arm_data_path}data/$dirdate/pngs/thmb/saia_04500_thumb.png";
-					if (@fopen($aiaintfile, "r"))
+					$hmicintfile="${arm_data_path}data/$dirdate/pngs/thmb/hmi_06173_thumb_.png";
+					if (@fopen($hmicintfile, "r"))
 					{
-						$links[$i] = link_image($aiaintfile, 220, false);
-						$index_types[$i] = 'saia_04500';
+						$links[$i] = link_image($hmicintfile, 220, false);
+						$index_types[$i] = 'hmi_6173';
 						list($instrument, $filter) = split('[_]', $index_types[$i],2);
 						$file = find_latest_file($date, $instrument, $filter, 'png', 'fd');
 						if($file !== "No File Found"){
-							$times[]="AIA 4500&Aring; ".$date." ".substr($file,23,2) . ":" . substr($file,25,2);
-						}else{$times[]="AIA 4500&Aring; ".$date." ";}
+							$times[]="HMI 6173&Aring; ".$date." ".substr($file,23,2) . ":" . substr($file,25,2);
+						}else{$times[]="HMI 6173&Aring; ".$date." ";}
 
 					}
 					elseif (@fopen($gongintfile, "r"))
