@@ -28,6 +28,8 @@
 		
 		//	Data Path
 		//	This is the folder that the data/ folder lies in.
+		date_default_timezone_set('utc') ; // get rid of this
+
 		$arm_data_path = "";
  
                if (isset($_GET['region']) && !isset($_GET['date']))
@@ -61,6 +63,7 @@
 		    $region = '';
 		  }
 		  
+
 
 //		if (isset($_GET['date']))
 //			$date = $_GET['date'];
@@ -100,7 +103,7 @@ $index_types_opt = array(
 			 "continuum" => array("chmi_06173","smdi_igram","gong_igram"), //continuum
 			 "o171" => array("swap_00174","saia_00171","seit_00171","trce_m0171"), //171
 			 "o195" => array("saia_00193","seit_00195"), //195
-			 "o195f" => array("saia_00193","seit_00195","trce_m0171")); //195f
+			 "o195f" => array("saia_00193","seit_00195","trce_m0171")) ; //195f
 
 //
 $index_types_arr = array (

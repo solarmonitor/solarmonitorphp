@@ -95,7 +95,7 @@
 			$time1 = "some time";
 			$time2 = "some time";
 		}
-		print("				<p><i><b>Note:</b></i> The tabulated data are based on the most recent NOAA/USAF Active Region Summary issued on $time1, the values to the right of the forward slashes representing yesterdays values or events. Regions with no data in above property fields have decayed and exhibit no spots.	The region positions are valid on $time2.\n");
+		print("				<p><i><b>Note:</b></i> The tabulated data are based on the most recent NOAA/USAF Active Region Summary issued on $time1. The greyed out entries are values from the previous day. Slashed cells indicate that the active region has no spots. The latest positions of the active regions are given in both heliographic and heliocentric co-ordinates. The region positions are valid on $time2\n");
 		print("				</font></td>\n");
 		print("			</tr>\n");
 		print("		</table>\n");

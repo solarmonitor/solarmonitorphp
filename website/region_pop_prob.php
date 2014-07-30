@@ -1,4 +1,7 @@
-<? 
+<?
+
+	// Modified version of region_pop_prob that dals with probability images
+
 	include ("include.php");
 	include ("globals.php");
 	$indexnum = "1";
@@ -48,7 +51,7 @@
 	
 	$instrument = substr($type,0,4);
 	$filter = substr($type,5,5);
-	$file = find_latest_file($date, $instrument, $filter, 'png', 'ar', $region); 
+	$file = find_latest_file($date, $instrument, $filter, 'png', 'ap', $region); 
 
 	$url = "${arm_data_path}data/$dirdate/pngs/$instrument/$file";
 		
@@ -70,9 +73,9 @@
 			<tr>
 			<?
 				print("<td bgcolor=#FFFFFF align=center> \n") ; 
-				print("<a href=./region_pop_prob.php?date=$date&type=$type&region=$region> \n") ;
+				print("<a href=./region_pop.php?date=$date&type=$type&region=$region> \n") ;
 				print link_image($url, 604, false) ; 
-				print("</td> \n") ;
+				print("</td>\n") ;
 			?>
 			</tr>
 			<tr>
@@ -89,7 +92,7 @@ $k=array();
 			$type_r = $region_types[$i];
 			$instrument = substr($type_r,0,4);
 			$filter = substr($type_r,5,5);
-			$file = find_latest_file($date, $instrument, $filter, 'small60.jpg', 'ar', $region);
+			$file = find_latest_file($date, $instrument, $filter, 'small60.jpg', 'ap', $region);
 			$links[] = link_image("${arm_data_path}data/$dirdate/pngs/$instrument/$file", 35, false);
 			//			var_dump(file_exists("${arm_data_path}data/$dirdate/pngs/$instrument/$file"));
 			$k[]= (file_exists("${arm_data_path}data/$dirdate/pngs/$instrument/$file") && $type != $region_types[$i]) ? $i : -1;
@@ -100,7 +103,7 @@ print("<td align=\"center\" colspan=\"7ve \">\n");
 								{
 								  if ($k[$i] != -1)
 									 {
-									   print("<a href=./region_pop.php?date=$date&type=" . $region_types[$i] . "&region=$region title=\"".$region_strs1[$region_types[$i]]."\">". $links[$i] . "</a>\n");
+									   print("<a href=./region_pop_prob.php?date=$date&type=" . $region_types[$i] . "&region=$region title=\"".$region_strs1[$region_types[$i]]."\">". $links[$i] . "</a>\n");
 									 }
 								  
 //									print("<td background=common_files/brushed-metal.jpg valign=middle align=center><font size=-1 color=white>\n");

@@ -172,13 +172,13 @@ if ($interval < 180)
 			print("         <td colspan=7> Today's NOAA Active Regions</td>\n");
 			print("   </tr>\n");
 			print("   <tr align=center class=noaacolumns>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new active region by NOAA.'\">Group Number</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The locations are given in heliographic (latitude and longitude) and heliocentric (arcseconds from Sun centre).'\">Location</a></div></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new active region by NOAA.'\">NOAA Number</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The locations are given in heliographic (latitude and longitude) and heliocentric (arcseconds from Sun centre).'\">Latest <br> Position</a></div></td>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='The Hale class describes the magnetic complexity of an active region'\">Hale <br> Class</div></i></td>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='The McIntosh class describes the complexity of the sunspot group'\">McIntosh Class</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The area in millionths of the solar disk area.'\">Sunspot <br> Area</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The area in millionths of the solar disk area.'\">Sunspot Area<br> [millionths]</div></i></td>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='Number of the Spots that form the active region'\">Number of Spots</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='Number of Flares associated with the active region.'\">Flares <br> History</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='Number of Flares associated with the active region.'\">Recent <br> Flares</div></i></td>\n");
 			print("   </tr>\n");
 		
 		//	Print the start of the table and the column headers.  These always display.
@@ -306,15 +306,21 @@ if ($interval < 180)
 				}
 				
 				//	Finally print all of the columns.  $events still needs to be parsed and implemented.
+				 
+				// Explodes the strings so that today/yesterday can have different formats in html 
+
+					$mac=explode("/" , $mcintosh) ;
+					$ar=explode("/" , $area) ;
+					$n_spot=explode("/" , $nspots) ;
 
 					//	Print the columns with their identifiers
 					print("<tr class=noaaresults align=center>\n");
 					print("  <td   id=\"noaa_number\" bgcolor=#f0f0f0>    <a class=mail2 href=\"index.php?date=$date&region=$number\">$number</a></td>\n");
-					print("  <td   id=\"position\"    bgcolor=#f0f0f0>       $location1<br>$location2   </td>\n");
-					print("  <td   id=\"hale\"        bgcolor=#f0f0f0>           $hale1_str/$hale2_str      </td>\n");
-					print("  <td   id=\"mcintosh\"    bgcolor=#f0f0f0>       $mcintosh                  </td>\n");
-					print("  <td   id=\"area\"        bgcolor=#f0f0f0>           $area                      </td>\n");
-					print("  <td   id=\"nspots\"      bgcolor=#f0f0f0>         $nspots                    </td>\n");
+					print("  <td   id=\"position\"    bgcolor=#f0f0f0>    $location1$location2 </td>\n");
+					print("  <td   id=\"hale\"        bgcolor=#f0f0f0>    <b>$hale1_str</b>/<font color=grey>$hale2_str</font> </td>\n");
+					print("  <td   id=\"mcintosh\"    bgcolor=#f0f0f0>    <b>$mac[0]</b>/<font color=grey>$mac[1]</font> </td>\n");
+					print("  <td   id=\"area\"        bgcolor=#f0f0f0>    <b>$ar[0]</b>/<font color=grey>$ar[1]</font></td>\n");
+					print("  <td   id=\"nspots\"      bgcolor=#f0f0f0>    <b>$n_spot[0]</b>/<font color=grey>$n_spot[1]</font></td>\n");
 					if ($events_str != "-")
 					  {
 					    //print("  <td   onClick=\"servOC($linen,7,'./ar_table_flare.php?date=$date&region=$number','#99ccff')\" id=\"name".$linen."7\" onMouseOver=\"rowOver($linen,7)\" onMouseOut=\"rowOut($linen,7,'#99ccff')\" bgcolor=#f0f0f0>         $events_str                </td>\n");

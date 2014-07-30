@@ -38,8 +38,16 @@ function link_image($file, $size, $map)
 		}
 		//	if the desired file is found, return an html taged string linking to that image
 		//	otherwise return one linking to the placeholder.
-		if (file_exists($file))
-			$output = "<img src=\"$file\" width=$size heigth=$size border=0 $map_str $zoomjs>";
+		if (file_exists($file)) {
+//			$stamp = imagecreatetruecolor(200 , 200) ;
+//			$orig_im = imagecreatefrompng($file) ;
+//			imagecopyresampled($stamp , $orig_im , 0 , 0 , 0 , 0 , 200) ;
+
+//			$src = imagecreatefrompng("Sure.png") ;
+//			imagecopy($stamp , $src , 0 , 0 , 0 , 0 , 200 , 200) ;
+//			imagepng($stamp) ;
+			$output = "<img src=$file width=$size heigth=$size border=0 $map_str $zoomjs>";
+		}
 		else
 			$output = "<img src=\"./common_files/placeholder_${size}\" width=$size heigth=$size border=0 $map_str $zoomjs>";
 			
@@ -104,8 +112,19 @@ function link_image($file, $size, $map)
 						{
 							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
 						}
+						elseif (($fd_ar_type == "pr") && ($fd_ar == "pr"))
+						{
+							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);
+						}
 						//	if it is an ar and we want an ar parse the rest of the filename
 						elseif (($fd_ar_type == "ar") && ($fd_ar == "ar"))
+						{
+							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
+							//	go to next file if we dont get the region number we want
+							if ($file_region != $region_number)
+								continue;
+						}
+						elseif (($fd_ar_type == "ap") && ($fd_ar == "ap"))
 						{
 							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
 							//	go to next file if we dont get the region number we want
@@ -117,10 +136,12 @@ function link_image($file, $size, $map)
 						{
 							continue;
 						}
+
 						
 						//	if the instrument or filter dont match, move on.  this may need fixing after gsxi is correct
 						// added that the rest need to equal to 'png' in order to continue! so no conflict with jpg thumbnails!
 						//						print($dir." ".$extension."  ".$rest." <br>");
+
 
 						if (($instrument != $file_instrument) || ($filter != $file_filter) || ($rest != $extension)) //&& (($rest != "png") || ($rest != "fts.gz")))
 							continue;
@@ -131,8 +152,9 @@ function link_image($file, $size, $map)
 						$hh = substr($file_time,0,2);
 						$mm = substr($file_time,2,2);
 						$ss = substr($file_time,4,2);
-
+						
 						//	compare the times
+
 						if($latest_time <= strtotime("$file_date $hh:$mm:$ss"))
 						{
 							$latest_time = strtotime("$file_date $hh:$mm:$ss");

@@ -32,8 +32,9 @@
 	
 	//	include all the fuctions
 	include ("write_ar_table.php");
-        include ("write_smart_table.php");
-        include ("write_new_ar_table.php");
+    include ("write_smart_table.php");
+    include ("write_new_ar_table.php");
+	include ("write_flare_prob_img.php") ;
 	include ("write_charm_table.php");
 	include ("write_title.php");
 	include ("write_title_cal1.php");
