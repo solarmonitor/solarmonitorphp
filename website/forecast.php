@@ -36,59 +36,38 @@
 								<td colspan=1 valign=middle height=1%><table rules=rows cellpadding=1 cellspacing=0 border=0 width=100% height=1%><tr>
 									<th class=noaacol align=center><font color=white size=-1>
 										<i><b>NOAA Number</b></i>
-									</font></td>
+									</font></th>
 									<th class=noaacol align=center><font color=white size=-1>
 										<i><b>McIntosh Class</b></i>
-									</font></td>
+									</font></th>
 									<th class=noaacol align=center><font color=white size=-1>
-										<i><b>C-class <br>SM</b></i>
-									</font></td>
+										<i><b>C-class </b></i>
+									</font></th>
 									<th class=noaacol align=center><font color=white size=-1>
-										<i><b>C-class <br>NOAA</b></i>
-									</font></td>
+										<i><b>M-class </b></i>
+									</font></th>
 									<th class=noaacol align=center><font color=white size=-1>
-										<i><b>M-class<br> SM</b></i>
-									</font></td>
-									<th class=noaacol align=center><font color=white size=-1>
-										<i><b>M-class<br> NOAA</b></i>
-									</font></td>
-									<th class=noaacol align=center><font color=white size=-1>
-										<i><b>X-class <br>SM</b></i>
-									</font></td>
-									<th class=noaacol align=center><font color=white size=-1>
-										<i><b>X-class<br> NOAA</b></i>
-									</font></td>
+										<i><b>X-class</b></i>
+									</font></th>
 								</tr>
-							<?
-								$file = "${arm_data_path}data/$dirdate/meta/arm_forecast_" . $date . ".txt";
-								
-								if (file_exists($file))
-								{
-									$lines=file($file);
-									$nline=count($lines);
-									if ($nline < 2)
-									{
-										$line=$lines;
-									}
-									else
-									{
-										$line=$lines[0];
-									}
-						//temporary->
-						//echo 'Use this file: '.$file;
-						//echo '<br>Line[0] is: '.$lines[0];
-						//endtemporary
-									
-									if ($line == "N" || $line == "")
-									{
-										print("							<tr>\n");
-										print("								<td align=center valign=middle  bgcolor=#f0f0f0 colspan=5><font color=white>\n");
-										print("									<b>No Prediction Found</b>");
-										print("								</font></td>");
-										print("							</tr>\n");										
-									}
-									else
-									{
+							<tr>
+								<?  
+										$file = "${arm_data_path}data/$dirdate/meta/arm_forecast_" . $date . ".txt";
+						
+										if (file_exists($file))
+										{
+											$lines=file($file);
+											$nline=count($lines);
+										}
+										if ($nline < 2)
+										{
+											$line=$lines;
+										}
+										else
+										{
+											$line=$lines[0];
+										}
+										$i = 0;
 										foreach($lines as $line)
 										{
 											list($region, $mcintosh, $c, $m, $x) = split('[ ]', $line, 5);
@@ -99,46 +78,66 @@
 											$c_probs = explode("(" , $c) ; 
 											$m_probs = explode("(" , $m) ; 
 											$x_probs = explode("(" , $x) ; 
-
-
-											print("							<tr>                      \n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									<a id=$i class=mail2  href=\"region.php?date=$date&region=$region\">$region</a>\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$mcintosh\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$c_probs[0]\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$c_probs[1]\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$m_probs[0]\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$m_probs[1]\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$x_probs[0]\n");
-											print("								</td>\n");
-											print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n");
-											print("									$x_probs[1]\n");
-											print("								</td>\n");
-											print("							</tr>\n");
+											++$i ;
+											$c_prob_data[$i] = $c_probs ;
+										   	$m_prob_data[$i] = $m_probs  ;
+											$x_prob_data[$i] = $x_probs  ;
+										  	$reg_data[$i] = $region  ;
+										   	$mc_class_data[$i] = $mcintosh  ;
 										}
-									}
-								}
-								else
-								{
-									print("							<tr>\n");
-									print("								<td align=center valign=middle background=common_files/brushed-metal.jpg colspan=5><font color=white>\n");
-									print("									<b>No Prediction Found</b>");
-									print("								</font></td>");
-									print("							</tr>\n");
-								}
-							?>
+								?> 
+									<td>
+										<table rules=rows cellpadding=1 cellspacing=0 border=0 width=100%>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b><br> </b></i>
+											</font></th>
+											<? write_pr_table_entry("reg" , $reg_data) ; ?>
+										</table>
+									</td>
+									<td>
+										<table rules=rows cellpadding=1 cellspacing=0 border=0 width=100%>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b><br> </b></i>
+											</font></th>
+											<? write_pr_table_entry("mc" , $mc_class_data) ; ?>
+										</table>
+									</td>
+									<td>
+										<table rules=all cellpadding=1 cellspacing=0 border=0>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b>SM </b></i>
+											</font></th>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b>NOAA </b></i>
+											</font></th>
+											<? write_pr_table_entry("pr" , $c_prob_data) ; ?>
+										</table>
+									</td>
+									<td>
+										<table rules=all cellpadding=1 cellspacing=0 border=0>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b>SM </b></i>
+											</font></th>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b>NOAA </b></i>
+											</font></th>
+											<? write_pr_table_entry("pr" , $m_prob_data) ; ?>
+										</table>
+									</td>
+									<td>
+										<table rules=all cellpadding=1 cellspacing=0 border=0>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b>SM </b></i>
+											</font></th>
+											<th class=noaacol align=center><font color=white size=-1>
+											<i><b>NOAA </b></i>
+											</font></th>
+											<? write_pr_table_entry("pr" , $x_prob_data) ; ?>
+										</table>
+									</td>
+
+
+							</tr>
 							</table>
 							<tr>
 								<td bgcolor=#FFFFFF align=left valign=top colspan=1>

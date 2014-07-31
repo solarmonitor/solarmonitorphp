@@ -1,0 +1,19 @@
+Subject: MM#009 Default HESSI Target<br>
+<span id="date"><dfn>Date</dfn>: Wed, 30 Jul 2014 11:24:08 -0700</span><br /><br>
+</address> <pre> </pre> <p> Dear RHESSI Collaborators,
+<p>The level of solar activity is low. Yesterday's target (NOAA
+12127) was responsible for a C9.0 flare on 30-Jul-20014 at
+16:17 UT, the largest since the last message. The region
+maintains the largest spot area. Adjacent region NOAA
+12130 released a series of C-class flares. Limited FOV
+instruments should focus on NOAA 12127 but include 12130,
+if possible. Further C-class activity is expected with a chance
+for a low M-class flare.
+<p>The position of NOAA 12127 on 30-July-2014 18:20 UT is:
+<p>S08W01, ( 19&quot;, -224&quot; )
+<p>See <a href="http://www.SolarMonitor.org">http://www.SolarMonitor.org</a> for images and
+<a href="http://solar.physics.montana.edu/max_millennium/ops/observing.shtml">http://solar.physics.montana.edu/max_millennium/ops/observing.shtml</a>
+for a description of the current Max Millennium Observing Plan. <p>Regards,
+<p>Paul Higgins (Trinity College Dublin/LMSAL)
+<span id="received"><dfn>Received on</dfn> Wed Jul 30 2014 - 12:24:29 MDT</span>
+</div> <!-- body="end" -->
