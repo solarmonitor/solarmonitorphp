@@ -274,8 +274,8 @@ if ($interval < 180)
 						//	one array index behind.  incriment the array counter.  add the correct hyperlink to the string.
 						if ($events_arr[$i] == "/")
 						{
-							$events_str = $events_str . "/";
 							$y = 1;
+							$col = "#58ACFA";
 						}
 						else
 						{
@@ -296,7 +296,8 @@ if ($interval < 180)
 							    $today_s[] = substr($size,1);
 							  }
 							$i++;
-							$events_str = $events_str . "<a class=mail2 href=javascript:OpenLastEvents(\"$url\")>$data</a><br>";
+							$events_str = $events_str . "<a class=mail2 style=\"color:$col;\"  href=javascript:OpenLastEvents(\"$url\")>$data</a><br>";
+							$col = "#0000FF" ;
 						}
 					}
 				}
@@ -316,7 +317,7 @@ if ($interval < 180)
 					//	Print the columns with their identifiers
 					print("<tr class=noaaresults align=center>\n");
 					print("  <td   id=\"noaa_number\" bgcolor=#f0f0f0>    <a class=mail2 href=\"index.php?date=$date&region=$number\">$number</a></td>\n");
-					print("  <td   id=\"position\"    bgcolor=#f0f0f0>    $location1$location2 </td>\n");
+					print("  <td   id=\"position\"    bgcolor=#f0f0f0>    $location1<br>$location2 </td>\n");
 					print("  <td   id=\"hale\"        bgcolor=#f0f0f0>    <b>$hale1_str</b>/<font color=grey>$hale2_str</font> </td>\n");
 					print("  <td   id=\"mcintosh\"    bgcolor=#f0f0f0>    <b>$mac[0]</b>/<font color=grey>$mac[1]</font> </td>\n");
 					print("  <td   id=\"area\"        bgcolor=#f0f0f0>    <b>$ar[0]</b>/<font color=grey>$ar[1]</font></td>\n");
