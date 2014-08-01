@@ -10,7 +10,6 @@
 	{
 		include ("globals.php") ;
 		
-		print("					<tr>\n") ;
 		print("						<td colspan=1 valign=middle height=1%><table rules=rows cellpadding=1 cellspacing=0 border=0 width=100% height=1%><tr>\n") ;
 		print("						<th class=noaacol align=center><font color=white size=-1>\n") ;
 		print("								<i><b>NOAA Number</b></i>\n") ;
@@ -48,10 +47,9 @@
 			}
 			if ($line =="N" || $line = "")
 			{
-				print("									<tr>\n") ;
 				print("										<td align=center valign=middle bgcolor=#f0f0f0 colspan=5><font color=white\n") ;
 				print("										<b>No Prediction Found</b>\n") ;
-				print("									</font></tr>\n") ;
+				print("									</font></td></tr></table></td>\n") ;
 			}
 			else
 			{
@@ -73,7 +71,7 @@
 				   	$mc_class_data[$i] = $mcintosh  ;
 					++$i ;
 				}
-			}							
+										
 				print("						<td>\n") ;
 				print("							<table rules=rows cellpadding=1 cellspacing=0 border=0 width=100%>\n") ;
 				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
@@ -126,12 +124,12 @@
 				print("				</tr>\n") ;
 				print("				</table>\n") ;	
 			}
-			else
-			{
-				print("									<tr>\n") ;
-				print("										<td align=center background=common_files/brushed-metal.jpg valign=middle bgcolor=#f0f0f0 colspan=5><font color=white\n") ;
-				print("										<b>No Prediction Found</b>\n") ;
-				print("									</font></tr>\n") ;
-			}
+		}
+		else
+		{
+			print("										<td align=center background=common_files/brushed-metal.jpg valign=middle bgcolor=#f0f0f0 colspan=5><font color=white\n") ;
+			print("										<b>No Prediction Found</b>\n") ;
+			print("									</font></td></tr></table></td>\n") ;
+		}
 	}
 ?>
