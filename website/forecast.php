@@ -38,6 +38,14 @@
 							<tr>
 								<td bgcolor=#FFFFFF align=left valign=top colspan=1>
 									<table width=100% height=100% cellpadding=20 cellspacing=0 border=0><tr><td valign=top><p>
+									Solar Monitor's (SolMon) flare probabilities are calculated using
+									<a class=mail2 href="http://www.swpc.noaa.gov/">NOAA Space Weather Prediction Center</a> data 
+	                                combined over 1969-1976 and 1988-1996 (details of which can be found in Bloomfield <i>et al.</i>, 2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, 									  L41, along with full forecast verification testing).
+									</p> <p>See <a class=mail2 href=http://www.springerlink.com/content/h02309110582457j/
+                                    target=_blank>Gallagher, P. T., Moon, Y.-J., Wang, H., <i>Solar Physics</i>,
+	                                <b>209</b>, 171, (2002)</a>,<br> Wheatland, M. S., 2001, <i>Solar Physics</i>, 	<b>203</b>, 
+									87 and Moon <i>et al.</i>, 2001, <i>Journal of Geophysical Research-Space Physics</i>, 
+									<b>106(A12)</b> 29951 for further details.</br></p><p>
 
 									Occurrence of '...' indicates that McIntosh class was not observed in 
                                                                         the period over which the Poisson flare rate statistics were determined. 
@@ -48,25 +56,7 @@
 									following date. The most recent data can also be found at NOAA's
 									<a class=mail2 href=http://www.swpc.noaa.gov/ftpdir/latest/daypre.txt>
 									3-day Space Weather Predictions</a> page.</br></p>
-                                     <p>Solar Monitor's (SM) flare probabilities are calculated using
-									<a class=mail2 href="http://www.swpc.noaa.gov/">NOAA Space Weather Prediction Center</a> data 
-	                                combined over 1969-1976 and 1988-1996 (details of which can be found in Bloomfield <i>et al.</i>, 
-								        2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, L41, along with full forecast 
-                                                                        verification testing). Percentage probabilities 
-									are based on the number of flares produced by regions classified using the McIntosh classification 
-									scheme (McIntosh, P., 1990, <i>Solar Physics</i>, <b>125</b>, 251) during cycles 21 and 22. For example, 
-									over both time periods there were 377 regions classified Eai. As this class produced 131 M-class 
-									events, the mean M-class flare rate is ~131/377 or ~0.347 flares per day. Assuming the number of 
-									flares per unit time is governed by Poisson statistics, we can estimate a flaring probability
-									for the following 24-hours using P( one or more flares ) = 1 - exp( -mean ), i.e.,
-									P = 1 - exp( -0.347 ) ~ 0.29, or 29% for an Eai class region to produce one or more M-class
-									flares in the next 24-hours. <p>See <a class=mail2 href=http://www.springerlink.com/content/h02309110582457j/
-                                    target=_blank>Gallagher, P. T., Moon, Y.-J., Wang, H., <i>Solar Physics</i>,
-	                                <b>209</b>, 171, (2002)</a>,<br> Wheatland, M. S., 2001, <i>Solar Physics</i>, 	<b>203</b>, 
-									87 and Moon <i>et al.</i>, 2001, <i>Journal of Geophysical Research-Space Physics</i>, 
-									<b>106(A12)</b> 29951 for further details.</br></p>
-									<p>Click <a class=mail2 href=http://sidc.oma.be/educational/classification.php>here</a> for a description of the various active region classifications from the Royal Observatory of Belgium.<br></p>
-	<p>Please contact <a class=mail2 href="mailto:peter.gallagher@tcd.ie">Peter Gallagher</a> if you 
+                                   										<p>Please contact <a class=mail2 href="mailto:peter.gallagher@tcd.ie">Peter Gallagher</a> if you 
 									have any comments or questions regarding this research.<br>
 									</font></td></tr></table>
 								</td>

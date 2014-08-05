@@ -516,4 +516,90 @@ function link_image($file, $size, $map)
 
 
 	}
+
+	/*
+	Function:
+		order_events
+	
+	Purpose:
+		orders event struct such that yesterdays events are before todays events	
+	Parameters:		
+		Input:
+			events - an array of event times and classes
+		Output:
+			output -- modified event array 
+	
+	Author(s):
+		Michael Tierney -- tiernemi@tcd.ie
+	
+	History:
+		05/08/2014 -- Wrote function
+	*/
+	function order_events($events)
+	{
+		$ev_str = '' ;
+		if($events[0] != '-')
+		{
+			$events_arr = split('[ ]' , $events) ;
+	
+			for ($i = 0 ; $i < count($events_arr) ; ++$i)
+			{
+				if ($events_arr[$i] == "/")	
+				{
+					$y = 1 ;
+				}
+				else
+				{
+					$url[] = $events_arr[$i];
+					$data[] = $events_arr[$i+1];
+					list($size,$time) = split('[(]', $events_arr[$i+1] , 2);
+					if ($y == 1) 
+					{
+						$ev_time[] = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
+						$time_inst = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
+						$col = "#58ACFA";
+					}
+					else
+					{
+						$ev_time[] = (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
+						$time_inst =  (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
+						$col = "#0000FF" ;
+					}
+					$url_inst = $events_arr[$i] ;
+					$data_inst = $events_arr[$i+1] ;
+					$col_ar[] = $col ;
+					// Orders from latest to earliest
+					for ($j = count($data) - 1 ; $j > 0 ; --$j)
+					{
+							if ($ev_time[$j] > $ev_time[$j-1])
+							{
+								$ev_time[$j] = $ev_time[$j-1] ;
+								$ev_time[$j-1] = $time_inst ;
+								$url[$j] = $url[$j-1] ;
+								$url[$j-1] = $url_inst ;
+								$data[$j] = $data[$j-1] ;
+								$data[$j-1] = $data_inst ;
+								$col_ar[$j] = $col_ar[$j-1] ;
+								$col_ar[$j-1] = $col ;			
+							}
+							else
+							{
+								continue ;
+							}
+					}
+					$y = 0 ;
+					++$i ;
+				}
+			}
+			for ($i = 0 ; $i < count($data) ; ++$i) 
+			{
+				$ev_str = $ev_str . "<a class=mail2 style=\"color:$col_ar[$i];\"  href=javascript:OpenLastEvents(\"$url[$i]\")>$data[$i]</a><br>" ;
+			}
+		}		
+		else
+		{
+			$ev_str = "-" ;
+		}
+		return $ev_str ;
+	}
 ?>

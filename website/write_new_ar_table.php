@@ -169,7 +169,7 @@ if ($interval < 180)
 			print("<div class=noaat>\n");		
 			print("<table class='frame' rules=rows width=700 align=center cellpadding=0 cellspacing=0 frame=hsides>\n");
 			print("	  <tr align=center class=noaatit>\n");
-			print("         <td colspan=7> Today's NOAA Active Regions</td>\n");
+			print("         <td colspan=7> Today's NOAA Active Regions <br> <b>Today</b>/<font color=grey>Yesterday</font></td>\n");
 			print("   </tr>\n");
 			print("   <tr align=center class=noaacolumns>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new active region by NOAA.'\">NOAA Number</div></i></td>\n");
@@ -257,57 +257,9 @@ if ($interval < 180)
 				//	this section works similar to the write_events function.
 				//	first, start with a blank events string, then split all the parts of the events up into an array.
 				//	loop through the array.
-				$events_str="";
-				if ($events[0] != "-")
-				{
-				  $today_t=array();
-				  $tomorrow_t=array();
-				  $today_c=array();
-				  $tomorrow_c=array();
-				  $today_s=array();
-				  $tomorrow_s=array();
-				  $y = 0;
-					$events_arr = split('[ ]', $events);
-					for($i=0; $i<count($events_arr); $i++)
-					{
-						//	if there is a slash, add it to the string.  otherwise, get the url and the data that follows
-						//	one array index behind.  incriment the array counter.  add the correct hyperlink to the string.
-						if ($events_arr[$i] == "/")
-						{
-							$y = 1;
-							$col = "#58ACFA";
-						}
-						else
-						{
-							$url = $events_arr[$i];
-							$data = $events_arr[$i+1];
-							list($size,$time) = split('[(]', $data,2);
-							$time = (strtotime(substr($time,0,5))-strtotime("00:00"))/60.;  //time in minutes from midnight.
-							if ($y == 1)
-							  {
-							    $yesterday_t[] = $time;
-							    $yesterday_c[] = substr($size,0,1);
-							    $yesterday_s[] = substr($size,1);  
-							  }
-							else
-							  {
-							    $today_t[] = $time;
-							    $today_c[] = substr($size,0,1);
-							    $today_s[] = substr($size,1);
-							  }
-							$i++;
-							$events_str = $events_str . "<a class=mail2 style=\"color:$col;\"  href=javascript:OpenLastEvents(\"$url\")>$data</a><br>";
-							$col = "#0000FF" ;
-						}
-					}
-				}
-				else
-				{
-					$events_str = "-";
-				}
+				$events_str = order_events($events) ;
 				
-				//	Finally print all of the columns.  $events still needs to be parsed and implemented.
-				 
+				//	Finally print all of the columns.  $events still needs to be parsed and implemented. 
 				// Explodes the strings so that today/yesterday can have different formats in html 
 
 					$mac=explode("/" , $mcintosh) ;

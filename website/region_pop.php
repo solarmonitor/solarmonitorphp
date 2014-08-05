@@ -70,7 +70,7 @@
 			<tr>
 			<?
 				print("<td bgcolor=#FFFFFF align=center> \n") ; 
-				print("<a href=./region_pop_prob.php?date=$date&type=$type&region=$region> \n") ;
+				//print("<a href=./region_pop_prob.php?date=$date&type=$type&region=$region> \n") ; Uncomment to enable probability switching
 				print link_image($url, 604, false) ; 
 				print("</td> \n") ;
 			?>
