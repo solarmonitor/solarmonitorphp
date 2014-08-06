@@ -538,6 +538,7 @@ function link_image($file, $size, $map)
 	function order_events($events)
 	{
 		$ev_str = '' ;
+		$y = 0 ;
 		if($events[0] != '-')
 		{
 			$events_arr = split('[ ]' , $events) ;
