@@ -169,7 +169,7 @@ if ($interval < 180)
 			print("<div class=noaat>\n");		
 			print("<table class='frame' rules=rows width=700 align=center cellpadding=0 cellspacing=0 frame=hsides>\n");
 			print("	  <tr align=center class=noaatit>\n");
-			print("         <td colspan=7> Today's NOAA Active Regions <br> <b>Today</b>/<font color=grey>Yesterday</font></td>\n");
+			print("         <td colspan=7> Today's/<font color=grey>Yesterday's</font> NOAA Active Regions </td>\n");
 			print("   </tr>\n");
 			print("   <tr align=center class=noaacolumns>\n");
 			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new active region by NOAA.'\">NOAA Number</div></i></td>\n");
@@ -270,10 +270,10 @@ if ($interval < 180)
 					print("<tr class=noaaresults align=center>\n");
 					print("  <td   id=\"noaa_number\" bgcolor=#f0f0f0>    <a class=mail2 href=\"index.php?date=$date&region=$number\">$number</a></td>\n");
 					print("  <td   id=\"position\"    bgcolor=#f0f0f0>    $location1<br>$location2 </td>\n");
-					print("  <td   id=\"hale\"        bgcolor=#f0f0f0>    <b>$hale1_str</b>/<font color=grey>$hale2_str</font> </td>\n");
-					print("  <td   id=\"mcintosh\"    bgcolor=#f0f0f0>    <b>$mac[0]</b>/<font color=grey>$mac[1]</font> </td>\n");
-					print("  <td   id=\"area\"        bgcolor=#f0f0f0>    <b>$ar[0]</b>/<font color=grey>$ar[1]</font></td>\n");
-					print("  <td   id=\"nspots\"      bgcolor=#f0f0f0>    <b>$n_spot[0]</b>/<font color=grey>$n_spot[1]</font></td>\n");
+					print("  <td   id=\"hale\"        bgcolor=#f0f0f0>    $hale1_str/<font color=grey>$hale2_str</font> </td>\n");
+					print("  <td   id=\"mcintosh\"    bgcolor=#f0f0f0>    $mac[0]/<font color=grey>$mac[1]</font> </td>\n");
+					print("  <td   id=\"area\"        bgcolor=#f0f0f0>    $ar[0]/<font color=grey>$ar[1]</font></td>\n");
+					print("  <td   id=\"nspots\"      bgcolor=#f0f0f0>    $n_spot[0]/<font color=grey>$n_spot[1]</font></td>\n");
 					if ($events_str != "-")
 					  {
 					    //print("  <td   onClick=\"servOC($linen,7,'./ar_table_flare.php?date=$date&region=$number','#99ccff')\" id=\"name".$linen."7\" onMouseOver=\"rowOver($linen,7)\" onMouseOut=\"rowOut($linen,7,'#99ccff')\" bgcolor=#f0f0f0>         $events_str                </td>\n");
@@ -302,6 +302,13 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 		
 		//	Close off the table
 		print("</table>\n");
+		print("<table colspan=1 width=100p>\n") ;
+		print("<tr>\n") ;
+		print("<td colspan=1>\n") ;
+		print("<font size=\"-4\" color=blue> Today </font><font size=\"-4\">/</font> <font color=\"#58ACFA\" size=\"-4\">Yesterday</font>\n") ;
+		print("</td>\n") ;
+		print("</tr>\n") ;
+		print("</table>\n") ;
 		print("</div>\n");			
 	}
 ?>
