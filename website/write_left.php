@@ -179,10 +179,10 @@
 			// Flare Forecasts
 		if ($this_page == "forecast.php")
 		{
-			print("          <div class=\"header\" id=\"Sol-header\">Solar Monitor</div>\n");
+			print("          <div class=\"header\" id=\"Sol-header\">Flare Forecast</div>\n");
   			print("		 <div class=\"content\" id=\"Sol-content\">\n");
 			print("			   <div class=\"text\">\n");
-			print("				<a class=mail href=\"./index.php?date=$date\">Solar Monitor</a><br>\n");
+			print("				<a class=mail href=\"./index.php?date=$date\">Flare Prediction System</a><br>\n");
 			print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
 			print("			   </div>\n");
 			print("  	</div>\n");
@@ -192,7 +192,7 @@
 			print("          <div class=\"header\" id=\"Forecast-header\">Flare Forecast</div>\n");
 	  		print("		 <div class=\"content\" id=\"Forecast-content\">\n");
 			print("			   <div class=\"text\">\n");
-			print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Forecast</a><br>\n");
+			print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Prediction System</a><br>\n");
 			print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
 			print("			   </div>\n");
 			print("  	</div>\n");
