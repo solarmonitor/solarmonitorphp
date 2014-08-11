@@ -304,8 +304,8 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 		print("</table>\n");
 		print("	<div align=center style=\"width : 688px ;\">\n") ;
 		print("		<p align=left>\n") ;
-		print("			<font size=\"-4\" color=blue> Class (HH:MM) -Today</font><br>\n") ;
-		print("			<font color=\"#58ACFA\" size=\"-4\">Class (HH:MM) -Yesterday</font>\n") ;
+		print("			<font size=\"2\" color=blue> Class (HH:MM) -Today</font><br>\n") ;
+		print("			<font color=\"#58ACFA\" size=\"2\">Class (HH:MM) -Yesterday</font>\n") ;
 		print("		</p>\n") ;
 		print("	</div>\n") ;
 		print("</div>\n");			
