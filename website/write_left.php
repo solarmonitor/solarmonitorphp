@@ -182,7 +182,7 @@
 			print("          <div class=\"header\" id=\"Sol-header\">Flare Forecast</div>\n");
   			print("		 <div class=\"content\" id=\"Sol-content\">\n");
 			print("			   <div class=\"text\">\n");
-			print("				<a class=mail href=\"./index.php?date=$date\">Flare Prediction System</a><br>\n");
+			print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Prediction System</a><br>\n");
 			print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
 			print("			   </div>\n");
 			print("  	</div>\n");
