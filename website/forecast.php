@@ -20,10 +20,10 @@
 				</tr>
 				<tr>
 					<td valign=top align=center>
-						<? write_left_accordion($date,-1); ?>
+						<? write_left_accordion($date,-1,$this_page); ?>
 					</td>
 					<td bgcolor=#FFFFFF valign=top width=681>
-						<table  class='frame' width=100% id='test'  cellpadding=0 cellspacing=0>
+						<table  class="frame" width=100% id='test'  cellpadding=0 cellspacing=0>
 							<tr>	
 							    <?  write_flare_prob_img($date) ; ?>
 							</tr>
@@ -38,9 +38,9 @@
 							<tr>
 								<td bgcolor=#FFFFFF align=left valign=top colspan=1>
 									<table width=100% height=100% cellpadding=20 cellspacing=0 border=0><tr><td valign=top><p>
-									Solar Monitor's (SolMon) flare probabilities are calculated using
+									Solar Monitor's flare prediction system's (FPS) probabilities are calculated using
 									<a class=mail2 href="http://www.swpc.noaa.gov/">NOAA Space Weather Prediction Center</a> data 
-	                                combined over 1969-1976 and 1988-1996 (details of which can be found in Bloomfield <i>et al.</i>, 2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, 									  L41, along with full forecast verification testing).
+	                                combined over 1969-1976 and 1988-1996 (details of which can be found in <a class=mail2 href = http://adsabs.harvard.edu/abs/2012ApJ...747L..41B> Bloomfield <i>et al.</i>, 2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, 									  L41 </a>, along with full forecast verification testing).
 									</p> <p>See <a class=mail2 href=http://www.springerlink.com/content/h02309110582457j/
                                     target=_blank>Gallagher, P. T., Moon, Y.-J., Wang, H., <i>Solar Physics</i>,
 	                                <b>209</b>, 171, (2002)</a>,<br> Wheatland, M. S., 2001, <i>Solar Physics</i>, 	<b>203</b>, 

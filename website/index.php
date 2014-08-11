@@ -18,7 +18,7 @@
 				</tr>
 				<tr>
 					<td valign=top align=center width=82>
-						<? write_left_accordion($date,-1); ?>
+						<? write_left_accordion($date,-1,$this_page); ?>
 					</td>
 					<td bgcolor=#FFFFFF valign=top width=680>
     <? if ($region == '') 

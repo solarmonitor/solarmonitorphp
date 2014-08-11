@@ -40,7 +40,7 @@
 				</tr>
 				<tr>
 					<td valign=top align=center>
-						<? write_left_accordion($date,-1); ?>
+						<? write_left_accordion($date,-1,$this_page); ?>
 					</td>
 					<td bgcolor=#FFFFFF>
 						<table cellspacing=0 cellpadding=0>
@@ -71,7 +71,7 @@
 			</table>
 			<p>
 			
-			<? write_ar_table($date) ?>
+			<? write_new_ar_table($date) ?>
 			
 			<p>
 			<? write_events($date); ?>

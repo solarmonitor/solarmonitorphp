@@ -559,15 +559,17 @@ function link_image($file, $size, $map)
 						$ev_time[] = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
 						$time_inst = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
 						$col = "#58ACFA";
+						$data[count($data)-1] = "<font color=\"black\">- / </font>" . $data[count($data)-1] ;
 					}
 					else
 					{
 						$ev_time[] = (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
 						$time_inst =  (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
 						$col = "#0000FF" ;
+						$data[count($data)-1] = $data[count($data)-1] . "<font color=\"black\"> / -</font>" ;
 					}
 					$url_inst = $events_arr[$i] ;
-					$data_inst = $events_arr[$i+1] ;
+					$data_inst = $data[count($data)-1] ;
 					$col_ar[] = $col ;
 					// Orders from latest to earliest
 					for ($j = count($data) - 1 ; $j > 0 ; --$j)
