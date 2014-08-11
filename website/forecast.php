@@ -38,7 +38,7 @@
 							<tr>
 								<td bgcolor=#FFFFFF align=left valign=top colspan=1>
 									<table width=100% height=100% cellpadding=20 cellspacing=0 border=0><tr><td valign=top><p>
-									Solar Monitor's (SolMon) flare probabilities are calculated using
+									Solar Monitor's flare prediction system's (FPS) probabilities are calculated using
 									<a class=mail2 href="http://www.swpc.noaa.gov/">NOAA Space Weather Prediction Center</a> data 
 	                                combined over 1969-1976 and 1988-1996 (details of which can be found in <a class=mail2 href = http://adsabs.harvard.edu/abs/2012ApJ...747L..41B> Bloomfield <i>et al.</i>, 2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, 									  L41 </a>, along with full forecast verification testing).
 									</p> <p>See <a class=mail2 href=http://www.springerlink.com/content/h02309110582457j/

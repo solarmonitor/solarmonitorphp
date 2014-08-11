@@ -302,13 +302,12 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 		
 		//	Close off the table
 		print("</table>\n");
-		print("<table colspan=1 width=100p>\n") ;
-		print("<tr>\n") ;
-		print("<td colspan=1>\n") ;
-		print("<font size=\"-4\" color=blue> Today </font><font size=\"-4\">/</font> <font color=\"#58ACFA\" size=\"-4\">Yesterday</font>\n") ;
-		print("</td>\n") ;
-		print("</tr>\n") ;
-		print("</table>\n") ;
+		print("	<div align=center style=\"width : 688px ;\">\n") ;
+		print("		<p align=left>\n") ;
+		print("			<font size=\"-4\" color=blue> C1 (HH:MM) -Today</font><br>\n") ;
+		print("			<font color=\"#58ACFA\" size=\"-4\">C1 (HH:MM) -Yesterday</font>\n") ;
+		print("		</p>\n") ;
+		print("	</div>\n") ;
 		print("</div>\n");			
 	}
 ?>

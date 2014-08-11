@@ -90,9 +90,9 @@
 				print("						</td>\n") ;
 				print("						<td>\n") ;
 				print("							<table rules=all cellpadding=1 cellspacing=0 border=0>\n") ;
-				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
-				print("								<i><b>FPS</b></i>\n") ;
-				print("								</font></th>\n") ;
+				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=white size=-1>\n") ;
+				print("									<i><b>FPS</b></i>\n") ;
+				print("									</font></div></th>\n") ;
 				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
 				print("								<i><b>NOAA </b></i>\n") ;
 				print("								</font></th>\n") ;
@@ -101,9 +101,9 @@
 				print("						</td>\n") ;
 				print("						<td>\n") ;
 				print("							<table rules=all cellpadding=1 cellspacing=0 border=0>\n") ;
-				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
-				print("							<i><b>FPS</b></i>\n") ;
-				print("								</font></th>\n") ;
+				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=white size=-1>\n") ;
+				print("									<i><b>FPS</b></i>\n") ;
+				print("									</font></div></th>\n") ;
 				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
 				print("								<i><b>NOAA </b></i>\n") ;
 				print("								</font></th>\n") ;
@@ -112,9 +112,9 @@
 				print("						</td>\n") ;
 				print("						<td>\n") ;
 				print("							<table rules=all cellpadding=1 cellspacing=0 border=0>\n") ;
-				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
+				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=white size=-1>\n") ;
 				print("									<i><b>FPS</b></i>\n") ;
-				print("									</font></th>\n") ;
+				print("									</font></div></th>\n") ;
 				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
 				print("								<i><b>NOAA </b></i>\n") ;
 				print("								</font></th>\n") ;
