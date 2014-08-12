@@ -32,6 +32,7 @@
 	
 	//	include all the fuctions
 	include ("write_ar_table.php");
+	include ("write_forecast_paragraph.php");
     include ("write_smart_table.php");
     include ("write_new_ar_table.php");
 	include ("write_flare_prob_img.php") ;

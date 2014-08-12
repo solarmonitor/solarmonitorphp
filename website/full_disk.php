@@ -40,7 +40,7 @@
 				</tr>
 				<tr>
 					<td valign=top align=center>
-						<? write_left_accordion($date,-1,$this_page); ?>
+						<? write_left_accordion($date,-1); ?>
 					</td>
 					<td bgcolor=#FFFFFF>
 						<table cellspacing=0 cellpadding=0>
