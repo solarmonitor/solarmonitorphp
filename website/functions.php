@@ -522,7 +522,7 @@ function link_image($file, $size, $map)
 		order_events
 	
 	Purpose:
-		orders event struct such that yesterdays events are before todays events	
+		orders events such that yesterdays events are after todays events on list	
 	Parameters:		
 		Input:
 			events - an array of event times and classes

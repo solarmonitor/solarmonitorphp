@@ -57,6 +57,9 @@
 				foreach($lines as $line)
 				{
 					list($region, $mcintosh, $c, $m, $x) = split('[ ]', $line, 5);
+		
+					// Converts strings to arrays of today/yesterday data using ) and ( as delimiters
+
 					$c = rtrim($c , ")") ;
 					$m = rtrim($m , ")") ;
 					$x = rtrim($x) ;
@@ -71,6 +74,8 @@
 				   	$mc_class_data[$i] = $mcintosh  ;
 					++$i ;
 				}
+
+				// Builds tables and writes data in using write_pr_table_entry($mode , $data) 
 										
 				print("						<td>\n") ;
 				print("							<table rules=rows cellpadding=1 cellspacing=0 border=0 width=100%>\n") ;
