@@ -150,7 +150,7 @@
 									on the current date. When viewed in real-time after 22:00 UT (or when 
 									viewing past dates), NOAA predictions are valid up to 22:00 UT on the 
 									following date. The most recent data can also be found at NOAA's
-									<a class=mail2 href=http://www.swpc.noaa.gov/ftpdir/latest/daypre.txt>
+									<a class=mail2 href=http://legacy-www.swpc.noaa.gov/ftpdir/latest/daypre.txt>
 									3-day Space Weather Predictions</a> page.
 									<p>Please contact <a class=mail2 href="mailto:peter.gallagher@tcd.ie">Peter Gallagher</a> if you 
 									have any comments or questions regarding this research.<br></font></td></tr></table>

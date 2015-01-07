@@ -4,6 +4,9 @@ var warning=function(){
 		init:function(t,c){
 			var s,ds,l,i,y;
 			s=document.getElementById(t); 
+                        if(s == null){
+                            return
+                        }
 			ds=s.getElementsByTagName('div'); 
 			l=ds.length;
 			i=y=0;
