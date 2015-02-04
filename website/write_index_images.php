@@ -47,7 +47,7 @@ function write_index_images($date,$indexnum,$table_div='table')
 		$index_types = $index_types_arr[$indexnum];
 		for($i=0;$i<count($index_types);$i++)
 		{
-		  if ($index_types[$i] == "magnetogram" || $index_types[$i] == "continuum" || $index_types[$i] == "o171" || $index_types[$i] == "o195" || $index_types[$i] == "o195f") 
+		  if ($index_types[$i] == "magnetogram" || $index_types[$i] == "continuum" || $index_types[$i] == "o171" || $index_types[$i] == "o195" || $index_types[$i] == "o195f" || $index_types[$i] == "xray") 
 		    {
 		      $options = get_type_opt($date,$index_types_opt[$index_types[$i]]);
 		      list($index_types[$i],$files[$i]) = $options;
