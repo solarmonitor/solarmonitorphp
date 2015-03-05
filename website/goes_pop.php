@@ -38,24 +38,21 @@
 		if ($date != $curr_date)
 			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_xrays_${date}.png";
 		else
-//			$url = "http://www.sec.noaa.gov/ftpdir/plots/${year}_plots/xray/${date}_xray.gif";
-			$url = "http://www.sec.noaa.gov/ftpdir/plots/xray/${date}_xray.gif";
+			$url = "http://legacy-www.swpc.noaa.gov/ftpdir/plots/xray/${date}_xray.gif";
 	}
 	elseif ($type == "proton")
 	{
 		if ($date != $curr_date)
 			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_prtns_${date}.png";
 		else
-//			$url = "http://www.sec.noaa.gov/ftpdir/plots/${year}_plots/proton/${date}_proton.gif";
-            $url = "http://www.sec.noaa.gov/ftpdir/plots/proton/${date}_proton.gif";
+		  $url = "http://legacy-www.swpc.noaa.gov/ftpdir/plots/proton/${date}_proton.gif";
 	}
 	elseif ($type == "electron")
 	{
 		if ($date != $curr_date)
-			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_elect_${date}.png";
+		  $url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_elect_${date}.png";
 		else
-//			$url = "http://www.sec.noaa.gov/ftpdir/plots/${year}_plots/electron/${date}_electron.gif";
-                        $url = "http://www.sec.noaa.gov/ftpdir/plots/electron/${date}_electron.gif";
+		  $url = "http://legacy-www.swpc.noaa.gov/ftpdir/plots/electron/${date}_electron.gif";
 	}
 	else
 	{

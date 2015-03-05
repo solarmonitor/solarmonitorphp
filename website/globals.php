@@ -79,40 +79,95 @@
 //			$dirdate = $date;	
                         $date_smart_hmi = "20101116";
 
-$index_types_def = array("smdi_maglc" => "MDI Mag", "smdi_igram" => "MDI Cont", "bbso_halph" => "GHN H&alpha;",
-			 "seit_00171" => "EIT 171&Aring", "seit_00195" => "EIT 195&Aring", "seit_00284" => "EIT 284&Aring","seit_00304" => "EIT 304&Aring",
-			 "hxrt_flter" => "XRT", "gsxi_flter" => "SXI X-rays", 
-			 "gong_maglc" => "GONG Mag", "gong_igram" => "GONG+ Continuum", "gong_farsd" => "GONG Farside",  
-			 "slis_chrom" => "SOLIS Mag", 
-			 "stra_00195" => "STEREO A", "strb_00195" => "STEREO B", 
-			 "swap_00174" => "SWAP 174&Aring", 
-			 "shmi_maglc" => "HMI Mag", 
-			 "saia_00094" => "AIA 94&Aring", "saia_00131" => "AIA 131&Aring", "saia_00171" => "AIA 171&Aring", "saia_00193" => "AIA 193&Aring", "saia_00211" => "AIA 211&Aring", 
-			 "saia_00304" => "AIA 304&Aring", "saia_00335" => "AIA 335&Aring", "saia_01600" => "AIA 1600&Aring", "saia_01700" => "AIA 1700&Aring", "saia_04500" => "AIA 4500&Aring",
-			 "trce_m0171" => "TRACE 171&Aring", 
+$index_types_def = array(
+		         // SOHO/MDI
+		         "smdi_maglc" => "MDI Mag", "smdi_igram" => "MDI Cont",
+			 // BBSO
+		         "bbso_halph" => "GHN H&alpha;",
+			 // SOHO/EIT
+			 "seit_00171" => "EIT 171&Aring", "seit_00195" => "EIT 195&Aring",
+			 "seit_00284" => "EIT 284&Aring","seit_00304" => "EIT 304&Aring",
+			 // X-Ray
+			 "hxrt_flter" => "XRT", "gsxi_flter" => "SXI X-rays", "ysxt_flter" => "SXT",
+			 // Gong
+			 "gong_maglc" => "GONG Mag", "gong_igram" => "GONG+ Continuum", "gong_farsd" => "GONG Farside",
+			 // solis
+			 "slis_chrom" => "SOLIS Mag",
+			 // STEREO
+			 "stra_00195" => "STEREO A", "strb_00195" => "STEREO B",
+			 // SWAP
+			 "swap_00174" => "SWAP 174&Aring",
+			 // SDO/HMI
+			 "shmi_maglc" => "HMI Mag", "chmi_06173" => "HMI 6173&Aring",
+			 // SDO/AIA
+			 "saia_00094" => "AIA 94&Aring", "saia_00131" => "AIA 131&Aring",
+			 "saia_00171" => "AIA 171&Aring", "saia_00193" => "AIA 193&Aring",
+			 "saia_00211" => "AIA 211&Aring", "saia_00304" => "AIA 304&Aring",
+			 "saia_00335" => "AIA 335&Aring", "saia_01600" => "AIA 1600&Aring",
+			 "saia_01700" => "AIA 1700&Aring",
+			 // TRACE
+			 "trce_m0171" => "TRACE 171&Aring",
+			 // others
 			 "bake_00171" => "CCD BAKEOUT","keyh_00171" => "SOHO KEYHOLE",
 			 "bake_00195" => "CCD BAKEOUT","keyh_00195" => "SOHO KEYHOLE");
-			 //Yokoh SXI?
 
 $index_types_opt = array(
 			 "magnetogram" => array("shmi_maglc","smdi_maglc","gong_maglc"), //magnetogram
-			 "continuum" => array("saia_04500","smdi_igram","gong_igram"), //continuum
+			 "continuum" => array("chmi_06173","smdi_igram","gong_igram"), //continuum
 			 "o171" => array("swap_00174","saia_00171","seit_00171","trce_m0171"), //171
 			 "o195" => array("saia_00193","seit_00195"), //195
-			 "o195f" => array("saia_00193","seit_00195","trce_m0171")); //195f
+			 "o195f" => array("saia_00193","seit_00195","trce_m0171"),
+			 "xray" => array("hxrt_flter", "gsxi_flter", "ysxt_flter")); //195f
 
 //
 $index_types_arr = array (
-		      1 => array("magnetogram","continuum" , "bbso_halph", "o171"       , "o195"       , "hxrt_flter"),
-		      2 => array("magnetogram","slis_chrom", "gong_farsd", "strb_00195", "o195f"      , "stra_00195"),
+		      1 => array("magnetogram","continuum" , "bbso_halph", "o171"      , "o195"      , "xray"),
+		      2 => array("magnetogram","slis_chrom", "gong_farsd", "strb_00195", "o195f"     , "stra_00195"),
 		      3 => array("magnetogram","saia_00094", "saia_00131", "saia_00171", "saia_00193", "saia_00211"),
-		      4 => array("magnetogram","saia_00304", "saia_00335", "saia_01600", "saia_01700", "saia_04500"));
+		      4 => array("magnetogram","saia_00304", "saia_00335", "saia_01600", "saia_01700", "chmi_06173"));
 
 	
 
-$region_types = array("smdi_igram", "smdi_maglc", "bbso_halph", "seit_00304", "swap_00174", "seit_00195", "seit_00284", "hxrt_flter", "gong_maglc", "gong_bgrad","saia_00171", "saia_00304", "saia_00193", "saia_04500", "saia_00094", "saia_00131", "saia_00211", "saia_00335", "saia_01600", "saia_01700", "shmi_maglc", "shmi_magss");
-$region_strs1 = array("smdi_igram" => "MDI Continuum", "smdi_maglc" => "MDI Magnetogram", "bbso_halph" => "BBSO H-Alpha", "seit_00304" => "EIT 304&Aring","seit_00171" => "EIT 171&Aring", "trce_m0171" => "Trace 171&Aring", "seit_00195" => "EIT 195&Aring", "seit_00284" => "EIT 284&Aring", "hxrt_flter" => "Hinode XRT", "gong_maglc" => "GONG+ Magnetogram", "gong_bgrad" => "Magnetic Gradient","slis_chrom" => "SOLIS Chromospheric Mag", "gong_farsd" => "GONG Farside", "strb_00195" => "STEREO B 195&Aring", "stra_00195" => "STEREO A 195&Aring", "gong_igram" => "GONG+ Continuum", "swap_00174" => "SWAP 174&Aring", "saia_00171" => "AIA 171&Aring","saia_00304" => "AIA 304&Aring", "saia_00193" => "AIA 193&Aring", "saia_04500" => "AIA 4500&Aring", "saia_0094" => "AIA 94&Aring", "saia_00131" => "AIA 131&Aring", "saia_00211" => "AIA 211&Aring", "saia_00335" => "AIA 335&Aring", "saia_01600" => "AIA 1600&Aring", "saia_01700" => "AIA 1700&Aring", "shmi_maglc" => "HMI Magnetogram", "shmi_magss" => "Sunspot Contours"); 
-$region_strs2 = array("smdi_igram" => "Cont", "smdi_maglc" => "Mag", "bbso_halph" => "H&alpha;","seit_00304" => "304&Aring", "seit_00171" => "171&Aring", "seit_00195" => "195&Aring", "seit_00284" => "284&Aring","hxrt_flter" => "XRT", "gong_maglc" => "Mag", "gong_bgrad" => "Magnetic<br>Gradient");
+$region_types = array(
+	              "smdi_igram", "smdi_maglc",
+		      "bbso_halph",
+		      "seit_00304", "seit_00195", "seit_00284",
+		      "swap_00174",
+		      "hxrt_flter", "ysxt_flter",
+		      "gong_maglc", "gong_bgrad",
+		      "saia_00171", "saia_00304", "saia_00193", "saia_00094",
+		      "saia_00131", "saia_00211", "saia_00335", "saia_01600",
+		      "saia_01700",
+		      "shmi_maglc", "shmi_magss", "chmi_06173");
+		      
+$region_strs1 = array(
+                      "smdi_igram" => "MDI Continuum", "smdi_maglc" => "MDI Magnetogram",
+		      "bbso_halph" => "BBSO H-Alpha",
+		      "seit_00304" => "EIT 304&Aring", "seit_00171" => "EIT 171&Aring",
+		      "seit_00195" => "EIT 195&Aring", "seit_00284" => "EIT 284&Aring",
+		      "trce_m0171" => "Trace 171&Aring",
+		      "hxrt_flter" => "Hinode XRT", "ysxt_flter" => "Yohkoh SXT",
+		      "gong_maglc" => "GONG+ Magnetogram", "gong_bgrad" => "Magnetic Gradient",
+		      "slis_chrom" => "SOLIS Chromospheric Mag",
+		      "gong_farsd" => "GONG Farside",
+		      "strb_00195" => "STEREO B 195&Aring", "stra_00195" => "STEREO A 195&Aring",
+		      "gong_igram" => "GONG+ Continuum",
+		      "swap_00174" => "SWAP 174&Aring",
+		      "saia_00171" => "AIA 171&Aring", "saia_00304" => "AIA 304&Aring",
+		      "saia_00193" => "AIA 193&Aring", "saia_0094" => "AIA 94&Aring",
+		      "saia_00131" => "AIA 131&Aring", "saia_00211" => "AIA 211&Aring",
+		      "saia_00335" => "AIA 335&Aring", "saia_01600" => "AIA 1600&Aring",
+		      "saia_01700" => "AIA 1700&Aring",
+		      "shmi_maglc" => "HMI Magnetogram", "shmi_magss" => "Sunspot Contours",
+		      "chmi_06173" =>"HMI 6173&Aring");
+		      
+$region_strs2 = array(
+                      "smdi_igram" => "Cont", "smdi_maglc" => "Mag",
+		      "bbso_halph" => "H&alpha;",
+		      "seit_00304" => "304&Aring", "seit_00171" => "171&Aring",
+		      "seit_00195" => "195&Aring", "seit_00284" => "284&Aring",
+		      "hxrt_flter" => "XRT", "ysxt_flter" => "SXT", 
+                      "gong_maglc" => "Mag", "gong_bgrad" => "Magnetic<br>Gradient");
 
 $themes = array(
 		"modern" => "./common_files/css/modern.css",

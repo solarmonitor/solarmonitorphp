@@ -174,10 +174,22 @@
 
 
 			print("			\n");
-			//print("     <br>\n");
+			print("     <br>\n");
 		
+			// Flare Forecasts
+
+	print("          <div class=\"header\" id=\"Forecast-header\">Flare Forecast</div>\n");
+  		print("		 <div class=\"content\" id=\"Forecast-content\">\n");
+		print("			   <div class=\"text\">\n");
+		print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Forecast</a><br>\n");
+		print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
+		print("			   </div>\n");
+		print("  	</div>\n");
+
 		// SMART INPUT
-		print("          <div class=\"header\" id=\"SMART-head\" onmouseover=\"title='Active Regions'\">SMART</div>\n");
+
+	
+			//	print("          <div class=\"header\" id=\"SMART-head\" onmouseover=\"title='Active Regions'\">SMART</div>\n");
 		if (count($files_smart) !== 0)
 		{
 			$files_smart = array_reverse($files_smart);
@@ -190,7 +202,7 @@
 		else
 		{
 			//	If there is no data file, display a warning message
-			print("          <div class=\"header_sm\" id=\"SMART-header\">No Data</div>\n");
+		  //		print("          <div class=\"header_sm\" id=\"SMART-header\">No Data</div>\n");
 		}
 		print("      <div class=\"content\" id=\"SMART-content\">		\n");
 		print("</div>\n");
@@ -198,7 +210,7 @@
 		//print("<br>\n");
 		
 		// CHARM INPUT
-		print("          <div class=\"header\" id=\"CHARM-head\" onmouseover=\"title='Coronal Holes'\">CHARM</div>\n");
+		//	print("          <div class=\"header\" id=\"CHARM-head\" onmouseover=\"title='Coronal Holes'\">CHARM</div>\n");
 		if (count($files_charm) !== 0)
 		{
 			$files_charm = array_reverse($files_charm);
@@ -211,7 +223,7 @@
 		else
 		{
 			//	If there is no data file, display a warning message
-			print("          <div class=\"header_sm\" id=\"CHARM-header\">No Data</div>\n");
+		  //		print("          <div class=\"header_sm\" id=\"CHARM-header\">No Data</div>\n");
 		}
 		print("      <div class=\"content\" id=\"CHARM-content\">		\n");
 		print("</div>\n");

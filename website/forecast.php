@@ -41,9 +41,11 @@
 									flares per unit time is governed by Poisson statistics, we can estimate a flaring probability
 									for the following 24-hours using P( one or more flares ) = 1 - exp( -mean ), i.e.,
 									P = 1 - exp( -0.347 ) ~ 0.29, or 29% for an Eai class region to produce one or more M-class
-									flares in the next 24-hours. See Wheatland, M. S., 2001, <i>Solar Physics</i>, <b>203</b>, 
+									flares in the next 24-hours. <p>See <a class=mail2 href=http://www.springerlink.com/content/h02309110582457j/
+                                                                        target=_blank>Gallagher, P. T., Moon, Y.-J., Wang, H., <i>Solar Physics</i>,
+	                                                                <b>209</b>, 171, (2002)</a>,<br> Wheatland, M. S., 2001, <i>Solar Physics</i>, <b>203</b>, 
 									87 and Moon <i>et al.</i>, 2001, <i>Journal of Geophysical Research-Space Physics</i>, 
-									<b>106(A12)</b> 29951 for further details.
+									<b>106(A12)</b> 29951 for further details.</br></p>
 									<p>Click <a class=mail2 href=http://sidc.oma.be/educational/classification.php>here</a> for a description of the various active region classifications from the Royal Observatory of Belgium.<br>
 									</td></tr></table>
 								</td>
@@ -148,7 +150,7 @@
 									on the current date. When viewed in real-time after 22:00 UT (or when 
 									viewing past dates), NOAA predictions are valid up to 22:00 UT on the 
 									following date. The most recent data can also be found at NOAA's
-									<a class=mail2 href=http://www.swpc.noaa.gov/ftpdir/latest/daypre.txt>
+									<a class=mail2 href=http://legacy-www.swpc.noaa.gov/ftpdir/latest/daypre.txt>
 									3-day Space Weather Predictions</a> page.
 									<p>Please contact <a class=mail2 href="mailto:peter.gallagher@tcd.ie">Peter Gallagher</a> if you 
 									have any comments or questions regarding this research.<br></font></td></tr></table>
