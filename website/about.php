@@ -117,6 +117,11 @@ Foundation.<p>
 target=_blank>SXI</a> Full-disk X-ray images are supplied courtesy of
 the Solar X-ray Imager (SXI) team.<p>
 
+<li><a class=mail2 href=http://ylstone.physics.montana.edu/ylegacy/
+target=_blank>SXT</a> Full-disk Yohkoh X-ray images are supplied courtesy
+of the NASA-supported Yohkoh Legacy data Archive (YLA) at Montana State
+University.<p>
+
 <li><a class=mail2 href=http://xrt.cfa.harvard.edu/index.php
 target=_blank>XRT</a> Full-disk X-ray images are supplied courtesy of
 the Hinode X-Ray Telescope (XRT) team.<p>
