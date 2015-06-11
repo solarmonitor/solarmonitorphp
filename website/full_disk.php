@@ -71,7 +71,7 @@
 			</table>
 			<p>
 			
-			<? write_ar_table($date) ?>
+			<? write_new_ar_table($date) ?>
 			
 			<p>
 			<? write_events($date); ?>
