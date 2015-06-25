@@ -1,5 +1,5 @@
 <?
-include("write_new_ar_table.php");
+include("write_ar_table.php");
 include("globals.php");
 ?>
 <html lang="en"> 

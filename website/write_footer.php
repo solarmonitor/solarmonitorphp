@@ -57,7 +57,7 @@
 		print("     <a class=info href=\"./rss.php\"><img src=\"./common_files/images/rssfeed.jpg\" width=12> rss feed</a>\n");
 		print("	 </td>\n");
 		print("  <td align=\"right\">\n");
-		print("<a href=\"http://www.e-inis.ie/\"><img src=\"./common_files/images/logos/e-inis.png\" align=right border=0 height=40></a>\n");
+		print("<a href=\"http://www.dias.ie//\"><img src=\"./common_files/images/logos/dias_logo.jpg\" align=right border=0 height=40></a>\n");
 		print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide_small.jpg\" align=right border=0 height=40></a>\n");
 		//print("<a href=\"http://www.esa.eu/\"><img src=\"./common_files/images/logos/esa_small.jpg\" align=right border=0 height=70></a>\n");
 		//print("<a href=\"http://www.nasa.gov/goddard/\"><img src=\"./common_files/nasalogo.png\" align=right border=0 height=70></a>\n");

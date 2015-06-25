@@ -28,6 +28,8 @@
 		
 		//	Data Path
 		//	This is the folder that the data/ folder lies in.
+		date_default_timezone_set('utc') ; // get rid of this
+
 		$arm_data_path = "";
  
                if (isset($_GET['region']) && !isset($_GET['date']))
@@ -61,6 +63,7 @@
 		    $region = '';
 		  }
 		  
+
 
 //		if (isset($_GET['date']))
 //			$date = $_GET['date'];
