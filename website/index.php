@@ -6,6 +6,7 @@
 ?>
 
 <html>
+
 	<? write_header($date, $title, $this_page) ?>
 	<body onload="slider.init('sliderl');slider.init('sliderl2');slider.init('sliderr');warning.init('warning')">
 	  <? require("common_files/themes.php"); ?>
@@ -47,7 +48,7 @@
 			<p>
 			<hr size=2>
 			</center>
-	  <center>
+	    <center>
 		<? write_footer_new($time_updated); ?>
 	  </center>
 	</body>

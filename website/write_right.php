@@ -33,7 +33,15 @@
 		print("		<td align=center valign=top>\n");
 //		print("                       <br><font color=white><b>Solar<br>Monitor</b></font><br>\n");
 		print("			<br><b><a class=mail4 href=\"./index.php\">Home</a></b><br>\n");
-		print("			<a class=mail href=\"./forecast.php?date=$date\">Forecast</a><br>\n");
+		
+	 if (strtotime($date) >= strtotime("20150831"))
+	                          {   
+				       print("     			 <a class=mail href=\"./forecast.php?date=$date\">Flare Prediction System</a><br>\n");
+                                   } else
+	                          {   
+                                       print("                         <a class=mail href=\"./forecast_no_fps.php?date=$date\">Flare Forecast</a><br>\n");
+
+	                           }			
 		print("			<a class=mail href=\"./search.php?date=$date\">Search</a><br>\n");
 		print("         <a class=mail href=\"./news.php\">News</a><br>\n");
 		print("         <a class=mail href=\"./credits.php\">Credits</a><br><br>\n");

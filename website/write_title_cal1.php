@@ -13,7 +13,7 @@
 			this_page -- the php file currently being displayed
 			type -- optional paramter, this allows the nav links to point to the same type of page (eit_fd, region_###, etc)
 			width -- allows the width to be changed, optional.  this is used in the pop up window php files
-		Output:
+		Output
 			none
 	
 	Author(s):
@@ -26,9 +26,10 @@
 	
 	function write_title_cal1($date, $title, $this_page, $indexnum, $type=NULL, $width=780, $region=NULL)
 	{
-	  include("globals.php");
+	  	include("globals.php");
 		$current_date = gmdate("Ymd");
 		//	send the INDEXNUM so it goes back to the correct 6 image panel
+
 		if (isset($indexnum))
 			$indexnum_str="&indexnum=$indexnum";
 		else
@@ -68,6 +69,26 @@
 		$next_day=date("Ymd",strtotime("+1 day", strtotime($date)));
 		$next_week=date("Ymd",strtotime("+7 day", strtotime($date)));
 		$next_rot=date("Ymd",strtotime("+27 day", strtotime($date)));
+
+
+		// The following switches between the old and new flare probability page.
+		// 
+
+		$next_page = $this_page;
+		if (isset($_SERVER['HTTP_REFERER'])) { $previous = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH); }
+
+		if ($this_page == 'forecast.php' && strtotime($date) <= strtotime("20150830")){
+				$this_page = 'forecast_no_fps.php';
+				$next_page = 'forecast.php';
+			}	
+		if ($this_page == 'forecast_no_fps.php' && strtotime($date) == strtotime("20150829")){
+			$next_page = 'forecast.php';
+		}	
+		if ($this_page == 'forecast_no_fps.php' && strtotime($date) >= strtotime("20150829") && $previous=='/forecast_no_fps.php')
+				$this_page = 'forecast.php';
+
+
+
 		
 		$human_readable_date = date("Ymd", strtotime($date));		
 		//	Open the table up		
@@ -86,7 +107,7 @@
 
 		$datecolor = (strtotime($date) > strtotime($current_date))?"red":"white";
 	
-	print("		<font size=3 color=\"$datecolor\"><b><input type=\"text\" size=\"11\" name=\"date\" value=\"Date Search $date\" class=\"cal_box\" onchange=\"this.calendar.submit();\" > \n");
+		print("		<font size=3 color=\"$datecolor\"><b><input type=\"text\" size=\"11\" name=\"date\" value=\"Date Search $date\" class=\"cal_box\" onchange=\"this.calendar.submit();\" > \n");
 	    print("		<script language=\"JavaScript\">\n");
 	    print("		new tcal ({\n");
         print("				// form name\n");
@@ -139,7 +160,7 @@
 		//print("		<td bgcolor=gray valign=middle align=right><font color=#FFFFFF>\n");
 		print("			<a class=mail3 href =\"./$this_page?date=${next_rot}${type_str}${region_str}${indexnum_str}\" title=\"+27 days\"><i>Rotation</i></a><font size=2>&rArr;</font>\n");
 		print("			<a class=mail3 href =\"./$this_page?date=${next_week}${type_str}${region_str}${indexnum_str}\" title=\"+7 days\"><i>Week</i></a><font size=2>&rArr;</font>\n");    
-		print("			<a class=mail3 href =\"./$this_page?date=${next_day}${type_str}${region_str}${indexnum_str}\" title=\"+1 day\" accesskey=\".\"><i>$next_day</i></a><font size=2>&rArr;</font>\n");  
+		print("			<a class=mail3 href =\"./$next_page?date=${next_day}${type_str}${region_str}${indexnum_str}\" title=\"+1 day\" accesskey=\".\"><i>$next_day</i></a><font size=2>&rArr;</font>\n");  
 		print("		</b></font></td>\n");
 		//print("		</td>\n");
 		print("	</tr>\n");
