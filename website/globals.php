@@ -177,22 +177,6 @@ $themes = array(
 		"clasic" => "./common_files/css/clasic.css");
 
 
-$next_page = $this_page;
-if (isset($_SERVER['HTTP_REFERER'])) { $previous = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH); }
-
-if ($this_page == 'forecast.php' && strtotime($date) <= strtotime("20150830")){
-		$this_page = 'forecast_no_fps.php';
-		$next_page = 'forecast.php';
-	}	
-
-if ($this_page == 'forecast_no_fps.php' && strtotime($date) == strtotime("20150829")){
-	$next_page = 'forecast.php';
-}	
-
-if ($this_page == 'forecast_no_fps.php' && strtotime($date) >= strtotime("20150829") && $previous=='/forecast_no_fps.php')
-		$this_page = 'forecast.php';
-
-echo $this_page;
 
 //print "<br> end globals <br>";
 ?>

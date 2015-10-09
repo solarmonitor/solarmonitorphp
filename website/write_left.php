@@ -182,9 +182,8 @@
 				print("                         <a class=mail href=\"./forecast.php?date=$date\">Flare Prediction System</a><br>\n");
 			  } else
 			 {   
-			        print("                         <a class=mail href=\"./forecast_no_fps.php?date=$date\">Flare Forecast</a><br>\n");
-
-	                  } 
+			    print("                         <a class=mail href=\"./forecast_no_fps.php?date=$date\">Flare Forecast</a><br>\n");
+	         } 
 		
 		print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
 		print("			   </div>\n");

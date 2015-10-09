@@ -84,8 +84,7 @@
 		if ($this_page == 'forecast_no_fps.php' && strtotime($date) == strtotime("20150829")){
 			$next_page = 'forecast.php';
 		}	
-		if ($this_page == 'forecast_no_fps.php' && strtotime($date) >= strtotime("20150829") && $previous=='/forecast_no_fps.php')
-				$this_page = 'forecast.php';
+		if ($this_page == 'forecast_no_fps.php' && strtotime($date) >= strtotime("20150829") && $previous=='/forecast_no_fps.php') {$this_page = 'forecast.php';}
 
 
 
