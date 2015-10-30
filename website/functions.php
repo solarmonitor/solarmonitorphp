@@ -38,8 +38,16 @@ function link_image($file, $size, $map)
 		}
 		//	if the desired file is found, return an html taged string linking to that image
 		//	otherwise return one linking to the placeholder.
-		if (file_exists($file))
-			$output = "<img src=\"$file\" width=$size heigth=$size border=0 $map_str $zoomjs>";
+		if (file_exists($file)) {
+//			$stamp = imagecreatetruecolor(200 , 200) ;
+//			$orig_im = imagecreatefrompng($file) ;
+//			imagecopyresampled($stamp , $orig_im , 0 , 0 , 0 , 0 , 200) ;
+
+//			$src = imagecreatefrompng("Sure.png") ;
+//			imagecopy($stamp , $src , 0 , 0 , 0 , 0 , 200 , 200) ;
+//			imagepng($stamp) ;
+			$output = "<img src=$file width=$size heigth=$size border=0 $map_str $zoomjs>";
+		}
 		else
 			$output = "<img src=\"./common_files/placeholder_${size}\" width=$size heigth=$size border=0 $map_str $zoomjs>";
 			
@@ -104,8 +112,19 @@ function link_image($file, $size, $map)
 						{
 							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
 						}
+						elseif (($fd_ar_type == "pr") && ($fd_ar == "pr"))
+						{
+							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);
+						}
 						//	if it is an ar and we want an ar parse the rest of the filename
 						elseif (($fd_ar_type == "ar") && ($fd_ar == "ar"))
+						{
+							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
+							//	go to next file if we dont get the region number we want
+							if ($file_region != $region_number)
+								continue;
+						}
+						elseif (($fd_ar_type == "ap") && ($fd_ar == "ap"))
 						{
 							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
 							//	go to next file if we dont get the region number we want
@@ -117,10 +136,12 @@ function link_image($file, $size, $map)
 						{
 							continue;
 						}
+
 						
 						//	if the instrument or filter dont match, move on.  this may need fixing after gsxi is correct
 						// added that the rest need to equal to 'png' in order to continue! so no conflict with jpg thumbnails!
 						//						print($dir." ".$extension."  ".$rest." <br>");
+
 
 						if (($instrument != $file_instrument) || ($filter != $file_filter) || ($rest != $extension)) //&& (($rest != "png") || ($rest != "fts.gz")))
 							continue;
@@ -131,8 +152,9 @@ function link_image($file, $size, $map)
 						$hh = substr($file_time,0,2);
 						$mm = substr($file_time,2,2);
 						$ss = substr($file_time,4,2);
-
+						
 						//	compare the times
+
 						if($latest_time <= strtotime("$file_date $hh:$mm:$ss"))
 						{
 							$latest_time = strtotime("$file_date $hh:$mm:$ss");
@@ -493,5 +515,94 @@ function link_image($file, $size, $map)
 		print("</script>\n");
 
 
+	}
+
+	/*
+	Function:
+		order_events
+	
+	Purpose:
+		orders events such that yesterdays events are after todays events on list	
+	Parameters:		
+		Input:
+			events - an array of event times and classes
+		Output:
+			output -- modified event array 
+	
+	Author(s):
+		Michael Tierney -- tiernemi@tcd.ie
+	
+	History:
+		05/08/2014 -- Wrote function
+	*/
+	function order_events($events)
+	{
+		$ev_str = '' ;
+		$y = 0 ;
+		if($events[0] != '-')
+		{
+			$events_arr = split('[ ]' , $events) ;
+	
+			for ($i = 0 ; $i < count($events_arr) ; ++$i)
+			{
+				if ($events_arr[$i] == "/")	
+				{
+					$y = 1 ;
+				}
+				else
+				{
+					$url[] = $events_arr[$i];
+					$data[] = $events_arr[$i+1];
+					list($size,$time) = split('[(]', $events_arr[$i+1] , 2);
+					if ($y == 1) 
+					{
+						$ev_time[] = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
+						$time_inst = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
+						$col = "#58ACFA";
+						$data[count($data)-1] = "<font color=\"black\">- / </font>" . $data[count($data)-1] ;
+					}
+					else
+					{
+						$ev_time[] = (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
+						$time_inst =  (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
+						$col = "#0000FF" ;
+						$data[count($data)-1] = $data[count($data)-1] . "<font color=\"black\"> / -</font>" ;
+					}
+					$url_inst = $events_arr[$i] ;
+					$data_inst = $data[count($data)-1] ;
+					$col_ar[] = $col ;
+					// Orders from latest to earliest
+					for ($j = count($data) - 1 ; $j > 0 ; --$j)
+					{
+							if ($ev_time[$j] > $ev_time[$j-1])
+							{
+								$ev_time[$j] = $ev_time[$j-1] ;
+								$ev_time[$j-1] = $time_inst ;
+								$url[$j] = $url[$j-1] ;
+								$url[$j-1] = $url_inst ;
+								$data[$j] = $data[$j-1] ;
+								$data[$j-1] = $data_inst ;
+								$col_ar[$j] = $col_ar[$j-1] ;
+								$col_ar[$j-1] = $col ;			
+							}
+							else
+							{
+								continue ;
+							}
+					}
+					$y = 0 ;
+					++$i ;
+				}
+			}
+			for ($i = 0 ; $i < count($data) ; ++$i) 
+			{
+				$ev_str = $ev_str . "<a class=mail2 style=\"color:$col_ar[$i];\"  href=javascript:OpenLastEvents(\"$url[$i]\")>$data[$i]</a><br>" ;
+			}
+		}		
+		else
+		{
+			$ev_str = "-" ;
+		}
+		return $ev_str ;
 	}
 ?>
