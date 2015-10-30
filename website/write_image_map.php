@@ -27,12 +27,12 @@
 		2004/07/15 (RH) -- written
 	*/
 	
-	function write_image_map($date, $type)
+	function write_image_map($date, $type, $mode='norm')
 	{
 		include ("globals.php");
 		
 		//	start the map out
-		print("			<map name=\"fulldiskmap\">\n");
+		print("	<map name=\"fulldiskmap\">\n");
 		
 		//	check for the existence of the file, if it is not there, do nothing
 		$instrument = substr($type,0,4);
@@ -50,7 +50,10 @@
 				//	a possible newline character at the end of the region variable screws up the javascript
 				//	so all whitespace must be trimmed
 				$region=trim($region);
-				print("				<area shape=\"circle\" coords=\"$coor1,$coor2,35\" href=JavaScript:RegionZoom(\"./region_pop.php?date=$date&type=$type&region=$region\")>\n");
+				if ($mode != 'prob')
+					print("	<area shape=\"circle\" coords=\"$coor1,$coor2,35\" href=JavaScript:RegionZoom(\"./region_pop.php?date=$date&type=$type&region=$region\")>\n");
+				else
+					print("	<area shape=\"circle\" coords=\"$coor1,$coor2,35\" href=JavaScript:RegionZoom(\"./region_pop_prob.php?date=$date&type=$type&region=$region\")>\n");
 			}
 		}
 		

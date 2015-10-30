@@ -11,7 +11,7 @@ $error = 0;
 		}
 
 include ("globals.php");
-include("write_new_ar_table.php");
+include("write_ar_table.php");
 $file = "${arm_data_path}data/" . $dirdate . "/meta/arm_ar_summary_" . $date . ".txt";
 if (file_exists($file))
   {
