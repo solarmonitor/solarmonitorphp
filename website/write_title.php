@@ -84,7 +84,10 @@
 			//$human_readable_date_line = "$human_readable_date";
 		//	Write out and close the rest of the table
 		
-		
+		if ($this_page == 'forecast.php'){ //&& $this_page == 'forecast.php'){strtotime($date) <= strtotime("20150831")
+			$this_page = "forecast_no_fps.php";
+		}
+		echo $this_page;
 		
 		//print("			$title\n");
 		print("		</font></td>\n	");

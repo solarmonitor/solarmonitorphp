@@ -59,12 +59,13 @@
 					//	if a / is encounted, print the /.  otherwise, print a hyperlink to the event url
 					if ($line[0] == "/")
 					{
-						print("/");
+						$col = "#58ACFA";
 					}
 					else
 					{
 						list($url, $data) = split('[ ]', $line, 2);
-						print("<a class=mail2 href=javascript:OpenLastEvents(\"$url\")>$data</a>");
+						print("<a class=mail2 style=\"color:$col ;\" href=javascript:OpenLastEvents(\"$url\")>$data</a>");
+						$col = "#0000FF";
 					}	
 				}
 			}
@@ -95,7 +96,7 @@
 			$time1 = "some time";
 			$time2 = "some time";
 		}
-		print("				<p><i><b>Note:</b></i> The tabulated data are based on the most recent NOAA/USAF Active Region Summary issued on $time1, the values to the right of the forward slashes representing yesterdays values or events. Regions with no data in above property fields have decayed and exhibit no spots.	The region positions are valid on $time2.\n");
+		print("				<p><i><b>Note:</b></i> The tabulated data are based on the most recent NOAA/USAF Active Region Summary issued on $time1. The greyed out and light-blue entries are values from the previous day. Slashed cells indicate that the active region has no spots. The latest positions of the active regions are given in both heliographic and heliocentric co-ordinates. The region positions are valid on $time2 .\n");
 		print("				</font></td>\n");
 		print("			</tr>\n");
 		print("		</table>\n");

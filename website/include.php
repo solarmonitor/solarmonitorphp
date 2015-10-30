@@ -16,7 +16,7 @@
 	*/
 
 // check for mobile browser
-        include("mobile_redirect.php");
+    include("mobile_redirect.php");
 
     //  this section of code determines the current file being loaded, this is useful for the title
 	//  area because you want the previous and next navigation links to take you to the current
@@ -26,17 +26,22 @@
 	//print("$this_page_t $temp1 $temp2 $this_page\n");
 	$location = strrpos($this_page_t, "/");
 	$this_page = substr($this_page_t, $location + 1);
+
+
 	include ("functions.php");
-	include ("write_jscript.php");
-									
+	include ("write_jscript.php");								
 	
 	//	include all the fuctions
-	include ("write_ar_table.php");
-        include ("write_smart_table.php");
-        include ("write_new_ar_table.php");
+
+	include ("write_forecast_paragraph.php");
+    include ("write_smart_table.php");
+    include ("write_ar_table.php");
+	include ("write_flare_prob_img.php") ;
 	include ("write_charm_table.php");
 	include ("write_title.php");
 	include ("write_title_cal1.php");
+	include ("write_pr_table.php") ;
+	include ("write_pr_table_entry.php") ;
 	include ("write_title_clean.php");
 	include ("write_bottom.php");
 	include ("write_left.php");
@@ -58,13 +63,13 @@
 		include ("write_index_body_slider.php");
 		include ("write_index_images.php");
 		include ("write_index_regions.php");
-//		include ("write_index_images_div.php");
+	//		include ("write_index_images_div.php");
     include ("write_events.php");
 	include ("write_image_map.php");
 	include ("write_region_body.php");
 	
 	//	include the generic functions and arrays that may be needed by anything
-//removed comment on following line
+	//removed comment on following line
 	include_once ("globals.php");
 	include ("bakeout.php");
 	include ("scrape_functions.php");
@@ -110,6 +115,9 @@
 		$time_updated = "Not Updated";
 	}
 	
+	// The following switches between the old and new flare probability page.
+	// 
+
 	//$eit_bakeout = true;//in_bakeout($date);
 	
 ?>

@@ -94,7 +94,7 @@
 		}
 		
 		//	if called from a full disk or regional display, write the code for the regional pop-ups
-		if (($this_page == "full_disk.php")||(isset($_GET['region'])))
+		if (($this_page == "full_disk.php")||(isset($_GET['region']))||($this_page == "forecast.php"))
 		{
 			print("		function RegionZoom( url )\n");
 			print("		{\n");
