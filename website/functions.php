@@ -594,21 +594,6 @@ function link_image($file, $size, $map)
 						$ev_time[] = (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
 						$time_inst =  (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
 						$col = "#0000FF" ;
-						if ($i == 0)
-						{
-							switch ($y_events){
-							case 0:
-							{
-							$data[count($data)-1] =  $data[count($data)-1] ;
-							break;
-							}
-							case 1:
-							{
-							$data[count($data)-1] =  $data[count($data)-1]."<font color=\"black\"> / -  </font>" ;
-							break;
-							}
-							}
-						}
 					}						
 
 					$url_inst = $events_arr[$i] ;
@@ -633,10 +618,14 @@ function link_image($file, $size, $map)
 								continue ;
 							}
 					}
-					$y_events=0;
 					++$i ;
 				}
 			}
+			if ($y_events != 1)	
+			{	
+			$data[$n_events-2] = $data[count($data)-1]."<font color=\"black\"> / - </font>" ;
+			}
+			
 			for ($i = 0 ; $i < count($data) ; ++$i) 
 			{
 				$ev_str = $ev_str . "<a class=mail2 style=\"color:$col_ar[$i];\"  href=javascript:OpenLastEvents(\"$url[$i]\")>$data[$i]</a><br>" ;
