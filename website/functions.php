@@ -539,11 +539,12 @@ function link_image($file, $size, $map)
 	{
 		$ev_str = '' ;
 		$y = 0 ;
+
 		if($events[0] != '-')
 		{
 			$events_arr = split('[ ]' , $events) ;
-	
-			for ($i = 0 ; $i < count($events_arr) ; ++$i)
+
+					for ($i = 0 ; $i < count($events_arr) ; ++$i)
 			{
 				if ($events_arr[$i] == "/")	
 				{
@@ -554,20 +555,21 @@ function link_image($file, $size, $map)
 					$url[] = $events_arr[$i];
 					$data[] = $events_arr[$i+1];
 					list($size,$time) = split('[(]', $events_arr[$i+1] , 2);
+			
 					if ($y == 1) 
-					{
+					{ 
+		
 						$ev_time[] = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
 						$time_inst = (strtotime(substr($time,0,5)) - strtotime("00:00"))/60. - 1440 ;  //time in minutes from midnight.
 						$col = "#58ACFA";
-						$data[count($data)-1] = "<font color=\"black\">- / </font>" . $data[count($data)-1] ;
 					}
 					else
 					{
 						$ev_time[] = (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
 						$time_inst =  (strtotime(substr($time,0,5)) -strtotime("00:00"))/60.;  //time in minutes from midnight.
 						$col = "#0000FF" ;
-						$data[count($data)-1] = $data[count($data)-1] . "<font color=\"black\"> / -</font>" ;
 					}
+
 					$url_inst = $events_arr[$i] ;
 					$data_inst = $data[count($data)-1] ;
 					$col_ar[] = $col ;
@@ -590,7 +592,6 @@ function link_image($file, $size, $map)
 								continue ;
 							}
 					}
-					$y = 0 ;
 					++$i ;
 				}
 			}
@@ -599,6 +600,7 @@ function link_image($file, $size, $map)
 				$ev_str = $ev_str . "<a class=mail2 style=\"color:$col_ar[$i];\"  href=javascript:OpenLastEvents(\"$url[$i]\")>$data[$i]</a><br>" ;
 			}
 		}		
+
 		else
 		{
 			$ev_str = "-" ;
