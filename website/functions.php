@@ -623,7 +623,7 @@ function link_image($file, $size, $map)
 			}
 			if ($y_events != 1)	
 			{	
-			$data[$n_events-2] = $data[count($data)-1]."<font color=\"black\"> / - </font>" ;
+			$data[count($data)-1] = $data[count($data)-1]."<font color=\"black\"> / - </font>" ;
 			}
 			
 			for ($i = 0 ; $i < count($data) ; ++$i) 
