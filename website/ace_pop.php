@@ -34,7 +34,7 @@
 		}
 		else if ($date == $curr_date)
 		{
-			$url = "http://www.swpc.noaa.gov/ace/Swepam_3d.gif";
+			$url = "http://services.swpc.noaa.gov/images/ace-swepam-3-day.gif";
 		}
 		else
 		{
@@ -50,7 +50,7 @@
 		}
 		else if ($date == $curr_date)
 		{
-			$url = "http://www.swpc.noaa.gov/ace/Mag_3d.gif";
+			$url = "http://services.swpc.noaa.gov/images/ace-mag-3-day.gif";
 		}
 		else
 		{
