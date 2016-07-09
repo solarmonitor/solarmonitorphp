@@ -35,10 +35,9 @@ For information on our new SolarMonitor IDL Data Object (SOLMON), check out the 
 This web system is maintained and developed by a team of researchers in the School of Physics, Trinity College Dublin.<br>
 
 <ul>
-  <li>Peter T. Gallagher</a> (PI)
-  <li>David P&eacute;rez-Su&aacute;rez
+  <li>Peter T. Gallagher (PI)
   <li>Eoin Carley
-  <li>Aoife McCluskey
+  <li>Aoife McCloskey
 </ul>
 
 <b>SolarMonitor Smart Phone Team</b>
@@ -52,6 +51,7 @@ This web system is maintained and developed by a team of researchers in the Scho
 <b>SolarMonitor Alumni</b>
 
 <ul>
+  <li>David P&eacute;rez-Su&aacute;rez
   <li>D. Shaun Bloomfield
   <li>R. T. James McAteer
   <li>Amy Holden (Summer Intern 2013)
