@@ -1,14 +1,14 @@
 This repository contains the php, js, and other files used for SolarMonitor.org
 
 <b>Welcome</b><br>
-Welcome to the SolarMonitor ReadMe! You'll find here the documentation on the website architecture and hosting specifics. The SolarMonitor website and archive is currently hosted on a Virtual Machine (VM) at the Dublin institute for Advanced Studies (DIAS).
+Welcome to the SolarMonitor ReadMe! You'll find here the documentation on the website architecture and hosting specifics. The SolarMonitor website and archive is currently hosted on a virtual machine (VM) at the Dublin institute for Advanced Studies (DIAS). The contact point for any issues regarding this machine is Jean Francois Bucas at jef@dias.ie
 
 <b>Work with git to improve/test SolarMonitor</b><br>
-Firstly, you need to fork the main Solar Monitor repository on Github. This creates your own personal repository that you can edit and experiment with. To do so, you need to clone your fork by opening a terminal on your local machine and entering:
+Firstly, you need to 'fork' the main Solar Monitor repository on Github - this is done in the internet browser. This creates your own personal repository that you can edit and experiment with. At the moment your fork exists online, but you probably want bring it to your local machine. To do so, you need to 'clone' your fork by opening a terminal on your local machine and entering:
 
 $ git clone https://github.com/yourname/solarmonitorphp.git
 
-You will then have the latest copy of SM PHP code on your local machine. You can edit files, use 'git add' and 'git commit' to commit changes, and 'git push' to push them back to Github. The 'git push' will be sent to YOUR remote repository (you can check your remotes via git remote -v, there should at least be an 'origin' remote, which is your fork on Github).
+You will then have the latest copy of SM PHP code on your local machine. You can edit files, use 'git add' and 'git commit' to commit changes, and 'git push' to push them back to your fork on Github. The 'git push' will be sent to YOUR remote repository (you can check your remotes via git remote -v, there should at least be an 'origin' remote, which is your fork on Github).
 
 Your new/updated code is now on your fork on Github. Standard procedure at this stage is to create a pull request into the main solarmonitor repository (you're sending the changes 'upstream' in git jargon). Once/if the pull request is approved, the upstream repository, your fork online and locally will all be the same. From here, everyone on the project can do a git pull of the upstream version, so we're all at the same point.
 
