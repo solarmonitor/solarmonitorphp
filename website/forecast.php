@@ -29,12 +29,24 @@
 							</tr>
 							<tr valign=top>
 								<td class=noaacol align=center valign=middle colspan=5><font color=white>
+									<br />
 									<b>Region Flare Probabilities (%)</b>
 								</font></td>
 							</tr>
 							<tr>
 								<? write_pr_table() ; ?>
 							</tr>
+							
+							<tr valign=top>
+								<td class=noaacol align=center valign=middle colspan=5><font color=white>
+									<br />
+									<b>2-Day Region History</b>
+								</font></td>
+							</tr>
+							
+							<tr>
+								<? write_flarehist_table() ; ?>
+							</tr>	
 							<tr>
 								<? write_forecast_paragraph() ; ?>
 							</tr>

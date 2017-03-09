@@ -41,7 +41,9 @@
 	include ("write_title.php");
 	include ("write_title_cal1.php");
 	include ("write_pr_table.php") ;
+	include ("write_flarehist_table.php") ;
 	include ("write_pr_table_entry.php") ;
+	include ("write_reghist_entry.php") ;
 	include ("write_title_clean.php");
 	include ("write_bottom.php");
 	include ("write_left.php");

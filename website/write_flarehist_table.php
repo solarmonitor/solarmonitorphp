@@ -1,6 +1,6 @@
 <?
 /*...............................................*/
-// FUNCTION : write_pr_table()
+// FUNCTION : write_flarehist_table()
 // AUTHOR : Michael Tierney 
 // DATE : 31/07/2014
 // PURPOSE : Writes the flare probability table
@@ -8,9 +8,9 @@
 
 
 
-	function write_pr_table()
+	function write_flarehist_table()
 	{
-		include ("globals.php") ;
+		include ("globals.php");
 		
 		print("						<td valign=middle height=1%><table rules=rows cellpadding=1 cellspacing=0 border=0 width=100% height=1%><tr>\n") ;
 		print("						<th class=noaacol align=center><font color=white size=-1>\n") ;
@@ -31,7 +31,7 @@
 		print("						</tr>\n") ;
 		print("					<tr>\n") ;
 						  
-		$file = "${arm_data_path}data/$dirdate/meta/arm_forecast_" . $date . ".txt";
+		$file = "${arm_data_path}data/$dirdate/meta/ar_history_" . $date . ".txt";
 		echo '<script>myfunction()</script>';				
 		if (file_exists($file))
 		{
@@ -72,10 +72,10 @@
 				   	$m_prob_data[$i] = $m_probs  ;
 					$x_prob_data[$i] = $x_probs  ;
 				  	$reg_data[$i] = $region  ;
+					$mcintosh = explode("/",$mcintosh);
 				   	$mc_class_data[$i] = $mcintosh  ;
 					++$i ;
 				}
-				
 				
 				// Builds tables and writes data in using write_pr_table_entry($mode , $data) 
 										
@@ -84,54 +84,52 @@
 				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
 				print("								<i><b><br> </b></i>\n") ;
 				print("							</font></th>\n") ;
-				write_pr_table_entry("reg" , $reg_data) ;
+				write_reghist_entry("reg" , $reg_data) ;
 				print("							</table>\n") ;
 				print("						</td>\n") ;
 				print("						<td>\n") ;
-				print("							<table rules=rows cellpadding=1 cellspacing=0 border=0 width=100%>\n") ;
-				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
-				print("								<i><b><br> </b></i>\n") ;
+				print("							<table rules=all cellpadding=1 cellspacing=0 border=0 width=100%>\n") ;
+			
 				print("								</font></th>\n") ;
-				write_pr_table_entry("mc" , $mc_class_data) ; 
+				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
+				print("									<i><b>Day -1</b></i>\n") ;
+				print("								<th class=noaacol align=center><font color=white size=-1>\n") ;
+				print("									<i><b>Day 0</b></i>\n") ;
+				print("									</font></div></th>\n") ;
+					
+				write_reghist_entry("mc" , $mc_class_data) ; 
 				print("							</table>\n") ;
 				print("						</td>\n") ;
 				print("						<td>\n") ;
 				print("							<table rules=all cellpadding=1 cellspacing=0 border=0 >\n") ;
-				print("								<th class=noaacol align=center><div onmouseover=\"title='McIntosh Evolution Forecast Model'\"><font color=lime size=-1>\n") ;
-				print("									<i><b>MCEVOL</b></i>\n") ;
-				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=lime size=-1>\n") ;
-				print("									<i><b>MCSTAT</b></i>\n") ;
-				print("									</font></div></th>\n") ;
 				print("								<th class=noaacol align=center><font color=lime size=-1>\n") ;
-				print("								<i><b>NOAA </b></i>\n") ;
-				print("								</font></th>\n") ;
-				write_pr_table_entry("pr" , $c_prob_data) ;
+				print("									<i><b>Day -1</b></i>\n") ;
+				print("								<th class=noaacol align=center><font color=lime size=-1>\n") ;
+				print("									<i><b>Day 0</b></i>\n") ;
+				print("									</font></div></th>\n") ;
+				write_reghist_entry("pr" , $c_prob_data) ;
 				print("							</table>\n") ;
 				print("						</td>\n") ;
 				print("						<td>\n") ;
 				print("							<table rules=all cellpadding=1 cellspacing=0 border=0>\n") ;
-				print("								<th class=noaacol align=center><div onmouseover=\"title='Evolution Model\"><font color=#3399ff size=-1>\n") ;
-				print("									<i><b>MCEVOL</b></i>\n") ;
-				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=#3399ff size=-1>\n") ;
-				print("									<i><b>MCSTAT</b></i>\n") ;
-				print("									</font></div></th>\n") ;
 				print("								<th class=noaacol align=center><font color=#3399ff size=-1>\n") ;
-				print("								<i><b>NOAA </b></i>\n") ;
-				print("								</font></th>\n") ;
-				write_pr_table_entry("pr" , $m_prob_data) ;
+				print("									<i><b>Day -1</b></i>\n") ;
+				print("								<th class=noaacol align=center><font color=#3399ff size=-1>\n") ;
+				print("									<i><b>Day 0</b></i>\n") ;
+				print("									</font></div></th>\n") ;
+				
+				write_reghist_entry("pr" , $m_prob_data) ;
 				print("							</table>\n") ;
 				print("						</td>\n") ;
 				print("						<td>\n") ;
 				print("							<table rules=all cellpadding=1 cellspacing=0 border=0>\n") ;
-				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=#ff0000 size=-1>\n") ;
-				print("									<i><b>MCSTAT</b></i>\n") ;
-				print("								<th class=noaacol align=center><div onmouseover=\"title='Solar Monitors Flare Prediction System'\"><font color=#ff0000 size=-1>\n") ;
-				print("									<i><b>MCEVOL</b></i>\n") ;
-				print("									</font></div></th>\n") ;
 				print("								<th class=noaacol align=center><font color=#ff0000 size=-1>\n") ;
-				print("								<i><b>NOAA </b></i>\n") ;
-				print("								</font></th>\n") ;
-				write_pr_table_entry("pr" , $x_prob_data) ;
+				print("									<i><b>Day -1</b></i>\n") ;
+				print("								<th class=noaacol align=center><font color=#ff0000 size=-1>\n") ;
+				print("									<i><b>Day 0</b></i>\n") ;
+				print("									</font></div></th>\n") ;
+			
+				write_reghist_entry("pr" , $x_prob_data) ;
 				print("							</table>\n") ;
 				print("						</td>\n") ;
 				print("				</tr>\n") ;

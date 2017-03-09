@@ -1,14 +1,14 @@
 <?
 /*...............................................*/
-// FUNCTION : write_pr_table_entry($type , $data)
-// AUTHOR : Michael Tierney 
-// DATE : 31/07/2014
+// FUNCTION : write_reghist_entry($type , $data)
+// AUTHOR : Aoife McCloskey 
+// DATE : 08/003/2017
 // ARGS : $type = String telling function what style its supposed to use
 //		  $data = array containing the data to be shown on the table 
-// PURPOSE : Writes sub-tables within the flare probability table
+// PURPOSE : Writes sub-tables within the flare history table
 /*...............................................*/
 
-	function write_pr_table_entry($type , $data)
+	function write_reghist_entry($type , $data)
 	{
 		include ("globals.php") ;
 		for ($i = 0 ; $i < count($data) ; ++$i)
@@ -16,18 +16,15 @@
 			print("							<tr>\n");
 			if ($type == "pr") 
 			{
-					$EVOL_prob = $data[$i][0] ;
-					$SM_prob = $data[$i][1] ;
-					$NOAA_prob = $data[$i][2] ;
+					$flare_today = $data[$i][0] ;
+					$flare_yest = $data[$i][1] ;
 					print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n") ;
-					print("									$EVOL_prob\n");
+					print("									$flare_today\n");
 					print("								</td>\n");
 					print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n") ;
-					print("									$SM_prob\n");
+					print("									$flare_yest\n");
 					print("								</td>\n");
-					print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n") ;
-					print("									$NOAA_prob\n");
-					print("								</td>\n");
+
 			}
 			else if ($type == "reg")
 			{
@@ -37,8 +34,13 @@
 			}
 			else
 			{
+				$mcint_today = $data[$i][1] ;
+				$mcint_yest = $data[$i][0] ;
 				print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n") ;
-				print("									$data[$i]\n");
+				print("									$mcint_today\n");
+				print("								</td>\n");
+				print("								<td align=center valign=top bgcolor=#f0f0f0><font size=-1>\n") ;
+				print("									$mcint_yest\n");
 				print("								</td>\n");
 			}
 		print("							</tr>\n") ;
