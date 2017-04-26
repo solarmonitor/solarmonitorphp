@@ -58,7 +58,7 @@
 		print("	 </td>\n");
 		print("  <td align=\"right\">\n");
 		print("<a href=\"http://www.dias.ie//\"><img src=\"./common_files/images/logos/dias_logo.jpg\" align=right border=0 height=40></a>\n");
-		print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide_small.jpg\" align=right border=0 height=40></a>\n");
+		print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide_small-new.jpg\" align=right border=0 height=40></a>\n");
 		//print("<a href=\"http://www.esa.eu/\"><img src=\"./common_files/images/logos/esa_small.jpg\" align=right border=0 height=70></a>\n");
 		//print("<a href=\"http://www.nasa.gov/goddard/\"><img src=\"./common_files/nasalogo.png\" align=right border=0 height=70></a>\n");
 		//print("<a href=\"http://cordis.europa.eu/fp7/\"><img src=\"./common_files/FP7_Capacities_logo.jpg\" align=right border=0 height=70></a>\n");
