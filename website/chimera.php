@@ -74,7 +74,7 @@
 			<? write_new_ch_table($date) ?>
 			
 			<p>
-			<? write_events($date); ?>
+			<? write_ch_events($date); ?>
 			<p>
 			<hr size=2>
 	<? write_footer_new($time_updated); ?>

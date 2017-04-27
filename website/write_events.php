@@ -101,4 +101,32 @@
 		print("			</tr>\n");
 		print("		</table>\n");
 	}
+
+function write_ch_events($date)
+	{
+		include ("globals.php");
+		
+		//	start the display
+		print("<table width=780>\n");
+		print("	<tr>\n");
+		print("		<td align=\"left\"><font size=\"-1\">\n");
+
+		$file = "${arm_data_path}data/" . $dirdate . "/meta/arm_ar_summary_issue_time_" . $date . ".txt";	
+		
+		if (file_exists($file))
+		{
+			$times = file($file);
+			$time1 = $times[0];
+			$time2 = $times[1];
+		}
+		else
+		{	
+			$time1 = "some time";
+			$time2 = "some time";
+		}
+		print("				<p><i><b>Note:</b></i> Solar Monitor's coronal hole segmentations are performed by CHIMERA (details of which can be found in Garton et al....). An extensive copy of coronal hole properties are available at ..... The latest positions of the coronal holes are given in heliocentric co-ordinates. The region positions are valid on $time2 .\n");
+		print("				</font></td>\n");
+		print("			</tr>\n");
+		print("		</table>\n");
+	}
 ?>
