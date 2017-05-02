@@ -124,7 +124,7 @@ function write_ch_events($date)
 			$time1 = "some time";
 			$time2 = "some time";
 		}
-		print("				<p><i><b>Note:</b></i> Solar Monitor's coronal hole segmentations are performed by CHIMERA (details of which can be found in Garton et al....). An extensive copy of coronal hole properties are available at ..... The latest positions of the coronal holes are given in heliocentric co-ordinates. The region positions are valid on $time2 .\n");
+		print("				<p><i><b>Note:</b></i> Solar Monitor's coronal hole segmentations are performed by CHIMERA, a copy of which is available at: github.com/solarmonitor/solarmonitoridl/idl. An extensive copy of coronal hole properties are available at: solarmonitor.org/data. The latest positions of the coronal holes are given in heliocentric co-ordinates. The region positions are valid on $time2 .\n");
 		print("				</font></td>\n");
 		print("			</tr>\n");
 		print("		</table>\n");
