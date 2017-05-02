@@ -325,16 +325,15 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 			print("<div class=noaat>\n");		
 			print("<table class='frame' rules=rows width=700 align=center cellpadding=0 cellspacing=0 frame=hsides>\n");
 			print("	  <tr align=center class=noaatit>\n");
-			print("         <td colspan=6> Today's/<font color=grey>Yesterday's</font> Coronal Hole Regions </td>\n");
+			print("         <td colspan=6> Today's Coronal Hole Properties </td>\n");
 			print("   </tr>\n");
 			print("   <tr align=center class=noaacolumns>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new coronal hole by CHIMERA.'\">Coronal Hole Number</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The centroids are given in x-y arcseconds (latitude and longitude) and heliocentric (arcseconds from Sun centre).'\">Centroid <br> [arcseconds]</a></div></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The Hale class describes the magnetic complexity of an active region'\">Longitudinal <br> Extent</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The McIntosh class describes the complexity of the sunspot group'\">Area <br> [Mm^2]</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The area in millionths of the solar disk area.'\"> Magnetic Field <br> [Gauss]</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='Number of the Spots that form the active region'\">Magnetic Flux <br> [Maxwells]</div></i></td>\n");
-			//print("         <td class=noaacol><i><div onmouseover=\"title='Number of Flares associated with the active region.'\">Recent <br> Flares</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new coronal hole by CHIMERA.'\">CHIMERA Number</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The centroids are given in heliocentric (arcseconds from Sun centre).'\">Centroid <br> [Heliocentric]</a></div></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The logitudinal width of CHs for forecasting arrival of solar wind'\">Width <br> [&deg;]</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The area in % of the solar disk area'\">Area <br> [%]</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The mean magnetic field in the CH boundary.'\"> < B > <br> [G]</div></i></td>\n");
+			print("         <td class=noaacol><i><div onmouseover=\"title='The mean magnetic flux in the CH boundary'\"> < &Phi; > <br> [Mx]</div></i></td>\n");
 			print("   </tr>\n");
 		
 		//	Print the start of the table and the column headers.  These always display.
@@ -348,7 +347,7 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 			foreach ($lines as $line)
 			{
 				//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-				list($number, $xcen, $ycen, $xeb, $yeb, $xwb, $ywb, $xnb , $ynb, $xsb, $ysb, $area1, $area2, $mB, $mBpos, $mBneg, $Bmax, $Bmin, $TotBPos, $TotBNeg, $Phi, $Phipos, $Phineg) = preg_split('/\s+/', $line, 23);
+				list($number, $xcen, $ycen, $xeb, $yeb, $xwb, $ywb, $xnb , $ynb, $xsb, $ysb, $width, $area1, $area2, $mB, $mBpos, $mBneg, $Bmax, $Bmin, $TotBPos, $TotBNeg, $Phi, $Phipos, $Phineg) = preg_split('/\s+/', $line, 23);
 
 				if("$linen" > "1")
 				{
@@ -356,9 +355,9 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 					//	Print the columns with their identifiers
 					print("<tr class=noaaresults align=center>\n");
 					print("  <td   id=\"CH_number\" bgcolor=#f0f0f0>    $number</font> </td>\n");
-					print("  <td   id=\"centroid\"    bgcolor=#f0f0f0>    $xcen,$ycen </td>\n");
-					print("  <td   id=\"extent\"        bgcolor=#f0f0f0>    $xeb,$xwb</font> </td>\n");
-					print("  <td   id=\"area\"    bgcolor=#f0f0f0>    $area1</font> </td>\n");
+					print("  <td   id=\"centroid\"    bgcolor=#f0f0f0>    ($xcen\",$ycen\") </td>\n");
+					print("  <td   id=\"extent\"        bgcolor=#f0f0f0>    $width </font> </td>\n");
+					print("  <td   id=\"area\"    bgcolor=#f0f0f0>    $area2</font> </td>\n");
 					print("  <td   id=\"B_field\"        bgcolor=#f0f0f0>    $mB</td>\n");
 					print("  <td   id=\"B_flux\"      bgcolor=#f0f0f0>    $Phi</td>\n");
 					print("</tr>\n");
@@ -382,8 +381,6 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 		print("</table>\n");
 		print("	<div align=center style=\"width : 688px ;\">\n") ;
 		print("		<p align=left>\n") ;
-		//print("			<font size=\"2\" color=blue> Class (HH:MM) -Today</font><br>\n") ;
-		//print("			<font color=\"#58ACFA\" size=\"2\">Class (HH:MM) -Yesterday</font>\n") ;
 		print("		</p>\n") ;
 		print("	</div>\n") ;
 		print("</div>\n");			
