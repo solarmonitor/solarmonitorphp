@@ -13,18 +13,18 @@
 	
 	if ($type == "trce_m0171")
 	{
-		$title = "TRACE 171 &Aring; Mosaic and NOAA Active Regions";	
+		$title = "TRACE 171 &Aring; Mosaic and CHIMERA segmentation";	
 	}
 
         else if ($type == "saia_00171")
 	  {
-	    $title = "AIA 171&Aring and NOAA Active Regions";
+	    $title = "AIA 171&Aring and CHIMERA segmentation";
 	  }
 
 	else
 	{
 		$temp_index = $index_types_def[$type];
-		$title = $temp_index." and NOAA Active Regions";	
+		$title = $temp_index." and CHIMERA segmentation";	
 	}
 ?>
 

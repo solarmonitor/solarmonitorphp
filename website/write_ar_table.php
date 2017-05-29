@@ -322,19 +322,19 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 		//	Contruct the file name
 		$file = "${arm_data_path}data/" . $dirdate . "/meta/arm_ch_summary_" . $date . ".txt";
 
-			print("<div class=noaat>\n");		
-			print("<table class='frame' rules=rows width=700 align=center cellpadding=0 cellspacing=0 frame=hsides>\n");
-			print("	  <tr align=center class=noaatit>\n");
-			print("         <td colspan=6> Today's Coronal Hole Properties </td>\n");
-			print("   </tr>\n");
-			print("   <tr align=center class=noaacolumns>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new coronal hole by CHIMERA.'\">CHIMERA Number</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The centroids are given in heliocentric (arcseconds from Sun centre).'\">Centroid <br> [Heliocentric]</a></div></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The logitudinal width of CHs for forecasting arrival of solar wind'\">Width <br> [&deg;]</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The area in % of the solar disk area'\">Area <br> [%]</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The mean magnetic field in the CH boundary.'\"> < B > <br> [G]</div></i></td>\n");
-			print("         <td class=noaacol><i><div onmouseover=\"title='The mean magnetic flux in the CH boundary'\"> < &Phi; > <br> [Mx]</div></i></td>\n");
-			print("   </tr>\n");
+		print("<div class=noaat>\n");		
+		print("<table class='frame' rules=rows width=700 align=center cellpadding=0 cellspacing=0 frame=hsides>\n");
+		print("	  <tr align=center class=noaatit>\n");
+		print("         <td colspan=6> Today's Coronal Hole Properties </td>\n");
+		print("   </tr>\n");
+		print("   <tr align=center class=noaacolumns>\n");
+		print("         <td class=noaacol><i><div onmouseover=\"title='This is a unique number assigned to each new coronal hole by CHIMERA.'\">CHIMERA Number</div></i></td>\n");
+		print("         <td class=noaacol><i><div onmouseover=\"title='The centroids are given in heliocentric (arcseconds from Sun centre).'\">Centroid <br> [Heliocentric]</a></div></td>\n");
+		print("         <td class=noaacol><i><div onmouseover=\"title='The logitudinal width of CHs for forecasting arrival of solar wind'\">Width <br> [&deg;]</div></i></td>\n");
+		print("         <td class=noaacol><i><div onmouseover=\"title='The area in % of the solar disk area'\">Area <br> [%]</div></i></td>\n");
+		print("         <td class=noaacol><i><div onmouseover=\"title='The mean magnetic field in the CH boundary.'\"> < B > <br> [G]</div></i></td>\n");
+		print("         <td class=noaacol><i><div onmouseover=\"title='The mean magnetic flux in the CH boundary'\"> < &Phi; > <br> [Mx]</div></i></td>\n");
+		print("   </tr>\n");
 		
 		//	Print the start of the table and the column headers.  These always display.
 //TODO: this if should go before the header or make a change to say that there is not ARs			
@@ -347,7 +347,7 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 			foreach ($lines as $line)
 			{
 				//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-				list($number, $xcen, $ycen, $xeb, $yeb, $xwb, $ywb, $xnb , $ynb, $xsb, $ysb, $width, $area1, $area2, $mB, $mBpos, $mBneg, $Bmax, $Bmin, $TotBPos, $TotBNeg, $Phi, $Phipos, $Phineg) = preg_split('/\s+/', $line, 23);
+				list($number, $xcen, $ycen, $cent, $xeb, $yeb, $xwb, $ywb, $xnb , $ynb, $xsb, $ysb, $ext, $width, $area1, $area2, $mB, $mBpos, $mBneg, $Bmax, $Bmin, $TotBPos, $TotBNeg, $Phi, $Phipos, $Phineg) = preg_split('/\s+/', $line, 26);
 
 				if("$linen" > "1")
 				{
@@ -355,8 +355,8 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 					//	Print the columns with their identifiers
 					print("<tr class=noaaresults align=center>\n");
 					print("  <td   id=\"CH_number\" bgcolor=#f0f0f0>    $number</font> </td>\n");
-					print("  <td   id=\"centroid\"    bgcolor=#f0f0f0>    ($xcen\",$ycen\") </td>\n");
-					print("  <td   id=\"extent\"        bgcolor=#f0f0f0>    $width </font> </td>\n");
+					print("  <td   id=\"centroid\"    bgcolor=#f0f0f0>    $cent<br><font color=grey>($xcen\",$ycen\") </td>\n");
+					print("  <td   id=\"extent\"        bgcolor=#f0f0f0>    $ext<br><font color=grey>($width) </font> </td>\n");
 					print("  <td   id=\"area\"    bgcolor=#f0f0f0>    $area2</font> </td>\n");
 					print("  <td   id=\"B_field\"        bgcolor=#f0f0f0>    $mB</td>\n");
 					print("  <td   id=\"B_flux\"      bgcolor=#f0f0f0>    $Phi</td>\n");
