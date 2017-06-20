@@ -48,11 +48,16 @@
 							<tr>
 								<td align=left width=681 colspan=3>
 									<?
-	  include("globals.php");
+	  									include("globals.php");
 										$instrument = substr($type,0,4);
 										$filter = substr($type,5,5);
 										$file = find_latest_file($date, $instrument, $filter, 'png', 'ch'); 
-										print(link_image("${arm_data_path}data/$dirdate/pngs/$instrument/$file", 681, true)); 
+										if (@fopen($HMI , "r")) {
+											print(link_image("${arm_data_path}data/$dirdate/pngs/$instrument/$file", 681, true)); 
+										}
+										else {
+											print(link_image("common_files/NoData/thumb/smdi_maglc_thumb.png"  , 681, true)) ;
+										}	
 									?>
 									<? write_image_map($date, $type); ?>
 								</td>
