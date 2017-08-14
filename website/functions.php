@@ -112,6 +112,10 @@ function link_image($file, $size, $map)
 						{
 							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
 						}
+						elseif (($fd_ar_type == "ch") && ($fd_ar == "ch"))
+						{
+							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
+						}
 						elseif (($fd_ar_type == "pr") && ($fd_ar == "pr"))
 						{
 							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);
