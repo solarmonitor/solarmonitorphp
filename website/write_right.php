@@ -122,12 +122,7 @@
 		print("				<a class=mail href=JavaScript:OpenEve(\"./eve_pop.php?date=$date&type=eve6hr\")>6 Hour</a>\n");
 		print("   		</div>\n");
 		print("  		</div>\n");
-		//	print(" 		<div class=\"header\"><a class=mail5 href=JavaScript:OpenAurora(\"./aurora_pop.php?date=$date&type=geddsnowcast\")>GeoMag</a></div>\n");
-		//print("		    <div class=\"content\" id=\"GEOMAG-content\">\n");
-		//print(" 	   	<div class=\"text\">\n");
-		//print("    			<a class=mail href=JavaScript:OpenAurora(\"./aurora_pop.php?date=$date&type=geddsnowcast\")>Now-cast</a>\n");
-		//print("			</div>\n");
-		//print("			</div>\n");
+
 		print("  		<div class=\"header\" id=\"Events-header\">Events</div>\n");
   		print("			<div class=\"content\" id=\"Events-content\">\n");
 		print("			<div class=\"text\">\n");
@@ -136,26 +131,8 @@
 		print("				<a class=mail href=JavaScript:OpenHek(\"$heklink\")>HEK</a><br>\n");
 		print("			</div>\n");
   		print("			</div>\n");
-		//	print("          <div class=\"header\" id=\"Forecast-header\">Forecast</div>\n");
-		//	print("		 <div class=\"content\" id=\"Forecast-content\">\n");
-		//	print("			   <div class=\"text\">\n");
-		//	print("				<a class=mail href=\"./forecast.php?date=$date\">Flare Forecast</a><br>\n");
-		//	print("	           		<a class=mail href=JavaScript:OpenMotD(\"./motd_pop.php?date=$date\")>MM MotD</a>\n");
-		//	print("			   </div>\n");
-		//	print("  	</div>\n");
 
 		print("		  </div>\n");
-		print("		</td>\n");
-		print("	</tr>\n");
-		print(" <tr height=auto>\n");
-		print(" <td  align=center valign=bottom>\n");
-		print("        <a class=mail5 target=_blank href=\"./objects/solmon/\">IDL Access</a>\n");
-//		print("			<br><font color=white><b>BBSO</b></font><br>\n");
-//		print("			<a href=JavaScript:TermWindow()>Activity<br>Report</a><br>\n");
-//		print("		  <div class=\"right\">\n");
-//		print("			<div class=\"header2\">IDL</div>\n");
-//		print("         <a class=mail target=_blank href=\"./objects/solmon/\">SOLMON Object</a><br><br>\n");
-//		print("		  </div>\n");
 		print("		</td>\n");
 		print("	</tr>\n");
 		print("</table>\n");

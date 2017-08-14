@@ -189,6 +189,10 @@
 		print("			   </div>\n");
 		print("  	</div>\n");
 
+		print("     <br>\n");
+
+		print("                         <a class=mail href=\"./chimera.php?date=$date\"> <b> Coronal Holes</a><br>\n");
+
 		// SMART INPUT
 
 	
