@@ -52,7 +52,7 @@
 										$instrument = substr($type,0,4);
 										$filter = substr($type,5,5);
 										$file = find_latest_file($date, $instrument, $filter, 'png', 'ch'); 
-										if (@fopen("${arm_data_path}data/$dirdate/pngs/$instrument/$file" , "r")) {
+										if (@fopen("${arm_data_path}data/$dirdate/pngs/$instrument/$file", "r")) {
 											print(link_image("${arm_data_path}data/$dirdate/pngs/$instrument/$file", 681, true)); 
 										}
 										else {
