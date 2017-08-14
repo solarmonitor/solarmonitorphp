@@ -364,7 +364,7 @@ print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\"
 print("<tr style=\"display:none\" id=\"ihtr".$linen."7\"><td bgcolor=\"#ECECD9\" colspan=\"6\"><table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\"><tr><td width=\"10\"></td><td style=\"border:3px solid #003366\"><iframe frameborder=\"0\" width=\"100%\" id=\"ihif".$linen."7\"></iframe></td></tr></table></td></tr> \n");
 
 				}
-					$linen++;
+			  $linen++;
 			}
 		}
 		else
