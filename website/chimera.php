@@ -5,7 +5,7 @@
 		$type = $_GET['type'];
 	else
 		$type = "saia_chimr";
-		
+
 	if (isset($_GET['indexnum']))
 		$indexnum = $_GET['indexnum'];
 	else
@@ -23,8 +23,8 @@
 
 	else
 	{
-		$temp_index = $index_types_def[$type];
-		$title = $temp_index." and CHIMERA segmentation";	
+		
+		$title = "CHIMERA Segmentation";	
 	}
 ?>
 
