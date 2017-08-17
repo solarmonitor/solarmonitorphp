@@ -18,7 +18,7 @@
 			if ($type == "pr") 
 			{
 			// Flare probabilities for dates before MCEVOl was added are replaced by N/A
-				if (strtotime($date) <= strtotime("20170601"))
+				if (count($data[$i]) < 3)
 				{
 					$EVOL_prob = "N/A";
 					$SM_prob = $data[$i][0];
