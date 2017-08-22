@@ -52,6 +52,7 @@
 	include ("write_googleanalytics.php");
 	include ("write_piwik.php");
 	include ("write_toolbar.php");
+	include("get_ar_history.php");
 
 	//include the body stuff separately because of the ticker's javascript.  in reality they should all
 	//be included separately but that would require a redesign.  this will come someday

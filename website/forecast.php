@@ -29,6 +29,7 @@
 							</tr>
 							<tr valign=top>
 								<td class=noaacol align=center valign=middle colspan=5><font color=white>
+									<br />
 									<b>Region Flare Probabilities (%)</b>
 								</font></td>
 							</tr>

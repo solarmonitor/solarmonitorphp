@@ -115,6 +115,7 @@ function write_ch_events($date)
 		
 		if (file_exists($file))
 		{
+			$times = file($file);
 			$time = $times[1];
 		}
 		else
