@@ -39,16 +39,29 @@
 		print("					    <div class=\"sub\">\n");
 		print("					    <div class=\"sub_small\">\n");
 		print("			            <ul>\n");
-		
+//		print($type)
 										$instrument = substr($type,0,4);
 										$filter = substr($type,5,5);
-										$file = find_latest_file($date, $instrument, $filter, 'png', 'fd'); 			
+										if ($filter == "chimr"){
+											$view = 'ch';
+										} else{
+											$view = 'fd';
+										}
+										
+										$file = find_latest_file($date, $instrument, $filter, 'png', $view); 			
 
 		print("		                	<li><a href=\"${arm_data_path}data/$dirdate/pngs/$instrument/$file\">PNG</a></li>\n");
 
-										$file = find_latest_file($date, $instrument, $filter, 'fts.gz', 'fd'); 			
+										if ($view == "fd"){
+										$file = find_latest_file($date, $instrument, $filter, 'fts.gz', $view); 			
 		
 		print("							<li><a href=\"${arm_data_path}data/$dirdate/fits/$instrument/$file\">FITS</a></li>\n");
+										} else{
+										$file = find_latest_file($date, $instrument, "masks", 'png', $view); 			
+		
+		print("							<li><a href=\"${arm_data_path}data/$dirdate/pngs/$instrument/$file\">MASK</a></li>\n");
+										}
+
 		print("	            		</ul>\n");
 		print("					    </div>\n");
 		print("					    </div>\n");
