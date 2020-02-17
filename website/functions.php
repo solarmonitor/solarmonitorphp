@@ -181,7 +181,6 @@
 		}
 		
 		//	return the resulting file.. maybe this should return directory, i dont know yet
-		echo $latest_file;
 		return $latest_file;
 	} 
 	

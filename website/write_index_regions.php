@@ -8,7 +8,7 @@ function get_artype_opt($date,$type,$region)
 	  {
 	    $eit_bakeout= in_bakeout($date);
 	    $eit_keyhole= in_keyhole($date);
-	    list($eit,$filter) = split('[_]',$type[$i],2);
+	    list($eit,$filter) = explode('_',$type[$i],2);
 	    $bake  = array("bake_".$filter);
 	    $keyh  = array("keyh_".$filter);
 	    // add to the eit arrays the bake entries at the end IF they exist for $date
@@ -22,7 +22,7 @@ function get_artype_opt($date,$type,$region)
 	    break;
 	  }
 
-	list($instrument, $filter) = split('[_]', $type[$i],2);
+	list($instrument, $filter) = explode('_', $type[$i],2);
 	$file = find_latest_file($date, $instrument, $filter, 'png', 'ar',$region);
 	if ($file != "No File Found" && $type[$i] != "seit_00195" && $type[$i] != "seit_00171"){break;}
 	if ($file != "No File Found" && preg_match("/seit/",$type[$i]) && !$eit_bakeout){break;}
@@ -53,7 +53,7 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 		    }
 		  else 
 		    {
-		      list($instrument, $filter) = split('[_]', $index_types[$i],2);
+		      list($instrument, $filter) = explode('_', $index_types[$i],2);
 		      $files[$i] = find_latest_file($date, $instrument, $filter,'png', 'ar',$region);
 		    }
 		  //if file No exist => load thumbnail
@@ -77,7 +77,7 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 		  // rest -> load proper file
 		  else
 		    {
-		      list($inst, $filt, $ar, $region, $fdate, $time, $ext) = split('[_.]',$files[$i],7);
+		      list($inst, $filt, $ar, $region, $fdate, $time, $ext) = multiexplode(array("_","."),$files[$i],7);
 		      $dt = $fdate . " " . substr($time,0,2) . ":" . substr($time,2,2);
 		      $str = $index_types_def[$index_types[$i]]." ".$fdate . " " . date("H:i", strtotime($dt));
 		      $times[]=$str;
