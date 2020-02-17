@@ -23,7 +23,7 @@
 		2004/07/14 (RH) -- added map parameter
 	*/
 	
-function link_image($file, $size, $map)
+	function link_image($file, $size, $map)
 	{
 		//	if the image is part of an image map, set a string with the mapname
 		if ($map)
@@ -54,6 +54,12 @@ function link_image($file, $size, $map)
 		return $output;
 	}
 
+	function multiexplode ($delimiters,$data) {
+		$MakeReady = str_replace($delimiters, $delimiters[0], $data);
+		$Return    = explode($delimiters[0], $MakeReady);
+		return  $Return;
+	}
+
 	function find_latest_file($date, $instrument, $filter, $extension, $fd_ar, $region_number="00000")
 	{
 		include("globals.php");
@@ -80,12 +86,14 @@ function link_image($file, $size, $map)
 		$latest_time = strtotime("19800101 00:00:00");
 		
 		//	open the dir if it exists
+
 		$dir = "${arm_data_path}data/$dirdate/$folder/$instr";
 		if (is_dir($dir))
 		{
 			if ($dir_handle = opendir($dir))
 			{
 				//	loop through the files in the directory
+
 				while(false !== ($file = readdir($dir_handle)))
 				{
 					if(($file != ".") && ($file != ".."))
@@ -93,44 +101,44 @@ function link_image($file, $size, $map)
 						//	if the folder is meta, the only files we should need start with map_coord
 						if ($folder == "meta")
 						{
-							list($meta1, $rest) = split('[_.]', $file, 2);
+							list($meta1, $rest) = multiexplode(array("_","."), $file, 2);
 							if ($meta1 != "forecast")
-								list($meta2, $rest) = split('[_.]', $rest, 2);
+								list($meta2, $rest) = multiexplode(array("_","."), $rest, 2);
 						}
 						else
 							$rest = $file;
-							
+						
 						//	so test to see if it is a map_coord
 						//if(($folder == "meta") && ($meta1 != "map"))
 						//	continue;
 							
 						//	get the instrument, filter, and ar or fd type
-						list($file_instrument, $file_filter, $fd_ar_type, $rest) = split('[_.]', $rest, 4);
-						
+						list($file_instrument, $file_filter, $fd_ar_type, $rest) = explode('_', $rest, 4);
+
 						//	if it is a fd and we want an fd, parse the rest of the filename
 						if (($fd_ar_type == "fd") && ($fd_ar == "fd"))
 						{
-							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest); 
 						}
 						elseif (($fd_ar_type == "ch") && ($fd_ar == "ch"))
 						{
-							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 3);	
 						}
 						elseif (($fd_ar_type == "pr") && ($fd_ar == "pr"))
 						{
-							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 3);
 						}
 						//	if it is an ar and we want an ar parse the rest of the filename
 						elseif (($fd_ar_type == "ar") && ($fd_ar == "ar"))
 						{
-							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
+							list($file_region, $file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 4);
 							//	go to next file if we dont get the region number we want
 							if ($file_region != $region_number)
 								continue;
 						}
 						elseif (($fd_ar_type == "ap") && ($fd_ar == "ap"))
 						{
-							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
+							list($file_region, $file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 4);
 							//	go to next file if we dont get the region number we want
 							if ($file_region != $region_number)
 								continue;
@@ -141,14 +149,15 @@ function link_image($file, $size, $map)
 							continue;
 						}
 
-						
 						//	if the instrument or filter dont match, move on.  this may need fixing after gsxi is correct
 						// added that the rest need to equal to 'png' in order to continue! so no conflict with jpg thumbnails!
 						//						print($dir." ".$extension."  ".$rest." <br>");
 
 
-						if (($instrument != $file_instrument) || ($filter != $file_filter) || ($rest != $extension)) //&& (($rest != "png") || ($rest != "fts.gz")))
+						if (($instrument != $file_instrument) || ($filter != $file_filter) || ($rest != $extension)) {//&& (($rest != "png") || ($rest != "fts.gz")))
+							
 							continue;
+						}	
 						//	if (($fd_ar == "ar") && ($rest != "png"))
 						// continue;
 						
@@ -164,6 +173,7 @@ function link_image($file, $size, $map)
 							$latest_time = strtotime("$file_date $hh:$mm:$ss");
 							$latest_file = $file;
 						}
+				
 					}
 				}
 			}
@@ -171,6 +181,7 @@ function link_image($file, $size, $map)
 		}
 		
 		//	return the resulting file.. maybe this should return directory, i dont know yet
+		echo $latest_file;
 		return $latest_file;
 	} 
 	
@@ -213,9 +224,9 @@ function link_image($file, $size, $map)
 						//	if the folder is meta, the only files we should need start with map_coord
 						if ($folder == "meta")
 						{
-							list($meta1, $rest) = split('[_.]', $file, 2);
+							list($meta1, $rest) = explode('_', $file, 2);
 							if ($meta1 != "forecast")
-								list($meta2, $rest) = split('[_.]', $rest, 2);
+								list($meta2, $rest) = explode('_', $rest, 2);
 						}
 						else
 							$rest = $file;
@@ -225,17 +236,17 @@ function link_image($file, $size, $map)
 						//	continue;
 							
 						//	get the instrument, filter, and ar or fd type
-						list($file_instrument, $file_filter, $fd_ar_type, $rest) = split('[_.]', $rest, 4);
+						list($file_instrument, $file_filter, $fd_ar_type, $rest) = explode('_', $rest, 4);
 						
 						//	if it is a fd and we want an fd, parse the rest of the filename
 						if (($fd_ar_type == "fd") && ($fd_ar == "fd"))
 						{
-							list($file_date, $file_time, $rest) = split('[_.]', $rest, 3);	
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 3);	
 						}
 						//	if it is an ar and we want an ar parse the rest of the filename
 						elseif (($fd_ar_type == "ar") && ($fd_ar == "ar"))
 						{
-							list($file_region, $file_date, $file_time, $rest) = split('[_.]', $rest, 4);
+							list($file_region, $file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 4);
 							//	go to next file if we dont get the region number we want
 							if ($file_region != $region_number)
 								continue;
@@ -292,8 +303,8 @@ function link_image($file, $size, $map)
 							$lines = file($meta_file);
 							foreach ($lines as $line)
 							{
-								//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-								list($number, $rest ) = split('[ ]', $line, 2);
+								//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be explode later.
+								list($number, $rest ) = explode(' ', $line, 2);
 								if ($number == $region_num)
 								{
 									if (($date) > ($most_recent_date))
@@ -395,8 +406,8 @@ function link_image($file, $size, $map)
 				$lines = file($meta_file);
 				foreach ($lines as $line)
 				{
-					//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-					list($number, $rest ) = split('[ ]', $line, 2);
+					//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be explode later.
+					list($number, $rest ) = explode(' ', $line, 2);
 					if ($number == $region_num)
 					{
 						return true;
@@ -421,8 +432,8 @@ function link_image($file, $size, $map)
 				$lines = file($meta_file);
 				foreach ($lines as $line)
 				{
-					//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-					list($number, $rest ) = split('[ ]', $line, 2);
+					//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be explode later.
+					list($number, $rest ) = explode(' ', $line, 2);
 					if ($number < $min)
 					{
 						$min=$number;
@@ -547,7 +558,7 @@ function link_image($file, $size, $map)
 
 		if($events[0] != '-')
 		{
-			$events_arr = split('[ ]' , $events) ;
+			$events_arr = explode(' ' , $events) ;
 			$n_events = count($events_arr) ;
 			
 			if ($events_arr[0] != '/')
@@ -571,7 +582,7 @@ function link_image($file, $size, $map)
 				{
 					$url[] = $events_arr[$i];
 					$data[] = $events_arr[$i+1];
-					list($size,$time) = split('[(]', $events_arr[$i+1] , 2);
+					list($size,$time) = explode('(', $events_arr[$i+1] , 2);
 					
 					if ($y == 1) 
 					{ 
@@ -641,5 +652,100 @@ function link_image($file, $size, $map)
 			$ev_str = "-" ;
 		}
 		return $ev_str ;
+	}
+	
+	function write_statcounter()
+	{
+		/*
+	Function:
+		write_statcounter
+	
+	Purpose:
+			adds statcounter.com code to the site
+	
+	Parameters:		
+		Input:
+			none
+		Output:
+			none
+	
+	Author(s):
+		Russ Hewett -- rhewett@vt.edu
+	
+	History:
+		2006/05/22 (RH) -- written
+	*/
+	
+		print("<!-- Start of StatCounter Code -->\n");
+		print("<script type=\"text/javascript\" language=\"javascript\">\n");
+		print("<!--\n"); 
+		print("var sc_project=1583330;\n"); 
+		print("var sc_invisible=1;\n"); 
+		print("var sc_partition=14;\n"); 
+		print("var sc_security=\"3bc361e8\";\n"); 
+		print("//-->\n");
+		print("</script>\n");
+
+		print("<script type=\"text/javascript\" language=\"javascript\" src=\"http://www.statcounter.com/counter/counter.js\"></script><noscript><a href=\"http://www.statcounter.com/\" target=\"_blank\"><img  src=\"http://c15.statcounter.com/counter.php?sc_project=1583330&java=0&security=3bc361e8&invisible=1\" alt=\"free web tracker\" border=\"0\"></a> </noscript>\n");
+		print("<!-- End of StatCounter Code -->\n");
+	}
+
+	function write_googleanalytics()
+	{
+
+		/*
+	Function:
+		write_googleanalytics
+	
+	Purpose:
+			adds google analytics code to the site
+	
+	Parameters:		
+		Input:
+			none
+		Output:
+			none
+	
+	Author(s):
+		Russ Hewett -- rhewett2@uiuc.edu
+	
+	History:
+		2006/05/62 (RH) -- written
+	*/
+	
+		print("<!-- Start of Google Analytics Code -->\n");
+		print("<script src=\"http://www.google-analytics.com/urchin.js\" type=\"text/javascript\">\n");
+		print("</script>\n"); 
+		print("<script type=\"text/javascript\">\n"); 
+		print("_uacct = \"UA-341043-2\";\n"); 
+		print("urchinTracker();\n"); 
+		print("</script>\n");
+		print("<!-- End of Google Analytics Code -->\n");
+	}
+
+	////////////////////////////////////////////////////////////
+
+	function write_forecast_paragraph()
+	{	
+
+
+	print("								<td bgcolor=#FFFFFF align=left valign=top colspan=1>\n") ;
+	print("									<table width=100% height=100% cellpadding=20 cellspacing=0 border=0><tr><td valign=top><p>\n") ;
+	print("										Solar Monitor's flare prediction system's probabilities are calculated using <a class=mail2 href=\"http://www.swpc.noaa.gov/\">NOAA Space Weather Prediction Center</a> data. There are two main methods, <b>MCSTAT</b> and <b>MCEVOL</b>, that use sunspot-group McIntosh classifications and Poisson statistics to calculate flaring probabilities valid for a 24-hr period*. The flaring probabilities are calculated using historical data from the periods 1969-1976 & 1988-1996 (MCSTAT) and 1988-2008 (MCEVOL).\n</p>") ;	
+	print("<p><b>MCSTAT</b> – Uses point-in-time McIntosh classifications to calculate Poisson flaring probabilities. Details about the method [1] and forecast verification testing [2] can be found in the following papers:\n </p>");
+	print("<p>[1] <a class=mail2 href=http://www.springerlink.com/content/h02309110582457j/ target=_blank>Gallagher, P. T., Moon, Y.-J., Wang, H., <i>Solar Physics</i>, <b>209</b>, 171, (2002)</a><br>
+	[2]  <a class=mail2 href = http://adsabs.harvard.edu/abs/2012ApJ...747L..41B> Bloomfield <i>et al.</i>, 2012, <i>The Astrophysical Journal Letters</i>, <b>747</b>, L41 </a> </p>") ;
+	print("<p><b>MCEVOL</b> – Uses the evolution of McIntosh classifications over a 24-hr period to calculate Poisson flaring probabilities. Details about the method and flaring rate statistics can be found in the following:</p>
+	[1] <a class=mail2 href=https://link.springer.com/article/10.1007/s11207-016-0933-y target=_blank>McCloskey, A.E., Gallagher, P.T. & Bloomfield, D.S., <i>Solar Physics</i>, <b>291</b>, 1711, (2016)</a>");
+	print("<p> Further Reading: <br> Wheatland, M. S., 2001, <i>Solar Physics</i>, 	<b>203</b>, 87 <br> Moon <i>et al.</i>, 2001, <i>Journal of Geophysical Research-Space Physics</i>, <b>106(A12)</b> 29951</br></p>\n");
+	print("<hr style=border-top: dotted 1px />");
+	print(" 										<p> <b>Notes</b>: <br> <br>
+	'...' =  McIntosh class or evolution was not observed in the period over which the Poisson flare rate statistics were determined. <br>
+	* When viewed in real-time and before 22:00 UT, NOAA predictions are valid up to 22:00 UT on the current date. When viewed in real-time after 22:00 UT (or when viewing past dates), NOAA predictions are valid up to 22:00 UT on the following date. The most recent data can also be found at NOAA's <a class=mail2 href=http://www.swpc.noaa.gov/ftpdir/latest/daypre.txt> 3-day Space Weather Predictions</a> page.</br></p>\n") ;
+	print("<hr style=border-top: dotted 1px />");
+	print("											<p>Please contact <a class=mail2 href=\"mailto:peter.gallagher@tcd.ie\">Peter Gallagher</a> if you have any queries regarding this research.<br>\n") ;
+
+	print("									</font></td></tr></table>\n") ;
+	print("								</td>\n") ;
 	}
 ?>

@@ -15,7 +15,7 @@
 		<table class='frame' width="670" height="575" align=center valign=middle border=0 cellspacing=0 cellpadding=0>
 			<tr>
 				<td align=center>
-					<? write_title_cal1($date, $title, $this_page, NULL, $indexnum="1", $width="100%"); ?>
+					<? write_title_cal($date, $title, $this_page, NULL, $indexnum="1", $width="100%"); ?>
 				</td>
 			</tr>
 			<tr>

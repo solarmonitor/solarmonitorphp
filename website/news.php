@@ -34,7 +34,7 @@
 											print("										<b>News:</b>\n");
 											foreach($lines as $line)
 											{
-												list($news_date, $text) = split('[ ]', $line,2);
+												list($news_date, $text) = explode('[ ]', $line,2);
 												print("										<tr>\n");
 												print("											<td align=left width=20% valign=top>\n");
 												print("												$news_date\n");

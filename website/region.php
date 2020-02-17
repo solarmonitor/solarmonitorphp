@@ -36,7 +36,7 @@
 			<table bgcolor=#787878 width=815 border=0 cellpadding=0 cellspacing=0 align="center">
 				<tr>
 					<td background=common_files/brushed-top-big.jpg align=center colspan=3>
-						<? write_title_cal1($date, $title, $this_page, NULL, $indexnum, 780, $region); ?>
+						<? write_title_cal($date, $title, $this_page, NULL, $indexnum, 780, $region); ?>
 					</td>
 				</tr>
 				<tr>

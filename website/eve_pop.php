@@ -95,7 +95,7 @@ function get_text($filename)
 		<table class='frame' width="674" height="575" align=center border=0 cellspacing=0 cellpadding=0 border=0>
 			<tr>
 				<td align=center>				
-					<? write_title_cal1($date, $title, $this_page, $indexnum="1", $type, $width="95%"); ?>
+					<? write_title_cal($date, $title, $this_page, $indexnum="1", $type, $width="95%"); ?>
 				</td>
 			</tr>
 			<tr>

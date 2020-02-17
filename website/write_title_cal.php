@@ -24,7 +24,7 @@
 		2004/07/15 (RH) -- added width and type
 	*/
 	
-	function write_title_cal1($date, $title, $this_page, $indexnum, $type=NULL, $width=780, $region=NULL)
+	function write_title_cal($date, $title, $this_page, $indexnum, $type=NULL, $width=780, $region=NULL)
 	{
 	  	include("globals.php");
 		$current_date = gmdate("Ymd");
