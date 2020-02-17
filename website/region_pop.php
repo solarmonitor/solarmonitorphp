@@ -25,7 +25,7 @@
 		$title = "No Region $region Found";
 		foreach($lines as $line)
 		{
-			list($number, $temp_title) = split('[ ]', $line, 2);
+			list($number, $temp_title) = explode(' ', $line, 2);
 			if ($number == $region)
 			{
 				$title = $temp_title;

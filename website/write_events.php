@@ -63,7 +63,7 @@
 					}
 					else
 					{
-						list($url, $data) = split('[ ]', $line, 2);
+						list($url, $data) = explode(' ', $line, 2);
 						print("<a class=mail2 style=\"color:$col ;\" href=javascript:OpenLastEvents(\"$url\")>$data</a>");
 						$col = "#0000FF";
 					}	

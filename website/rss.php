@@ -16,11 +16,11 @@
 			foreach ($lines as $line)
 			{
 				//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-				list($number, $location1, $location2, $hale, $mcintosh, $area, $nspots, $events ) = split('[ ]', $line, 8);
+				list($number, $location1, $location2, $hale, $mcintosh, $area, $nspots, $events ) = explode(' ', $line, 8);
 				
 				//	Split the Hale text in to individual characters.  For each part go through each character and 
 				//	build a string with the image tags for each of the greek letters.
-				list($hale1,$hale2) = split('[/]', $hale,2);
+				list($hale1,$hale2) = explode('/', $hale,2);
 				$hale1_arr = preg_split('//', $hale1, -1, PREG_SPLIT_NO_EMPTY);
 				$hale2_arr = preg_split('//', $hale2, -1, PREG_SPLIT_NO_EMPTY);
 				
@@ -77,7 +77,7 @@
 				$events_str="";
 				if ($events[0] != "-")
 				{
-					$events_arr = split('[ ]', $events);
+					$events_arr = explode(' ', $events);
 					for($i=0; $i<count($events_arr); $i++)
 					{
 						//	if there is a slash, add it to the string.  otherwise, get the url and the data that follows

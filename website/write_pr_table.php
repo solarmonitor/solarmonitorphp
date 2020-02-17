@@ -57,7 +57,7 @@
 				$i = 0;
 				foreach($lines as $line)
 				{
-					list($region, $mcintosh, $c, $m, $x) = split('[ ]', $line, 5);
+					list($region, $mcintosh, $c, $m, $x) = explode(' ', $line, 5);
 		
 					// Converts strings to arrays of MCEVOL, MCSTAT and NOAA predictions using ) and ( as delimiters
 

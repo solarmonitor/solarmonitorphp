@@ -44,7 +44,7 @@
 			foreach ($lines as $line)
 			{
 				//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-				list($number, $location1, $location2, $hale, $mcintosh, $area, $nspots, $events ) = split('[ ]', $line, 8);
+				list($number, $location1, $location2, $hale, $mcintosh, $area, $nspots, $events ) = explode(' ', $line, 8);
 				if ($current_region_number == $number)
 					print("			<b><font color=\"white\" size=\"-1\"><a class=mail href=\"region.php?date=$date&region=$number\">$number</a></font></b>\n");//<a href=\"./region.php?date=$date&region=$number\">$number</a></b></font>\n");
 				else
@@ -156,7 +156,7 @@
 			foreach ($lines as $line)
 			{
 				//	Extract all info from the line.  Events that get hyperlinks are all stored in $events and need to be split later.
-				list($number, $location1, $location2, $hale, $mcintosh, $area, $nspots, $events ) = split('[ ]', $line, 8);
+				list($number, $location1, $location2, $hale, $mcintosh, $area, $nspots, $events ) = explode(' ', $line, 8);
 				print("      		<a class=mail href=\"index.php?date=$date&region=$number\">$number</a><br>\n");
 			} 
 			print("          </div>\n");
