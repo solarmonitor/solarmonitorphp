@@ -78,7 +78,7 @@ function write_index_images($date,$indexnum,$table_div='table')
 		  // rest -> load proper file
 		  else
 		    {
-		      list($inst, $filt, $fd, $fdate, $time, $ext) = multiexplode(array("_","."),$files[$i],6);
+		      list($inst, $filt, $fd, $fdate, $time, $ext) = preg_split("/[_.]/",$files[$i],6);
 		      $dt = $fdate . " " . substr($time,0,2) . ":" . substr($time,2,2);
 		      $str = $index_types_def[$index_types[$i]]." ".$fdate . " " . date("H:i", strtotime($dt));
 		      $times[]=$str;

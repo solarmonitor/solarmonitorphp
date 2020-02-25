@@ -54,6 +54,12 @@
 		return $output;
 	}
 
+	function multiexplode ($delimiters,$data) {
+		$MakeReady = str_replace($delimiters, $delimiters[0], $data);
+		$Return    = explode($delimiters[0], $MakeReady);
+		return  $Return;
+	}
+
 	function find_latest_file($date, $instrument, $filter, $extension, $fd_ar, $region_number="00000")
 	{
 		include("globals.php");
@@ -95,9 +101,9 @@
 						//	if the folder is meta, the only files we should need start with map_coord
 						if ($folder == "meta")
 						{
-							list($meta1, $rest) = preg_split("/[_.]/", $file, 2);
+							list($meta1, $rest) = multiexplode(array("_","."), $file, 2);
 							if ($meta1 != "forecast")
-								list($meta2, $rest) = preg_split("/[_.]/", $rest, 2);
+								list($meta2, $rest) = multiexplode(array("_","."), $rest, 2);
 						}
 						else
 							$rest = $file;
@@ -112,27 +118,27 @@
 						//	if it is a fd and we want an fd, parse the rest of the filename
 						if (($fd_ar_type == "fd") && ($fd_ar == "fd"))
 						{
-							list($file_date, $file_time, $rest) = preg_split("/[_.]/", $rest); 
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest); 
 						}
 						elseif (($fd_ar_type == "ch") && ($fd_ar == "ch"))
 						{
-							list($file_date, $file_time, $rest) = preg_split("/[_.]/", $rest, 3);	
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 3);	
 						}
 						elseif (($fd_ar_type == "pr") && ($fd_ar == "pr"))
 						{
-							list($file_date, $file_time, $rest) = preg_split("/[_.]/", $rest, 3);
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 3);
 						}
 						//	if it is an ar and we want an ar parse the rest of the filename
 						elseif (($fd_ar_type == "ar") && ($fd_ar == "ar"))
 						{
-							list($file_region, $file_date, $file_time, $rest) = preg_split("/[_.]/", $rest, 4);
+							list($file_region, $file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 4);
 							//	go to next file if we dont get the region number we want
 							if ($file_region != $region_number)
 								continue;
 						}
 						elseif (($fd_ar_type == "ap") && ($fd_ar == "ap"))
 						{
-							list($file_region, $file_date, $file_time, $rest) = preg_split("/[_.]/", $rest, 4);
+							list($file_region, $file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 4);
 							//	go to next file if we dont get the region number we want
 							if ($file_region != $region_number)
 								continue;
@@ -234,12 +240,12 @@
 						//	if it is a fd and we want an fd, parse the rest of the filename
 						if (($fd_ar_type == "fd") && ($fd_ar == "fd"))
 						{
-							list($file_date, $file_time, $rest) = preg_split("/[_.]/", $rest, 3);	
+							list($file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 3);	
 						}
 						//	if it is an ar and we want an ar parse the rest of the filename
 						elseif (($fd_ar_type == "ar") && ($fd_ar == "ar"))
 						{
-							list($file_region, $file_date, $file_time, $rest) = preg_split("/[_.]/", $rest, 4);
+							list($file_region, $file_date, $file_time, $rest) = multiexplode(array("_","."), $rest, 4);
 							//	go to next file if we dont get the region number we want
 							if ($file_region != $region_number)
 								continue;

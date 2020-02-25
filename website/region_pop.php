@@ -62,62 +62,62 @@
 	<body>
 	  <? require("common_files/themes.php"); ?>
 		<table class='frame' width="620" height="710" align="center" valign=middle border=0 cellpadding=0 cellspacing=0>
-			<tr>
-				<td align=center>
-					<? write_title_cal($date, $sub_title, $this_page, $indexnum, $type, $width="95%", $region); ?>
-				</td>
-			</tr>
-			<tr>
-			<?
-				print("<td bgcolor=#FFFFFF align=center> \n") ; 
-				//print("<a href=./region_pop_prob.php?date=$date&type=$type&region=$region> \n") ; Uncomment to enable probability switching
-				print link_image($url, 604, false) ; 
-				print("</td> \n") ;
-			?>
-			</tr>
-			<tr>
-				<td bgcolor=#FFFFFF align=center>
-					<table width=100% border=0 cellpadding=0 cellspacing=0>
-						<tr>
-	  
-							<?
-		$links=array();
-$k=array();
+					<tr>
+						<td align=center>
+							<? write_title_cal($date, $sub_title, $this_page, $indexnum, $type, $width="95%", $region); ?>
+						</td>
+					</tr>
+					<tr>
+					<?
+						print("<td bgcolor=#FFFFFF align=center> \n") ; 
+						//print("<a href=./region_pop_prob.php?date=$date&type=$type&region=$region> \n") ; Uncomment to enable probability switching
+						print link_image($url, 604, false) ; 
+						print("</td> \n") ;
+					?>
+					</tr>
+					<tr>
+						<td bgcolor=#FFFFFF align=center>
+							<table width=100% border=0 cellpadding=0 cellspacing=0>
+								<tr>
+			  
+								<?
+								$links=array();
+								$k=array();
 
-		for($i=0;$i<count($region_types);$i++)
-		{
-			$type_r = $region_types[$i];
-			$instrument = substr($type_r,0,4);
-			$filter = substr($type_r,5,5);
-			$file = find_latest_file($date, $instrument, $filter, 'small60.jpg', 'ar', $region);
-			$links[] = link_image("${arm_data_path}data/$dirdate/pngs/$instrument/$file", 35, false);
-			//			var_dump(file_exists("${arm_data_path}data/$dirdate/pngs/$instrument/$file"));
-			$k[]= (file_exists("${arm_data_path}data/$dirdate/pngs/$instrument/$file") && $type != $region_types[$i]) ? $i : -1;
-		}
-//var_dump($k);
-print("<td align=\"center\" colspan=\"7ve \">\n");
 								for($i=0;$i<count($region_types);$i++)
-								{
-								  if ($k[$i] != -1)
-									 {
-									   print("<a href=./region_pop.php?date=$date&type=" . $region_types[$i] . "&region=$region title=\"".$region_strs1[$region_types[$i]]."\">". $links[$i] . "</a>\n");
-									 }
+									{
+										$type_r = $region_types[$i];
+										$instrument = substr($type_r,0,4);
+										$filter = substr($type_r,5,5);
+										$file = find_latest_file($date, $instrument, $filter, 'small60.jpg', 'ar', $region);
+										$links[] = link_image("${arm_data_path}data/$dirdate/pngs/$instrument/$file", 35, false);
+										//			var_dump(file_exists("${arm_data_path}data/$dirdate/pngs/$instrument/$file"));
+										$k[]= (file_exists("${arm_data_path}data/$dirdate/pngs/$instrument/$file") && $type != $region_types[$i]) ? $i : -1;
+									}
+									//var_dump($k);
+									print("<td align=\"center\" colspan=\"7ve \">\n");
+								for($i=0;$i<count($region_types);$i++)
+									{
+									  if ($k[$i] != -1)
+										{
+										   print("<a href=./region_pop.php?date=$date&type=" . $region_types[$i] . "&region=$region title=\"".$region_strs1[$region_types[$i]]."\">". $links[$i] . "</a>\n");
+										}
 								  
-//									print("<td background=common_files/brushed-metal.jpg valign=middle align=center><font size=-1 color=white>\n");
-//									$temp_type = $region_types[$i];
-//									$string = $region_strs2[$temp_type];
-//									print("	<b><a class=mail href=\"./region_pop.php?date=$date&type=$region_types[$i]&region=$region\">$string</a></b>\n");
-//									print("</font></td>\n");								
-								}
-print("</td></tr>\n</table>\n");
+				//									print("<td background=common_files/brushed-metal.jpg valign=middle align=center><font size=-1 color=white>\n");
+				//									$temp_type = $region_types[$i];
+				//									$string = $region_strs2[$temp_type];
+				//									print("	<b><a class=mail href=\"./region_pop.php?date=$date&type=$region_types[$i]&region=$region\">$string</a></b>\n");
+				//									print("</font></td>\n");								
+									}
+							print("</td></tr>\n</table>\n");
 
-?>
-				</td>
-			</tr>
-						<tr>
-						<td colspan='3' align='center'>
- <? include ("share_include.txt"); ?>
- </td>
-</table>
+								?>
+						</td>
+					</tr>
+			<tr>
+				 <td colspan='3' align='center'>
+			     	<? include ("share_include.txt"); ?>
+			     </td>
+		</table>
 	</body>
 </html>

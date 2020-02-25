@@ -1,5 +1,5 @@
 <?
-function get_artype_opt($date,$type,$region)
+  function get_type_opt($date,$type)
   {
     $out = array();
     for ($i=0;$i<count($type);$i++)
@@ -23,7 +23,7 @@ function get_artype_opt($date,$type,$region)
 	  }
 
 	list($instrument, $filter) = explode('_', $type[$i],2);
-	$file = find_latest_file($date, $instrument, $filter, 'png', 'ar',$region);
+	$file = find_latest_file($date, $instrument, $filter, 'png', 'fd');
 	if ($file != "No File Found" && $type[$i] != "seit_00195" && $type[$i] != "seit_00171"){break;}
 	if ($file != "No File Found" && preg_match("/seit/",$type[$i]) && !$eit_bakeout){break;}
       }
@@ -36,8 +36,9 @@ function get_artype_opt($date,$type,$region)
 
 
 <?
-function write_index_regions($date,$indexnum,$table_div, $region="00000")
+function write_index_images($date,$indexnum,$table_div='table')
 	{
+	  
 		include("globals.php");
 		$image_size = ($table_div == 'table')?220:50;
 		$format = ($table_div == 'table')?'.png':'_small60.jpg';
@@ -48,13 +49,13 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 		{
 		  if ($index_types[$i] == "magnetogram" || $index_types[$i] == "continuum" || $index_types[$i] == "o171" || $index_types[$i] == "o195" || $index_types[$i] == "o195f" || $index_types[$i] == "xray") 
 		    {
-		      $options = get_artype_opt($date,$index_types_opt[$index_types[$i]],$region);
+		      $options = get_type_opt($date,$index_types_opt[$index_types[$i]]);
 		      list($index_types[$i],$files[$i]) = $options;
 		    }
 		  else 
 		    {
 		      list($instrument, $filter) = explode('_', $index_types[$i],2);
-		      $files[$i] = find_latest_file($date, $instrument, $filter,'png', 'ar',$region);
+		      $files[$i] = find_latest_file($date, $instrument, $filter,'png', 'fd');
 		    }
 		  //if file No exist => load thumbnail
 		  if ($files[$i] == "No File Found")
@@ -77,11 +78,11 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 		  // rest -> load proper file
 		  else
 		    {
-		      list($inst, $filt, $ar, $region, $fdate, $time, $ext) = preg_split("/[_.]/",$files[$i],7);
+		      list($inst, $filt, $fd, $fdate, $time, $ext) = multiexplode(array("_","."),$files[$i],6);
 		      $dt = $fdate . " " . substr($time,0,2) . ":" . substr($time,2,2);
 		      $str = $index_types_def[$index_types[$i]]." ".$fdate . " " . date("H:i", strtotime($dt));
 		      $times[]=$str;
-		      $links[] = link_image("${arm_data_path}data/$dirdate/pngs/$inst/$files[$i]", $image_size, false);
+		      $links[] = link_image("${arm_data_path}data/$dirdate/pngs/thmb/$index_types[$i]_thumb$format", $image_size, false);
 		    }
 		}
 
@@ -106,7 +107,7 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 			  {print("			<a>\n");}
 			else
 			  {
-			    print("			<a href=JavaScript:RegionZoom(\"./region_pop.php?date=$date&type=" . $index_types[$i] . "&region=$region\")>\n");
+			    print("			<a href=\"full_disk.php?date=$date&type=" . $index_types[$i] . "&indexnum=$indexnum\">\n");
 			  }
 			print("				" . $links[$i] . "\n");
 			print("			</a>\n");
@@ -117,7 +118,6 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 			
 		      }
 		    print("</table>\n");
-
 		  }
 		elseif ($table_div == 'div')
 		  {
@@ -135,7 +135,7 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 			  {print("			<a>\n");}
 			else
 			  {
-			    print("			<a href=JavaScript:RegionZoom(\"./region_pop.php?date=$date&type=" . $index_types[$i] . "&region=$region\")>\n");
+			    print("			<a href=\"full_disk.php?date=$date&type=" . $index_types[$i] . "&indexnum=$indexnum\" title=\"". $times[$i] ."\">\n");
 			  }
 			print("				" . $links[$i] . "\n");
 			print("			</a>\n");

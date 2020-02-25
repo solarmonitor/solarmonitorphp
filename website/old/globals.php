@@ -28,7 +28,7 @@
 		
 		//	Data Path
 		//	This is the folder that the data/ folder lies in.
-		date_default_timezone_set('UTC') ; // get rid of this
+		date_default_timezone_set('utc') ; // get rid of this
 
 		$arm_data_path = "";
  

@@ -77,7 +77,7 @@ function write_index_regions($date,$indexnum,$table_div, $region="00000")
 		  // rest -> load proper file
 		  else
 		    {
-		      list($inst, $filt, $ar, $region, $fdate, $time, $ext) = preg_split("/[_.]/",$files[$i],7);
+		      list($inst, $filt, $ar, $region, $fdate, $time, $ext) = multiexplode(array("_","."),$files[$i],7);
 		      $dt = $fdate . " " . substr($time,0,2) . ":" . substr($time,2,2);
 		      $str = $index_types_def[$index_types[$i]]." ".$fdate . " " . date("H:i", strtotime($dt));
 		      $times[]=$str;
