@@ -45,7 +45,7 @@
 		if ($date != $curr_date)
 			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_prtns_${date}.png";
 		else
-		  $url = "http://legacy-www.swpc.noaa.gov/ftpdir/plots/proton/${date}_proton.gif";
+		  $url = "https://services.swpc.noaa.gov/images/swx-overview-large.gif";
 	}
 	elseif ($type == "electron")
 	{
