@@ -79,7 +79,7 @@ function write_index_body_slider($date, $indexnum, $fdar, $region = "00000")
 		print("	</div>\n");
 		print("</div>\n");
 		
-		write_ticker($date);
+		print(" <!-- write_ticker($date) -->");
 	}
 ?>
 					
