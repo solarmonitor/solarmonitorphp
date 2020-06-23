@@ -38,7 +38,7 @@
 		if ($date != $curr_date)
 			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_xrays_${date}.png";
 		else
-			$url = "https://services.swpc.noaa.gov/images/swx-overview-large.gif";
+			$url = "http://ovsa.njit.edu/flaremon/goes3-day.png";
 	}
 	elseif ($type == "proton")
 	{
@@ -82,8 +82,12 @@
 			</tr>
 			<tr>
 				<td align=center colspan=3>
-					<img align=center valign=center src="<? print $url ?>" width="550" height="500" >
+				</figure>
+					<img align=center valign=center src="<? print $url ?>" width="550" height="450" >
+					<figcaption>GOES SXR plot courtesy of ovsa.njit.edu/flaremon/</figcaption>
+				<figure>	
 				</td>
+			
 			</tr>
 			<tr>
 							<td valign=middle align=center><font color=white>

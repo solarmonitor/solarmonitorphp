@@ -47,9 +47,9 @@
 			<?php write_events($date); ?>
 			<p>
 			<hr size=2>
-			</center>
+	      </center>
 	    <center>
 		<?php write_footer_new($time_updated); ?>
-	  </center>
+	    </center>
 	</body>
 </html>

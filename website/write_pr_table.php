@@ -57,16 +57,15 @@
 				$i = 0;
 				foreach($lines as $line)
 				{
-					list($region, $mcintosh, $c, $m, $x) = explode(' ', $line, 5);
+					list($region, $mcintosh, $c, $m, $x) = preg_split("[\s]", $line, 5);
 		
 					// Converts strings to arrays of MCEVOL, MCSTAT and NOAA predictions using ) and ( as delimiters
-
 					$c = str_replace(")","",$c) ;
 					$m = str_replace(")","",$m);
 					$x = str_replace(")","",$x) ;
-					$c_probs = explode("(" , $c) ; 
-					$m_probs = explode("(" , $m) ; 
-					$x_probs = explode("(" , $x) ; 
+					$c_probs = preg_split("[\(]" , $c) ;  
+					$m_probs = preg_split("[\(]" , $m) ; 
+					$x_probs = preg_split("[\(]" , $x) ; 
 					$c_prob_data[$i] = $c_probs ;
 				   	$m_prob_data[$i] = $m_probs  ;
 					$x_prob_data[$i] = $x_probs  ;
