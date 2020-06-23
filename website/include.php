@@ -26,20 +26,15 @@
 	//print("$this_page_t $temp1 $temp2 $this_page\n");
 	$location = strrpos($this_page_t, "/");
 	$this_page = substr($this_page_t, $location + 1);
-
-
-	include ("functions.php");
-	include ("write_jscript.php");								
+						
 	
 	//	include all the fuctions
-
-	include ("write_forecast_paragraph.php");
-    include ("write_smart_table.php");
+	include ("functions.php");
+	include ("write_jscript.php");		
     include ("write_ar_table.php");
 	include ("write_flare_prob_img.php") ;
-	include ("write_charm_table.php");
 	include ("write_title.php");
-	include ("write_title_cal1.php");
+	include ("write_title_cal.php");
 	include ("write_pr_table.php") ;
 	include ("write_pr_table_entry.php") ;
 	include ("write_title_clean.php");
@@ -48,11 +43,14 @@
 	include ("write_right.php");
 	include ("write_footer.php");
 	include ("write_header.php");
-	include ("write_statcounter.php");
-	include ("write_googleanalytics.php");
-	include ("write_piwik.php");
 	include ("write_toolbar.php");
 	include("get_ar_history.php");
+	//include ("write_statcounter.php");
+	//include ("write_googleanalytics.php");
+	//include ("write_piwik.php");
+	//include ("write_charm_table.php");
+	//include ("write_forecast_paragraph.php");
+    //include ("write_smart_table.php");
 
 	//include the body stuff separately because of the ticker's javascript.  in reality they should all
 	//be included separately but that would require a redesign.  this will come someday
@@ -60,7 +58,7 @@
 	//if ($this_page == "index2.php") include ("./write_index_body2.php");
 	if ($this_page != "search.php") 
 		if ($this_page != "region.php")
-		include ("write_index_body.php");
+		//include ("write_index_body.php");
 		include ("write_index_body_slider.php");
 		include ("write_index_images.php");
 		include ("write_index_regions.php");

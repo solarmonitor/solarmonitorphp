@@ -46,7 +46,7 @@
 			foreach($lines as $line)
 			{
 				//	this gets all the variables from the line.
-				list($coor1, $coor2, $region) = split('[ ]', $line);
+				list($coor1, $coor2, $region) = explode(' ', $line);
 				//	a possible newline character at the end of the region variable screws up the javascript
 				//	so all whitespace must be trimmed
 				$region=trim($region);

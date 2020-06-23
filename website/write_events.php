@@ -63,7 +63,7 @@
 					}
 					else
 					{
-						list($url, $data) = split('[ ]', $line, 2);
+						list($url, $data) = explode(' ', $line, 2);
 						print("<a class=mail2 style=\"color:$col ;\" href=javascript:OpenLastEvents(\"$url\")>$data</a>");
 						$col = "#0000FF";
 					}	
@@ -122,7 +122,10 @@ function write_ch_events($date)
 		{	
 			$time = "some time";
 		}
-		print("				<p><i><b>Note:</b></i> Solar Monitor's coronal hole segmentations are performed by CHIMERA, a copy of which is available at: github.com/solarmonitor/solarmonitoridl/idl. An extensive copy of coronal hole properties are available at: solarmonitor.org/data. The latest positions of the coronal holes are given in heliocentric co-ordinates. The region positions are valid on $time .\n");
+		print("				<p><i><b>Note:</b></i> Solar Monitor's coronal hole segmentations are performed by CHIMERA, a copy of which is available at: \r\n<a href='https://github.com/TCDSolar/CHIMERA'>github.com/TCDSolar/CHIMERA</a>.\n");
+		print("				<p>The operations of the CHIMERA algorithm is described in a peer reviewed paper: <a href='https://arxiv.org/abs/1711.11476'>arxiv.org/abs/1711.11476</a>.\n");
+		print("				<p>An extensive copy of coronal hole properties are available at: <a href='https://solarmonitor.org/data'>solarmonitor.org/data</a>.");
+		print("				<p>The latest positions of the coronal holes are given in heliocentric co-ordinates, and the region positions are valid on $time.\n");
 		print("				</font></td>\n");
 		print("			</tr>\n");
 		print("		</table>\n");

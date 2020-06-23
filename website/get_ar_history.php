@@ -36,23 +36,23 @@
 				$i = 0;
 				foreach($lines as $line)
 				{
-					list($region, $loc, $loc_arc, $mtwil, $mcintosh,$area,$nspot) = split('[ ]', $line, 7);
+					list($region, $loc, $loc_arc, $mtwil, $mcintosh,$area,$nspot) = preg_split("[\s]", $line, 7);
 		
 					// Converts strings to arrays of today/yesterday data using ) and ( as delimiters
-
 					$region_data[$i] = $region ;
 					$loc_data[$i]=$loc;
 					$loc_arc_data[$i]=$loc_arc;
-					$mtwil_split =  explode("/", $mtwil);
+					$mtwil_split =  preg_split("[/]", $mtwil);
 					$mtwil_data[$i]= $mtwil_split;
-					$mcintosh_split = explode("/",$mcintosh);
+					$mcintosh_split = preg_split("[/]",$mcintosh);
 					$mcintosh_data[$i]=$mcintosh_split;
-					$area_split = explode("/", $area);
+					$area_split = preg_split("[/]", $area);
 					$area_data[$i]= $area_split;
-					$nspot_split = explode("/", $nspot);
+					$nspot_split = preg_split("[/]", $nspot);
 					$nspot_data[$i]= $nspot_split;
 					++$i ;
 				}
+				
 			return array($region_data,$loc_data,$loc_arc_data,$mtwil_data,$mcintosh_data,$area_data,$nspot_data);
 			  
 			}

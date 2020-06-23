@@ -58,7 +58,7 @@
 		print("	 </td>\n");
 		print("  <td align=\"right\">\n");
 		print("<a href=\"https://www.northumbria.ac.uk/about-us/academic-departments/mathematics-physics-and-electrical-engineering/research/solar-physics//\"><img src=\"./common_files/images/logos/northumb_logo.png\" align=right border=0 height=40></a>\n");
-		print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide_small.jpg\" align=right border=0  height=40></a>\n");
+	 	print("<a href=\"http://www.tcd.ie/\"><img src=\"./common_files/images/logos/TCD-logo-wide_small.jpg\" align=right border=0  height=40></a>\n");
 		print("<a href=\"http://www.dias.ie//\"><img src=\"./common_files/images/logos/dias_logo-small.png\" align=right border=0 height=40></a>\n");
 		//print("<a href=\"http://www.esa.eu/\"><img src=\"./common_files/images/logos/esa_small.jpg\" align=right border=0 height=70></a>\n");
 		//print("<a href=\"http://www.nasa.gov/goddard/\"><img src=\"./common_files/nasalogo.png\" align=right border=0 height=70></a>\n");

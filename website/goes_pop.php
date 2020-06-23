@@ -38,21 +38,21 @@
 		if ($date != $curr_date)
 			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_xrays_${date}.png";
 		else
-			$url = "https://services.swpc.noaa.gov/images/goes-xray-flux.gif";
+			$url = "http://ovsa.njit.edu/flaremon/goes3-day.png";
 	}
 	elseif ($type == "proton")
 	{
 		if ($date != $curr_date)
 			$url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_prtns_${date}.png";
 		else
-		  $url = "https://services.swpc.noaa.gov/images/goes-proton-flux.gif";
+		  $url = "https://services.swpc.noaa.gov/images/swx-overview-large.gif";
 	}
 	elseif ($type == "electron")
 	{
 		if ($date != $curr_date)
 		  $url = "${arm_data_path}data/${dirdate}/pngs/goes/goes_elect_${date}.png";
 		else
-		  $url = "https://services.swpc.noaa.gov/images/goes-electron-flux.gif";
+		  $url = "http://legacy-www.swpc.noaa.gov/ftpdir/plots/electron/${date}_electron.gif";
 	}
 	else
 	{
@@ -77,13 +77,17 @@
 		<table class='frame' width="674" height="575" align=center border=0 cellspacing=0 cellpadding=0>
 			<tr>
 				<td colspan=3>
-					<? write_title_cal1($date, $title, $this_page, $indexnum="1", $type, $width="95%"); ?>
+					<? write_title_cal($date, $title, $this_page, $indexnum="1", $type, $width="95%"); ?>
 				</td>
 			</tr>
 			<tr>
 				<td align=center colspan=3>
-					<img align=center valign=center src="<? print $url ?>" width="630" height="485" >
+				</figure>
+					<img align=center valign=center src="<? print $url ?>" width="550" height="450" >
+					<figcaption>GOES SXR plot courtesy of ovsa.njit.edu/flaremon/</figcaption>
+				<figure>	
 				</td>
+			
 			</tr>
 			<tr>
 							<td valign=middle align=center><font color=white>

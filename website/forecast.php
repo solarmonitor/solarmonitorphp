@@ -15,23 +15,19 @@
 			<table class='frame' width=842 border=0 cellpadding=0 cellspacing=0 align="center">
 				<tr>
 					<td align=center colspan=3>
-						<? write_title_cal1($date, $title, $this_page, $indexnum); ?>
+						<? write_title_cal($date, $title, $this_page, $indexnum); ?>
 					</td>
 				</tr>
 				<tr>
 					<td valign=top align=center>
-						<? write_left_accordion($date,-1); ?>
+						<?php write_left_accordion($date,-1); ?>
 					</td>
+
 					<td bgcolor=#FFFFFF valign=top width=681>
 						<table  class="frame" width=100% id='test'  cellpadding=0 cellspacing=0>
 							<tr>	
-							    <?  write_flare_prob_img($date) ; ?>
-							</tr>
-							<tr valign=top>
-								<td class=noaacol align=center valign=middle colspan=5><font color=white>
-									<br />
-									<b>Region Flare Probabilities (%)</b>
-								</font></td>
+							    <?php  write_flare_prob_img($date) ; ?>
+				    	
 							</tr>
 							<tr>
 								<? write_pr_table() ; ?>
@@ -41,24 +37,29 @@
 							</tr>
 						</table>
 					</td>
+
+
+					</td>
 					<td valign=top align=center width=82>
-						<? write_right_accordion($date) ; ?>
-    				</td>
+						<?php write_right_accordion($date) ; ?>
+    					</td>
   				</tr>
 				<tr>
 					<td align=center colspan=3>
-						<? write_bottom_clean() ; ?>
+						<?php write_bottom_clean() ; ?>
 					</td>
 				</tr>
 			</table>
 			<p>
-			<? write_new_ar_table($date) ; ?>
-			<? write_events($date) ; ?>
+			<?php write_new_ar_table($date) ; ?>
+			<?php write_events($date) ; ?>
 			<p>
 			<hr size=2>
-		<? write_footer_new($time_updated) ; ?>
-			<p>
-			</center>
-			<? write_footer_js() ; ?>
+		</center>	
+		<center>
+			<?php write_footer_new($time_updated) ; ?>
+			
+		</center>
+			
 	</body>
 </html>

@@ -28,7 +28,7 @@
 		$title = "No Region $region Found";
 		foreach($lines as $line)
 		{
-			list($number, $temp_title) = split('[ ]', $line, 2);
+			list($number, $temp_title) = explode(' ', $line, 2);
 			if ($number == $region)
 			{
 				$title = $temp_title;
@@ -67,7 +67,7 @@
 		<table class='frame' width="620" height="710" align="center" valign=middle border=0 cellpadding=0 cellspacing=0>
 			<tr>
 				<td align=center>
-					<? write_title_cal1($date, $sub_title, $this_page, $indexnum, $type, $width="95%", $region); ?>
+					<? write_title_cal($date, $sub_title, $this_page, $indexnum, $type, $width="95%", $region); ?>
 				</td>
 			</tr>
 			<tr>
