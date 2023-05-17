@@ -1,7 +1,7 @@
 This repository contains the php, js, and other files used for SolarMonitor.org
 
 <b>Welcome</b><br>
-Welcome to the SolarMonitor ReadMe! You'll find here the documentation on the website architecture and hosting specifics. The SolarMonitor website and archive is currently hosted on a virtual machine (VM) at the Dublin institute for Advanced Studies (DIAS). The contact point for any issues regarding this machine is Jean Francois Bucas at jef@dias.ie
+Welcome to the SolarMonitor ReadMe! You'll find here the documentation on the website architecture and hosting specifics. The SolarMonitor website and archive is currently hosted on a virtual machine (VM) at the Dublin institute for Advanced Studies (DIAS).
 
 <b>Work with git to improve/test SolarMonitor</b><br>
 Firstly, you need to 'fork' the main Solar Monitor repository on Github - this is done in the internet browser. This creates your own personal repository that you can edit and experiment with. At the moment your fork exists online, but you probably want bring it to your local machine. To do so, you need to 'clone' your fork by opening a terminal on your local machine and entering:
@@ -17,7 +17,7 @@ Next step is to deploy the code (usually into a test version on the live machine
 <b>Deploy test version</b><br>
 First off, on your local machine you can add a new remote git repository (which is on the web server) called test.
 
-$ git remote add test dperezsuarez@www.solarmonitor.org:solarmonitor-test.git
+
 
 You may push your code into this directory with:
 
@@ -30,7 +30,7 @@ To update the site in the future you just need to do: $ git push test
 [SIDE NOTE]
 The PHP git repositories on the DIAS machine are 'bare repositories'. Think of them as providing an address/link between your local machine code and the live (or test) code. When you push to the bare repository it simply sends your code onto the DIAS machine. To take a look at the bare repository, log into the DIAS machine with:
 
-ssh dperezsuarez@www.solarmonitor.org
+
 
 Once connected you should be in home directory where you'll see the bare git repository of solarmonitor-test.git (among others). If you view
 
@@ -46,7 +46,7 @@ If you go to that directory you'll see the website php. You should see a symlink
 <b>Push new changes to the web</b><br>
 Deploy production version Note: The following steps should just be done from your master branch, and not from a development one! The procedure is the very same as pushing to the test bare git repository, as above, but this time you'll be pushing to live code. Firstly, on your machine you can add a new remote git repository called production (or whatever name you choose).
 
-$ git remote add production dperezsuarez@www.solarmonitor.org:solarmonitor.git
+
 
 and to push the new version:
 
